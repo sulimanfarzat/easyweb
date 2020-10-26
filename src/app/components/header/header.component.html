@@ -1,1 +1,49 @@
-<p>header works!</p>
+<!-- Header -->
+<header class="">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><h2>easy<em>2edi</em></h2></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link lang" href="index.html" key="home">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a data-localize="about.aboutMnu" class="nav-link lang" href="about.html" key="about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a data-localize="services.servicesMnu" class="nav-link" href="services.html">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a data-localize="contact.contactMnu" class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="functional-buttons">
+        <ul>
+          <li><a class="translate" id="en">EN</a></li>
+          <li><a class="translate" id="de">DE</a></li>
+        </ul>
+      </div>
+
+      <span class="form-inline">
+        <select
+            class="form-control"
+            #selectedLang
+            (change)="switchLang(selectedLang.value)">
+          <option *ngFor="let language of translate.getLangs()"
+            [value]="language"
+            [selected]="language === translate.currentLang">
+            {{ language }}
+          </option>
+        </select>
+      </span>
+
+    </div>
+  </nav>
+</header>

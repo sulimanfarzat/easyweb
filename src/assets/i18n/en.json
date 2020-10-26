@@ -1,0 +1,173 @@
+{
+  "home": {
+    "homeMnu": "Home",
+    "hauptSatz": {
+      "zeile1": "EDI/EAI Senior Consulting",
+      "zeile2": "Your fair & independent contact for all topics concerning electronic data interchange & interfaces. ",
+      "zeile3": "Consulting & development from one source"
+    },
+    "reverences": "Our references",
+    "services": {
+      "zeile0": "Grow your Business",
+      "zeile1": "we provide optimal EDI solutions",
+      "zeile2": "Exchange data easier and faster! ",
+      "zeile3": "Optimize communication with your customers and suppliers. Read our case study to learn how you can automate the exchange of data with our high-performance Business Integration Platform.",
+      "card1-h": "NO PROJECT STANDSTILLS",
+      "card1-b": "development, operation and in-house support, that is, we can also provide ad-hoc services outside of release cycles.",
+      "card2-h": "COMPREHENSIVE SERVICES",
+      "card2-b": "EDI conversion, signing service, archiving service, validation service, file transfer service, capture services, reporting, etc.",
+      "card3-h": "LEADING WITH SECURITY",
+      "card3-b": "we offer maximum transparency in terms of security and process safety through encryptions, operating models, databases and operating systems."
+    },
+    "features": {
+      "zeile1": "Best Quality for you success",
+      "zeile2": "Features & Skills",
+      "cards": {
+        "EDI with Lobster": [
+          "filter",
+          "Consulting, profile development, process implementations & development of individual EDI/EAI/API services with with Lobster _data 3.x & 4.x, Lobster _data Portal & Lobster _scm as well as workshops & trainings."
+        ],
+        "EDI with Seeburger": [
+          "exchange-alt",
+          "Consulting, mapping development & implementations, real-time connection of applications and cloud services and control of internal and external business processes as well as process designer Seeburger BIS/BIC 5.x & 6"
+        ],
+        "EDI Project Management": [
+          "project-diagram",
+          "Requirements management external/internal partners, systems (EAI), pre- & after-sales support, conceptual design, documentation EDI interfaces & processes as well as analysis and creation of EDI guidelines."
+        ],
+        "Conception & Documentation": [
+          "edit",
+          "Creation of so-called „paper mappings“ (mapping descriptions hand in hand with your specialist departments) as well as creation of documentation EDI interfaces & processes."
+        ],
+        "Communication Channels": [
+          "network-wired",
+          "Tuning, setup and test of remote communication connections such as HTTP(s), (S)FTP(S), AS2, X.400, AS400 Dataqueue, LDAP, SMTP, POP3, IMAP, database connections, OFTP(2) or VAN (e.g. GXS)."
+        ],
+        "Performance": [
+          "tachometer-alt",
+          "High processing speed of large files as well as many short messages, load balance capability with fail-over and configuration options (HA concept)."
+        ],
+        "Data Formats": [
+          "file-alt",
+          "Data formats such as EDIFACT, Tradacoms, ZUGFeRD, XML, CSV, Excel, FixRecord, database queries, BWA, JSON, CARGO-IMP etc. as well as templates such as VDA, SAP IDoc, ANSI X.12 and more than 9,000 EDIFACT templates with secure transmission"
+        ],
+        "IT Support & Consulting": [
+          "question",
+          "extensive IT know-how, experience in client service, system first and second level as well as EDI clearing and support. Branch Know How: Logistics, Industry & Trade, Automotive."
+        ]
+      }
+    },
+    "testimonials": {
+      "zeile1": "Testimonials",
+      "zeile2": "What they say about us",
+      "cards": {
+        "Stefan Endler": [
+          "Head of SAP/BPM - ROTHENBERGER Werkzeuge GmbH",
+          "With Mr. Schäfer we have a very good consultant who supports us in our developments around the electronic customer and supplier connection fast, factually correct and unbureaucratic. With his high level of commitment, the cooperation is always fun and leads to the expected results."
+        ],
+        "Patrik Kluge": [
+          "Global Head of IT Systems and Development - dservice GmbH",
+          "Very professional and friendly manner, the cooperation with Mr. Philippe Schäfer is for us on a very solid basis. His expert knowledge in the topics EDI,EAI and their implementation in Lobster is a great help. We are looking forward to future projects!"
+        ],
+        "Project manager": [
+          "VS Logistics",
+          "The nice thing about working with Mr. Schäfer is his availability and quick support in urgent matters. Also his know-how helps us in the implementation of various projects, as he shows us different ways to reach our goal that we have not seen before. This is another reason why the implementations on his part take place without any problems. Furthermore, his friendly and helpful nature is also a reason why we like to work with him for a long time and will continue to do so."
+        ]
+      }
+    }
+    },
+  "services": {
+    "servicesMnu": "Services",
+    "hauptSatz": {
+      "zeile1": "EDI Services und mehr ...",
+      "zeile2": "Best Services We Provide! ",
+      "zeile3": "Exchange data easier and faster! Optimize communication with your customers and suppliers. Read our case study to learn how you can automate the exchange of data with our high-performance Business Integration Platform."
+    },
+    "card1": {
+      "title": "Who has time for complicated?",
+      "subTitle": "Lobster _data Consulting",
+      "description": "Data conversion. Data mapping. Data manipulation. Transfer your data to your target system. No crossing your fingers. No holding your breath. No worries. With lobster_data.",
+      "lobster": [
+        "EDI Clearing",
+        "Partner Onboarding (AS2, OFTP(2), http(s)...)",
+        "Entwicklung EDI/EAI Prozesse",
+        "Entwicklung Profile & Mappings",
+        "API/Webservice Anbindung",
+        "Schulungen & Workshops",
+        "Portal Entwicklung _data"
+      ],
+      "button": "Angebot anfordern"
+    },
+    "card2": {
+      "title": "Fullest support",
+      "subTitle": "Allgemeines EDI/IT Consulting",
+      "description": "Present concepts that all deal with the interaction of different parts of the IT landscape of one or more related companies.",
+      "allgemeines": [
+        "EDI/EAI Anforderungsmanagement",
+        "EDI/EAI Projekbegleitung",
+        "EDI/EAI Prozessmanagement",
+        "Tests & Do´kumentation",
+        "Guideline & Papermapping Erstellung",
+        "EDI/EAI Schnittstellendefinition & Erstellung",
+        "EDI Workshops",
+        "1st/2nd Level Support & Client Service "
+      ],
+      "button": "Angebot anfordern"
+    },
+      "card3": {
+        "title": "Your Central Platform for Digital Transformation",
+        "subTitle": "Seeburger BIS Consulting",
+        "description" : "SEEBURGER Business Integration Suite – The Hybrid Integration Platform One Platform for Full Life Cycle API Management and Any Integration Requirement.",
+        "seeburger": [
+        "EDI Clearing",
+        "Partner Onboarding",
+        "Mapping Erstellung/Modifikation",
+        "Prozessdesign & Modifikation BIS/BIC",
+        "EDI/EAI Schnittstellenentwicklung",
+        "Workflowdesigner BIS5.x",
+        "Migrationserfahrung BIS5 / BIS6 inkl. Mappings"
+      ],
+      "button": "Angebot anfordern"
+    }
+  },
+
+  "projects": {
+    "projectsMnu": "Projects"
+  },
+
+  "about": {
+    "aboutMnu": "About Us",
+    "aboutNav" : {
+      "title" : ["Background of our company", "Our History", "Our Vision"],
+      "description" : "xxxxx",
+      "history":["Founder: Philippe Schäfer, born 02.02.1976",
+                "Year of foundation: 2019",
+                "Place of foundation: Groß-Umstadt",
+                "Reason for foundation: fed up with being employed"],
+      "vision": "We intend to provide our customers with the best EDI services experience from beginning to end, with a fast, remotely support, easy-to-follow instructions, clear and secure connection methods, and fast, quality delivery."
+              },
+    "team" : {
+      "title" : "Our Team",
+      "subTitle" : "Availability in terms of time and location",
+      "description1" : "I would be pleased to be available to you in the future as a competent and reliable partner for EDI/EAI topics.",
+      "description2" : "Willingness to travel in a moderate framework in principle available. However, due to ongoing projects, only for small projects with flexible time schedules, remotely available."
+    }
+  },
+  "contact": {
+    "contactMnu": "Contact Us",
+    "hauptSatz": {
+      "zeile1": "Telephone or email You're welcome!",
+      "zeile2": "I would be pleased to be available to you in the future as a competent and reliable partner for EDI/EAI topics."
+    },
+    "contactNav" : {
+      "title" : "Let's keep in touch",
+      "description" : "xxxxx",
+      "form":["Your name",
+                "Your email",
+                "Subject",
+                "Your message",
+                "Send Message"],
+      "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
+              }
+  }
+}

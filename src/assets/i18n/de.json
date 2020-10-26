@@ -1,0 +1,176 @@
+{
+  "home": {
+    "homeMnu": "Home",
+    "hauptSatz": {
+      "zeile1": "EDI/EAI Senior Consultant",
+      "zeile2": "Ihr fairer & unabhängiger Ansprechpartner bei Themen zum elektronischen Datenaustausch & Schnittstellen",
+      "zeile3": "Beratung & Entwicklung aus einer Hand"
+    },
+    "reverences": "Unsere Referenzen",
+    "services": {
+      "zeile0": "Ihr Unternehmen wachsen lassen",
+      "zeile1": "wir liefern optimale EDI Lösungen",
+      "zeile2": "Daten einfacher und schneller austauschen! ",
+      "zeile3": "Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Lesen Sie unser Profil, um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Plattform automatisieren können.",
+      "card1-h": "KEINE PROJEKT-STILLSTÄNDE",
+      "card1-b": "Entwicklung, Betrieb und interne Unterstützung, d.h. wir können auch Ad-hoc-Dienste außerhalb der Release-Zyklen anbieten.",
+      "card2-h": "UMFANGREICHE DIENSTLEISTUNGEN",
+      "card2-b": "EDI-Konvertierung, Signierungsdienst, Archivierungsdienst, Validierungsdienst, Dateiübertragungsdienst, Erfassungsdienste, Berichtswesen usw.",
+      "card3-h": "SICHERHEIT",
+      "card3-b": "Wir bieten maximale Transparenz in Bezug auf Sicherheit und Prozesssicherheit durch Verschlüsselungen, Betriebsmodellen, Datenbanken und Betriebssystemen."
+    },
+    "features": {
+      "zeile1": "Beste Qualität für Ihren erfolgreichen Geschäftsverlauf.",
+      "zeile2": "Leistungen & Kompetenzen",
+      "cards": {
+        "EDI mit Lobster": [
+          "filter",
+          "Consulting, Profilentwicklung, Prozessimplementierungen & Entwicklung individueller EDI/EAI/API Services mit mit Lobster _data 3.x & 4.x, Lobster _data Portal & Lobster _scm sowie Workschops & Schulungen."
+        ],
+        "EDI mit Seeburger": [
+          "exchange-alt",
+          "Consulting, Mappingentwicklung & Implementierungen, Verbindung von Anwendungen und Cloud-Services in Echtzeit und Steuerung interner und externer Geschäftsprozesse sowie Prozessdesigner Seeburger BIS/BIC 5.x & 6"
+        ],
+        "EDI Projekt-management": [
+          "project-diagram",
+          "Anforderungsmanagement externe/interne Partner, Systeme (EAI), Pre- & After-Sales Unterstüzung, Konzeptionierung, Dokumenation EDI-Schnittstellen & Prozessen sowie Analysieren und Erstellen von EDI Guidelines."
+        ],
+        "Konzeptionierung & Dokumenation": [
+          "edit",
+          "Erstellung von sog. „Papermappings“ (Mappingbeschreibungen Hand in Hand mit Ihren Fachabteilungen) sowie Erstellung Dokumenation EDI-Schnittstellen & Prozessen."
+        ],
+        "Kommunikations-formen": [
+          "network-wired",
+          "Abstimmung, Einrichtung und Test von deversen Kommunikations-verbindungen wie HTTP(s), (S)FTP(S), AS2, X.400, AS400 Dataqueue, LDAP, SMTP, POP3, IMAP, Datenbankanbindungen, OFTP(2) oder VAN (bspw. GXS)."
+        ],
+        "Performance": [
+          "tachometer-alt",
+          "Hohe Verarbeitungs-geschwindigkeit von großen Dateien wie auch vielen kurzen Nachrichten, Load-Balance Fähigkeit mit Failover und Konfigurationsmöglichkeit (HA-Konzept)."
+        ],
+        "Datenformate": [
+          "file-alt",
+          "Datenformate wie EDIFACT, Tradacoms, ZUGFeRD, XML, CSV, Excel, FixRecord, Datenbankabfragen, BWA, JSON, CARGO-IMP etc. sowie Vorlagen wie VDA, SAP IDoc, ANSI X.12 und Mehr als 9.000 EDIFACT-Vorlagen mit sicherer Übertragung."
+        ],
+        "IT Support & Beratung": [
+          "question",
+          "umfangreiches IT KnowHow, Erfahrungen im Client Service, System First- und Second Level sowie EDI Clearing und Support. Branchen Know How: Logistik, Industrie & Handel, Automotive."
+        ]
+      }
+    },
+    "testimonials": {
+      "zeile1": "Bewertungen",
+      "zeile2": "Was sagen Sie über uns?",
+      "cards": {
+        "Stefan Endler": [
+          "Head of SAP/BPM - ROTHENBERGER Werkzeuge GmbH",
+          "Mit Herrn Schäfer haben wir einen sehr guten Berater der uns bei unseren Entwicklungen Rund um die elektronische Kunden und Lieferantenanbindung schnell, sachlich korrekt und unbürokratisch unterstützt. Mit seinem hohen Engagement macht die Zusammenarbeit immer wieder Spaß und führt zu den erwarteten Ergebnissen."
+        ],
+        "Patrik Kluge": [
+          "Global Head of IT Systems and Development - dservice GmbH",
+          "Sehr professionelle und freundliche Art, die Zusammenarbeit mit Hr. Philippe Schäfer ist für uns auf einer sehr soliden Basis. Sein Expertenwissen in den Themen EDI,EAI und deren Umsetzung in Lobster ist eine große Hilfe. Wir freuen uns auch in Zukunft auf kommende Projekte!"
+        ],
+        "Projektmanager": [
+          "VS Logistics",
+          "Das Schöne an der Arbeit mit Herrn Schäfer ist seine Erreichbarkeit und schnelle Unterstützung bei dringenden Themen. Ebenso hilft uns sein Know-how in der Umsetzung verschiedenster Projekte, da er unterschiedliche Weg zum Ziel aufzeigt die wir bis dahin nicht gesehen haben. Auch dadurch finden die Umsetzungen seinerseits problemlos statt. Des Weiteren ist auch seine sympatische und hilfsbereite Art ein Grund wieso wir so gerne seit längerem mit ihm zusammenarbeiten und das weiterhin werden."
+        ]
+      }
+    }
+  },
+
+  "services": {
+    "servicesMnu": "Dienste",
+    "hauptSatz": {
+      "zeile1": "EDI Services und mehr ...",
+      "zeile2": "Best Services We Provide! ",
+      "zeile3": "Exchange data easier and faster! Optimize communication with your customers and suppliers. Read our case study to learn how you can automate the exchange of data with our high-performance Business Integration Platform."
+    },
+    "card1": {
+      "title": "Kompliziert ist einfach zu langsam.",
+      "subTitle": "Lobster _data Consulting",
+      "description": "Datenkonvertierung, Data Mapping oder Datenmanipulation. Überführen sie ihre Daten in ihr Zielsystem. ohne zittern zu müssen, ob’s auch klappt. ohne diskussion. zack mit lobster_data.",
+      "lobster": [
+        "EDI Clearing",
+        "Partner Onboarding (AS2, OFTP(2), http(s)...)",
+        "Entwicklung EDI/EAI Prozesse",
+        "Entwicklung Profile & Mappings",
+        "API/Webservice Anbindung",
+        "Schulungen & Workshops",
+        "Portal Entwicklung _data"
+      ],
+      "button": "Angebot anfordern"
+    },
+    "card2": {
+      "title": "vollste Unterstützung",
+      "subTitle": "Allgemeines EDI/IT Consulting",
+      "description": "Konzepte vorstellen, die alle das Zusammenspiel verschiedener Teile der IT-Landschaft eines oder mehrerer miteinander in Beziehung stehender Unternehmen behandeln.",
+      "allgemeines": [
+        "EDI/EAI Anforderungsmanagement",
+        "EDI/EAI Projekbegleitung",
+        "EDI/EAI Prozessmanagement",
+        "Tests & Do´kumentation",
+        "Guideline & Papermapping Erstellung",
+        "EDI/EAI Schnittstellendefinition & Erstellung",
+        "EDI Workshops",
+        "1st/2nd Level Support & Client Service "
+      ],
+      "button": "Angebot anfordern"
+    },
+      "card3": {
+        "title": "Ihre zentrale Plattform für die digitale Transformation",
+        "subTitle": "Seeburger BIS Consulting",
+        "description": "SEEBURGER Business Integration Suite – die umfassendste Plattform für den digitalen Wandel. Ihr Vorteil? Eine nahtlose Integration all Ihrer Systeme, Anwendungen, Geschäftspartner und Cloud Services.",
+        "seeburger": [
+        "EDI Clearing",
+        "Partner Onboarding",
+        "Mapping Erstellung/Modifikation",
+        "Prozessdesign & Modifikation BIS/BIC",
+        "EDI/EAI Schnittstellenentwicklung",
+        "Workflowdesigner BIS5.x",
+        "Migrationserfahrung BIS5 / BIS6 inkl. Mappings"
+      ],
+      "button": "Angebot anfordern"
+    }
+  },
+
+  "projects": {
+    "projectsMnu": "Projekte"
+  },
+
+  "about": {
+    "aboutMnu": "Über uns",
+    "aboutNav" : {
+      "title" : ["Das Unternehmen", "Entstehung", "Unsere Vision"],
+      "description" : "xxxxx",
+      "history":["Gründer: Philippe Schäfer, geboren 02.02.1976",
+                "Gründungsjahr: 2019",
+                "Gründungsort: Groß-Umstadt",
+                "Gründungsgrund: Schnauze voll davon angestellt zu sein "],
+      "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
+              },
+    "team" : {
+      "title" : "Unser Team",
+      "subTitle" : "Zeitliche und Räumliche Verfügbarkeit",
+      "description1" : "Ich würde mich freuen, Ihnen zukünftig als kompetenter und verlässiger Partner bei EDI/EAI Themen zur Verfügung zu stehen.",
+      "description2" : "Reisebereitschaft in gemäßigtem Rahmen prinzipiell vorhanden. Aktuell jedoch aufgrund laufender Projekte nur noch für zeitlich flexible Kleinprojekte, remote verfügbar."
+    }
+  },
+
+  "contact": {
+    "contactMnu": "Kontakt",
+    "hauptSatz": {
+      "zeile1": "Telefon oder E-Mail Sie sind herzlich willkommen!",
+      "zeile2": "Ich würde mich freuen, Ihnen zukünftig als kompetenter und verlässiger Partner bei EDI/EAI Themen zur Verfügung zu stehen."
+    },
+    "contactNav" : {
+      "title" : "Lassen Sie uns in Kontakt bleiben",
+      "description" : "xxxxx",
+      "form":["Ihr Name",
+                "Ihre E-Mail",
+                "Betreff",
+                "Ihre Nachricht",
+                "Nachricht senden"],
+      "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
+              }
+  }
+
+}
