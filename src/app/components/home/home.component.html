@@ -1,1 +1,209 @@
-<p>home works!</p>
+<!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="header-text caption">
+              <h2>{{ 'home.hauptSatz.zeile1' | translate }}</h2>
+                <p class="lead" key="start_section">
+                  {{ 'home.hauptSatz.zeile2' | translate }}!
+                {{ 'home.hauptSatz.zeile3' | translate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+
+
+    <!-- Trusted Starts Here -->
+    <div class="trusted-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="trusted-section-heading">
+              <h4>{{ 'home.reverences' | translate }}</h4>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <owl-carousel-o [options]="trustedOptions" class="owl-trusted">
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a class="mr-3" href="https://www.vs-logistics.com/" target="_blank">
+                    <img src="assets/images/vs.png" alt="vs logistics">
+                  </a>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a class="mr-3" href="https://www.rothenberger.com/" target="_blank">
+                    <img src="assets/images/trusted_Rothenberger.png" alt="Rothenberger">
+                  </a>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a class="mr-3" href="https://www.gs1-germany.de/" target="_blank">
+                    <img src="assets/images/trusted_GS1.png" alt="GS1">
+                  </a>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a href="https://www.lobster-world.com/de/produkte/" target="_blank">
+                    <img src="assets/images/trusted_lobster1.png" alt="lobster"></a>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Trusted Ends Here -->
+
+
+    <!-- Services Starts Here -->
+    <div class="services-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <span>{{ 'home.services.zeile0' | translate }}</span>
+              <h2>{{ 'home.services.zeile1' | translate }}</h2>
+              <p>{{ 'home.services.zeile2' | translate }}
+                 {{ 'home.services.zeile3' | translate }}</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i><fa-icon [icon]="['fas', 'business-time']" size="lg"></fa-icon></i>
+              <h4>{{ 'home.services.card1-h' | translate }}</h4>
+              <p>{{ 'home.services.card1-b' | translate }}</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i><fa-icon [icon]="['fas', 'server']" size="lg"></fa-icon></i>
+              <h4>{{ 'home.services.card2-h' | translate }}</h4>
+              <p>{{ 'home.services.card2-b' | translate }}</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="service-item">
+              <i><fa-icon [icon]="['fas', 'shield-alt']" size="lg"></fa-icon></i>
+              <h4>{{ 'home.services.card3-h' | translate }}</h4>
+              <p>{{ 'home.services.card3-b' | translate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services Ends Here -->
+
+
+    <!-- Pricing Starts Here -->
+    <div class="pricing-section">
+      <div class="background-image-pricing">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="section-heading">
+              <h2>Our Plans</h2>
+              <p>Lorem ipsum dolor amet taxidermy sriracha cardigan salvia actually vice migas enamel pin sustainable carry scenester lomo hot chicken farm table actually kinfolk.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>Basic Services 5x</h4>
+              <div class="price">
+                <h6>€15.50</h6>
+                <span>monthly</span>
+              </div>
+              <p>Etiam sit amet placerat lacus, sed placerat mauris. Vestibulum malesuada vehicula sapien non tempus.</p>
+              <div class="dev"></div>
+              <ul>
+                <li><i class="fa fa-check"></i>Feature 1 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 2 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 3 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 4 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 5 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 6 Lorem ipsum</li>
+              </ul>
+              <a href="#" class="main-button">Start Plan</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>Services VPS 10x</h4>
+              <div class="price price-gradient">
+                <h6>€30.00</h6>
+                <span>monthly</span>
+              </div>
+              <p>Etiam sit amet placerat lacus, sed placerat mauris. Vestibulum malesuada vehicula sapien non tempus.</p>
+              <div class="dev"></div>
+              <ul>
+                <li><i class="fa fa-check"></i>Feature 1 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 2 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 3 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 4 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 5 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 6 Lorem ipsum</li>
+              </ul>
+              <a href="#" class="gradient-button">Select Plan</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>Advanced Services</h4>
+              <div class="price">
+                <h6>€72.25</h6>
+                <span>monthly</span>
+              </div>
+              <p>Etiam sit amet placerat lacus, sed placerat mauris. Vestibulum malesuada vehicula sapien non tempus.</p>
+              <div class="dev"></div>
+              <ul>
+                <li><i class="fa fa-check"></i>Feature 1 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 2 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 3 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 4 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 5 Lorem ipsum</li>
+                <li><i class="fa fa-check"></i>Feature 6 Lorem ipsum</li>
+              </ul>
+              <a href="#" class="main-button">Take it now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pricing Ends Here -->
+
+
+    <!-- Features Starts Here -->
+    <div class="features-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <span>{{ 'home.features.zeile1' | translate }}</span>
+              <h2>{{ 'home.features.zeile2' | translate }}</h2>
+            </div>
+          </div>
+          <ng-container *ngFor="let item of 'home.features.cards' | translate | keyvalue">
+          <div class="col-md-6">
+            <div class="feature-item">
+              <div class="icon">
+                <i><fa-icon [icon]="['fas', item.value[0] ]" size="2x"></fa-icon></i>
+              </div>
+              <h4>{{ item.key }}</h4>
+              <p>{{ item.value[1] }}</p>
+            </div>
+          </div>
+        </ng-container>
+
+        </div>
+      </div>
+    </div>
+    <!-- Features Ends Here -->

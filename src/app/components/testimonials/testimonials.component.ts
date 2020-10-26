@@ -15,27 +15,36 @@ export class TestimonialsComponent implements OnInit {
 
   testimonialsOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
     navSpeed: 700,
+    dots: true,
+    items: 1,
+    margin: 30,
+    autoplay: true,
+    smartSpeed: 700,
+    autoplayTimeout: 6000,
     navText: ['', ''],
     responsive: {
       0: {
-        items: 1
+        items: 1,
+        margin: 0
       },
-      400: {
-        items: 2
+      460: {
+        items: 1,
+        margin: 0
       },
-      740: {
-        items: 3
+      576: {
+        items: 1,
+        margin: 20
       },
-      940: {
-        items: 4
+      992: {
+        items: 1,
+        margin: 30
       }
     },
-    nav: true
+    nav: false
   }
 
 

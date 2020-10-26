@@ -14,35 +14,34 @@
             </a>
           </li>
           <li class="nav-item">
-            <a data-localize="about.aboutMnu" class="nav-link lang" href="about.html" key="about">About Us</a>
+            <a  routerLink="/projects" routerLinkActive="active" class="nav-link" href="#">{{ 'projects.projectsMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a data-localize="services.servicesMnu" class="nav-link" href="services.html">Our Services</a>
+            <a routerLink="/services" routerLinkActive="active" class="nav-link" href="#">{{ 'services.servicesMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a data-localize="contact.contactMnu" class="nav-link" href="contact.html">Contact Us</a>
+            <a routerLink="/about" routerLinkActive="active"  class="nav-link" href="#" key="about">{{ 'about.aboutMnu' | translate }}</a>
           </li>
-        </ul>
-      </div>
-      <div class="functional-buttons">
-        <ul>
-          <li><a class="translate" id="en">EN</a></li>
-          <li><a class="translate" id="de">DE</a></li>
+          <li class="nav-item">
+            <a routerLink="/contact" routerLinkActive="active"  class="nav-link" href="#">{{ 'contact.contactMnu' | translate }}</a>
+          </li>
         </ul>
       </div>
 
-      <span class="form-inline">
-        <select
-            class="form-control"
-            #selectedLang
-            (change)="switchLang(selectedLang.value)">
-          <option *ngFor="let language of translate.getLangs()"
-            [value]="language"
-            [selected]="language === translate.currentLang">
-            {{ language }}
-          </option>
-        </select>
-      </span>
+      <div type="button" class="btn btn-danger functional-buttons">
+        <span class="form-inline">
+          <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language"
+              [selected]="language === translate.currentLang">
+              {{ language }}
+            </option>
+          </select>
+        </span>
+      </div>
+      <select class="selectpicker" data-width="fit">
+        <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
+      <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
+    </select>
 
     </div>
   </nav>

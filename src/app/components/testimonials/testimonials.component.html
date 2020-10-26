@@ -4,23 +4,23 @@
     <div class="row">
       <div class="col-md-12">
         <div class="section-heading">
-          <span>Testimonials</span>
-          <h2>What they say about us</h2>
+          <span>{{ 'home.testimonials.zeile1' | translate }}</span>
+          <h2>{{ 'home.testimonials.zeile2' | translate }}</h2>
         </div>
       </div>
       <div class="col-md-10 offset-md-1">
-        <owl-carousel-o class="owl-testimonials" [options]="testimonialsOptions">
+        <owl-carousel-o [options]="testimonialsOptions" class="owl-testimonials" >
 
-          <ng-container *ngFor="let slide of 'testimonials.cards' | translate | keyvalue">
+          <ng-container *ngFor="let item of 'home.testimonials.cards' | translate | keyvalue">
             <ng-template carouselSlide>
               <div class="testimonial-item">
                 <div class="icon">
-                  <i class="fa fa-quote-right"></i>
+                  <!-- <i class="fa fa-quote-right"></i> -->
+                <i> <fa-icon [icon]="['fas', 'quote-right']"></fa-icon></i>
                 </div>
-                <p>"Ut elementum a elit sed tristique. Pellentesque sed semper erat. Orci varius natoque penatibus et
-                  magnis dis parturient montes, nascetur ridiculus mus. Aenean quam erat, rutrum ut malesuada."</p>
-                <h4>John Doe</h4>
-                <span>New Co-Founder</span>
+                <p>{{ item.value[1] }}</p>
+                <h4>{{ item.key }}</h4>
+                <span>{{ item.value[0] }}</span>
               </div>
             </ng-template>
           </ng-container>
