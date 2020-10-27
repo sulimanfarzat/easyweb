@@ -30,7 +30,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap-select/dist/js/bootstrap-select.min.js",
+              "./node_modules/bootstrap-select/dist/js/i18n/defaults-*.min.js"
+            ]
           },
           "configurations": {
             "production": {

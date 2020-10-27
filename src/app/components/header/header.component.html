@@ -2,14 +2,14 @@
 <header class="">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><h2>easy<em>2edi</em></h2></a>
+      <a routerLink="/" class="navbar-brand" href="#"><h2>easy<em>2edi</em></h2></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link lang" href="index.html" key="home">Home
+            <a routerLink="/" class="nav-link lang" href="#" key="home">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
@@ -28,20 +28,35 @@
         </ul>
       </div>
 
-      <div type="button" class="btn btn-danger functional-buttons">
-        <span class="form-inline">
-          <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
-            <option *ngFor="let language of translate.getLangs()" [value]="language"
-              [selected]="language === translate.currentLang">
-              {{ language }}
-            </option>
+
+      <div class="row">
+        <div class="col">
+          <span>
+            <select #selectedLang (change)="switchLang(selectedLang.value)">
+              <option *ngFor="let language of translate.getLangs()" [value]="language"
+                [selected]="language === translate.currentLang" >
+                {{ language }}
+                <img src="assets/images/svg/deutschland.svg" />
+              </option>
+            </select>
+          </span>
+
+          <select class="selectpicker">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Barbecue</option>
           </select>
-        </span>
+
+
+
+
+
+        </div>
       </div>
-      <select class="selectpicker" data-width="fit">
-        <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
-      <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
-    </select>
+
+
+
+
 
     </div>
   </nav>
