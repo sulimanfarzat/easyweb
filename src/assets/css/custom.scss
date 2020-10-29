@@ -294,7 +294,10 @@ header {
 
 }
 .navbar .navbar-toggler-icon {
-	background-image: none;
+  background-image: none;
+  color: #51BAA7;
+	font-size: 24px;
+	line-height: 26px;
 }
 .navbar .navbar-toggler {
 	border-color: #fff;
@@ -307,7 +310,7 @@ header {
 	top: 20px;
 }
 .navbar .navbar-toggler-icon:after {
-	content: '\f0c9';
+	/*content: '\f0c9';*/
 	color: #51BAA7;
 	font-size: 18px;
 	line-height: 26px;

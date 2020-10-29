@@ -1,35 +1,40 @@
 <!-- Header -->
-<header class="">
+<header class="" id="header">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a routerLink="/" class="navbar-brand" href="#"><h2>easy<em>2edi</em></h2></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      </button> -->
+      <button type="button" class="navbar-toggler" (click)="isMenuCollapsed = !isMenuCollapsed"
+      [attr.aria-expanded]="!isMenuCollapsed" aria-controls="navbarResponsive">
+      <span class="navbar-toggler-icon">&#9776;</span>
+</button>
+      <div class="collapse navbar-collapse" id="navbarResponsive" [ngbCollapse]="isMenuCollapsed">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a routerLink="/" class="nav-link lang" href="#" key="home">Home
+            <a routerLink="/" class="nav-link lang" href="#" key="home" (click)="isMenuCollapsed = true">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a  routerLink="/projects" routerLinkActive="active" class="nav-link" href="#">{{ 'projects.projectsMnu' | translate }}</a>
+            <a routerLink="/services" routerLinkActive="active" class="nav-link" href="#" (click)="isMenuCollapsed = true">{{ 'services.servicesMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/services" routerLinkActive="active" class="nav-link" href="#">{{ 'services.servicesMnu' | translate }}</a>
+            <a  routerLink="/projects" routerLinkActive="active" class="nav-link" href="#" (click)="isMenuCollapsed = true">{{ 'projects.projectsMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/about" routerLinkActive="active"  class="nav-link" href="#" key="about">{{ 'about.aboutMnu' | translate }}</a>
+            <a routerLink="/about" routerLinkActive="active"  class="nav-link" href="#" key="about" (click)="isMenuCollapsed = true">{{ 'about.aboutMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/contact" routerLinkActive="active"  class="nav-link" href="#">{{ 'contact.contactMnu' | translate }}</a>
+            <a routerLink="/contact" routerLinkActive="active"  class="nav-link" href="#" (click)="isMenuCollapsed = true">{{ 'contact.contactMnu' | translate }}</a>
           </li>
         </ul>
       </div>
 
 
-      <div class="row">
+
+      <div class="row functional-buttons" (click)="isMenuCollapsed = true">
         <div class="col">
           <span>
             <select #selectedLang (change)="switchLang(selectedLang.value)">
@@ -40,17 +45,6 @@
               </option>
             </select>
           </span>
-
-          <select class="selectpicker">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Barbecue</option>
-          </select>
-
-
-
-
-
         </div>
       </div>
 

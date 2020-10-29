@@ -10,21 +10,30 @@
           <p>easy2edi Schäfer</p>
           <p>Philippe Schäfer<br>
             Am Gewerbepark 7<br>
-            64823 Groß-Umstadt</p>
+            64823 Groß-Umstadt<br>
+            DE</p>
         </div>
       </div>
 
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="footer-item">
           <div class="footer-heading">
-            <h2>Hosting Plans</h2>
+            <h2>Menus</h2>
           </div>
           <ul class="footer-list">
-            <li><a href="#">Basic Services 5X</a></li>
-            <li><a href="#">Services VPS 10X</a></li>
-            <li><a href="#">Advanced Services</a></li>
-            <li><a href="#">Custom Services</a></li>
-            <li><a href="#">Special Solutions</a></li>
+            <li><a routerlink="/" href="#">{{ 'home.homeMnu' | translate }}</a></li>
+            <li class="nav-item">
+              <a  routerLink="/services" routerLinkActive="active" href="#">{{ 'services.servicesMnu' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a  routerLink="/projects" routerLinkActive="active" >{{ 'projects.projectsMnu' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a  routerLink="/about" routerLinkActive="active" href="#">{{ 'about.aboutMnu' | translate }}</a>
+            </li>
+            <li class="nav-item">
+              <a  routerLink="/contact" routerLinkActive="active" href="#">{{ 'contact.contactMnu' | translate }}</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -36,11 +45,17 @@
             <h2>Useful Links</h2>
           </div>
           <ul class="footer-list">
-            <li><a href="#">EDI Platform</a></li>
-            <li><a href="#">EDI Wissen</a></li>
-            <li><a href="#">Content EDI</a></li>
-            <li><a href="#">EDI Customer Support</a></li>
-            <li><a href="#">Latest EDI News</a></li>
+            <li><a target="_blank" href="https://www.gs1-germany.de/">GS1 Germany</a></li>
+            <li><a target="_blank" href="https://edi-wissen.de/">EDI Wissen</a></li>
+            <li><a target="_blank" href="https://www.lobster-world.com/">Lobster GmbH EDI &amp; EAI</a></li>
+            <li><a target="_blank" href="https://www.seeburger.com/platform/business-integration-suite/">Seeburger BIS</a></li>
+            <li><a target="_blank" href="https://it.farzat.co/">FARZAT it solutions</a></li>
+            <li><a target="_blank" href="https://www.mmc-media.de/">MMC - Media</a></li>
+            <li><a target="_blank" href="https://www.vda.de/de/services/Publikationen.html">VDA</a></li>
+            <li><a target="_blank" href="https://de.wikipedia.org/wiki/ZUGFeRD">ZUGFeRD</a></li>
+            <li><a target="_blank" href="https://www.google.com/search?client=ubuntu&amp;hs=QEp&amp;channel=fs&amp;biw=1542&amp;bih=760&amp;tbm=nws&amp;sxsrf=ALeKk03mQeeYFk8HMOzAVbcDhni8NTO_qg%3A1602939306819&amp;ei=qumKX8HPMZiEhbIPuuiguAg&amp;q=Latest+Electronic+Data+Interchange+News&amp;oq=Latest+Electronic+Data+Interchange+News&amp;gs_l=psy-ab.3...0.0.0.6372.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.UeR9VdMF8cg">Latest EDI News</a></li>
+            <li></li>
+
           </ul>
         </div>
       </div>
@@ -48,13 +63,16 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="footer-item">
           <div class="footer-heading">
-            <h2>More Information</h2>
+            <h2>{{ 'contact.contactMnu'| translate }}</h2>
           </div>
           <ul class="footer-list">
-            <li>Phone: <a href="#">+49 6078 9307344</a></li>
-            <li>Email: <a href="#">philippe.schaefer@easy2edi.de</a></li>
-            <li>Support: <a href="#">support@company.com</a></li>
-            <li>Website: <a href="#">www.easy2edi.de</a></li>
+            <li><fa-icon [icon]="['fas', 'phone']"></fa-icon><a href="tel:+49 6078 9307344">+49 6078 9307344</a></li>
+            <li><fa-icon [icon]="['fab', 'whatsapp']"></fa-icon><a href="tel:+49 6078 9307344">+49 6078 9307344</a></li>
+            <li style="letter-spacing: 0;"><fa-icon [icon]="['fas', 'envelope']"></fa-icon><a href="mailto:philippe.schaefer@easy2edi.de?subject=Mail from easy2edi Site&amp;body=Hallo Herr Schäfer,">philippe.schaefer@easy2edi.de</a></li>
+            <li><fa-icon [icon]="['fas', 'question-circle']"></fa-icon><a href="mailto:info@easy2edi.de?subject=Mail from easy2edi Site&amp;body=Hallo Herr Schäfer,">info@easy2edi.de</a></li>
+            <li><fa-icon [icon]="['fas', 'globe-europe ']"></fa-icon><a href="https://easy2edi.de/" target="_blank">www.easy2edi.de</a></li>
+            <li><fa-icon [icon]="['fab', 'xing']"></fa-icon><a href="https://www.xing.com/profile/Philippe_Schaefer" target="_blank">Xing: Philippe_Schaefer</a></li>
+            <li></li>
           </ul>
         </div>
       </div>
