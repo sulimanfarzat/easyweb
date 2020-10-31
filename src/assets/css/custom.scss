@@ -90,14 +90,24 @@ a.gradient-button:hover {
 }
 
 .page-heading {
-	background-image: url(../images/heading-bg.png);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	text-align: center;
+	background-image: url(../images/svg/heading-sm.svg),  url(../images/heading-bg.png);
+	background-position: 90% 70%, center center;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 540px, cover;
 	padding: 230px 0px 180px 0px;
 }
-
+.page-heading .caption {
+	text-align: left;
+}
+.page-heading .caption h2 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 0px;
+	margin-bottom: 50px;
+	font-size: 40px;
+	font-weight: 600;
+	color: #3B3B3B;
+}
 .page-heading h1 {
 	color: #3B3B3B;
 	font-size: 44px;
@@ -1065,7 +1075,10 @@ footer .sub-footer a {
 		margin-right: 15px;
 		margin-left: 15px;
 		margin-bottom: 15px;
-	}
+  }
+  .banner, .page-heading{
+    background-position: 100% 70%, center center;
+  }
 }
 @media (max-width: 991px) {
 	.navbar .navbar-brand {
@@ -1140,8 +1153,18 @@ footer .sub-footer a {
 		margin-left: 0px;
   }
   .banner {
-    background-size: 400px, cover;
+    background-size: 420px, cover;
     background-position: right bottom, center center;
+  }
+  .banner .caption {
+    margin-top: -85px;
+  }
+  .page-heading  {
+    background-size: 480px, cover;
+    background-position: right bottom, center center;
+  }
+  .page-heading .caption  {
+    margin-bottom: 200px;
   }
 }
 
@@ -1155,14 +1178,23 @@ footer .sub-footer a {
 	footer .sub-footer {
 		margin-top: 20px;
   }
-  .banner {
-    background-size: 320px, cover;
+  .banner{
+    background-size: 350px, cover;
+    background-position: center bottom, center center;
   }
   .banner .caption {
     text-align: center;
-    margin-top: -85px;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
+  .page-heading {
+    background-size: 420px, cover;
+    background-position: center bottom, center center;
+  }
+  .page-heading .caption  {
+    text-align: center;
+  }
+
+
 }
 
 
@@ -1188,9 +1220,6 @@ footer .sub-footer a {
 	.background-header .functional-buttons	ul li:first-child a {
 		padding: 6px 10px;
 		letter-spacing: 0px;
-  }
-  .banner {
-    background-position: center bottom, center center;
   }
 
 }

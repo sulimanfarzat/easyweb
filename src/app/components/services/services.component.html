@@ -1,16 +1,90 @@
 <!-- Page Content -->
     <!-- Heading Starts Here -->
-    <div class="page-heading header-text">
+    <div class="page-heading">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <h1>Our Services</h1>
-            <p><a href="index.html">Home</a> / <span>Our Services</span></p>
+          <div class="col-md-8">
+            <div class="header-text caption">
+              <h2>{{ 'services.hauptSatz.zeile1' | translate }} </h2>
+                <p class="lead" key="start_section">
+                {{ 'services.hauptSatz.zeile3' | translate }}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Heading Ends Here -->
+
+
+    <!-- Pricing Starts Here -->
+    <div class="pricing-section">
+      <div class="background-image-pricing">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="section-heading">
+              <h2>{{ 'services.hauptSatz.zeile2' | translate }}</h2>
+              <p>Lorem ipsum dolor amet taxidermy sriracha cardigan salvia actually vice migas enamel pin sustainable carry scenester lomo hot chicken farm table actually kinfolk.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>{{ 'services.card1.title' | translate }}</h4>
+              <div class="price">
+                <h6>{{ 'services.card1.subTitle' | translate }}</h6>
+                <span>Consulting</span>
+              </div>
+              <p>{{ 'services.card1.description' | translate }}</p>
+              <div class="dev"></div>
+              <ul>
+                <ng-container *ngFor="let item of 'services.card1.lobster' | translate ">
+                  <li><i><fa-icon [icon]="['fas', 'check']"></fa-icon></i>{{item}}</li>
+                </ng-container>
+              </ul>
+              <a href="#" class="main-button">{{ 'services.cardButton' | translate }}</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>{{ 'services.card2.title' | translate }}</h4>
+              <div class="price price-gradient">
+                <h6>{{ 'services.card2.subTitle' | translate }}</h6>
+                <span>Consulting</span>
+              </div>
+              <p>{{ 'services.card2.description' | translate }}</p>
+              <div class="dev"></div>
+              <ul>
+                <ng-container *ngFor="let item of 'services.card2.allgemeines' | translate ">
+                  <li><i><fa-icon [icon]="['fas', 'check']"></fa-icon></i>{{item}}</li>
+                </ng-container>
+              </ul>
+              <a href="#" class="gradient-button">{{ 'services.cardButton' | translate }}</a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="pricing-item">
+              <h4>{{ 'services.card3.title' | translate }}</h4>
+              <div class="price">
+                <h6>{{ 'services.card3.subTitle' | translate }}</h6>
+                <span>Consulting</span>
+              </div>
+              <p>{{ 'services.card3.description' | translate }}</p>
+              <div class="dev"></div>
+              <ul>
+                <ng-container *ngFor="let item of 'services.card3.seeburger' | translate ">
+                  <li><i><fa-icon [icon]="['fas', 'check']"></fa-icon></i>{{item}}</li>
+                </ng-container>
+              </ul>
+              <a href="#" class="main-button">{{ 'services.cardButton' | translate }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pricing Ends Here -->
+
+
 
 
     <!-- Services Starts Here -->

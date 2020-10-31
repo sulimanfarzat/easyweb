@@ -79,60 +79,79 @@
   "services": {
     "servicesMnu": "Services",
     "hauptSatz": {
-      "zeile1": "EDI Services und mehr ...",
+      "zeile1": "EDI Services and more",
       "zeile2": "Best Services We Provide! ",
       "zeile3": "Exchange data easier and faster! Optimize communication with your customers and suppliers. Read our case study to learn how you can automate the exchange of data with our high-performance Business Integration Platform."
     },
+    "cardButton": "Offer request",
     "card1": {
       "title": "Who has time for complicated?",
-      "subTitle": "Lobster _data Consulting",
+      "subTitle": "Lobster _data",
       "description": "Data conversion. Data mapping. Data manipulation. Transfer your data to your target system. No crossing your fingers. No holding your breath. No worries. With lobster_data.",
       "lobster": [
         "EDI Clearing",
         "Partner Onboarding (AS2, OFTP(2), http(s)...)",
-        "Entwicklung EDI/EAI Prozesse",
-        "Entwicklung Profile & Mappings",
-        "API/Webservice Anbindung",
-        "Schulungen & Workshops",
-        "Portal Entwicklung _data"
-      ],
-      "button": "Angebot anfordern"
+        "Development of EDI/EAI processes",
+        "Development Profiles & Mappings",
+        "API/Web Service Connection",
+        "Training & Workshops",
+        "Portal Development _data"
+      ]
     },
     "card2": {
       "title": "Fullest support",
-      "subTitle": "Allgemeines EDI/IT Consulting",
+      "subTitle": "Allgemeines EDI/IT",
       "description": "Present concepts that all deal with the interaction of different parts of the IT landscape of one or more related companies.",
       "allgemeines": [
-        "EDI/EAI Anforderungsmanagement",
-        "EDI/EAI Projekbegleitung",
-        "EDI/EAI Prozessmanagement",
-        "Tests & Do´kumentation",
-        "Guideline & Papermapping Erstellung",
-        "EDI/EAI Schnittstellendefinition & Erstellung",
+        "EDI/EAI Requirements Management",
+        "EDI/EAI project support",
+        "EDI/EAI Process Management",
+        "Tests & Documentation",
+        "Guideline & Papermapping Creation",
+        "EDI/EAI Interface Definition & Creation",
         "EDI Workshops",
         "1st/2nd Level Support & Client Service "
-      ],
-      "button": "Angebot anfordern"
+      ]
     },
       "card3": {
         "title": "Your Central Platform for Digital Transformation",
-        "subTitle": "Seeburger BIS Consulting",
+        "subTitle": "Seeburger BIS",
         "description" : "SEEBURGER Business Integration Suite – The Hybrid Integration Platform One Platform for Full Life Cycle API Management and Any Integration Requirement.",
         "seeburger": [
-        "EDI Clearing",
-        "Partner Onboarding",
-        "Mapping Erstellung/Modifikation",
-        "Prozessdesign & Modifikation BIS/BIC",
-        "EDI/EAI Schnittstellenentwicklung",
-        "Workflowdesigner BIS5.x",
-        "Migrationserfahrung BIS5 / BIS6 inkl. Mappings"
-      ],
-      "button": "Angebot anfordern"
+          "EDI Clearing",
+          "Partner Onboarding",
+          "Mapping Creation/Modification",
+          "Process Design & Modification BIS/BIC",
+          "EDI/EAI interface development",
+          "Workflow Designer BIS5.x",
+          "Migration Experience BIS5 / BIS6 incl. Mappings"
+      ]
     }
   },
 
   "projects": {
-    "projectsMnu": "Projects"
+    "projectsMnu": "Projects",
+    "zeile1": "we make your business Projects a reality",
+    "zeile2": "Our real work begins after implementing the project represented by providing the highest levels of support.",
+    "zeile3": "more than 10 years experience",
+    "zeile4": " In addition to technology, we are happy to place our know-how and many years of experience in project management at your disposal and ensure that your business runs smoothly from planning to implementation.",
+    "title": "PROJEKTHISTORIE",
+    "historie": {
+      "1": [
+        "EDI/EAI Senior Consultant Lobster _data",
+        "Fritz Logistik GmbH",
+        "Transport und Logistik",
+        "06/2019 - bis jetzt",
+        "- Initiale System- und Umgebungsanalyse inkl. Optimierung (Prozesse, Konfiguration etc.)",
+        "- Administration, Konfiguration & Support der Lobster _data Instanzen",
+        "- EDI/EAI Prozessberatung und Entwicklung",
+        "- EDI/EAI Kommunikationsanbindungen",
+        "- Entwicklung & Support _data Profile/Mappings",
+        "- Prozess- und Anforderungmanagement",
+        "-.Schulungen/Workshops Remote",
+        "- Dokumentation"
+      ]
+    }
   },
 
   "about": {
