@@ -1,6 +1,7 @@
 {
   "name": "easy2edi",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Suliman Farzat",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

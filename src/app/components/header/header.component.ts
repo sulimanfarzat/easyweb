@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   public isMenuCollapsed = true;
   y = window.scrollY;
-  myID = document.getElementById("header");
+  //myID = document.getElementById("header");
   //myID2 = document.getElementById("header2");
 
   constructor(public translate: TranslateService) {
@@ -30,16 +30,16 @@ export class HeaderComponent implements OnInit {
 
 
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll($event) {
-          if (this.y >= 150) {
-          //this.myID2.className = "background-header"
-          this.myID.className = "background-header";
-        } else {
-          //this.myID2.className = "bottomMenu show"
-          this.myID.className = "background-header";
-        }
-}
+//   @HostListener('window:scroll', ['$event'])
+//   onWindowScroll($event) {
+//           if (this.y >= 150) {
+//           //this.myID2.className = "background-header"
+//           this.myID.className = "background-header";
+//         } else {
+//           //this.myID2.className = "bottomMenu show"
+//           this.myID.className = "background-header";
+//         }
+// }
 
 
 

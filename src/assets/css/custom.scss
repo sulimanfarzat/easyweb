@@ -38,7 +38,7 @@ a.main-button {
 	transition: all 0.5s;
 }
 a.main-button:hover {
-	background-color: #4C96B3; //#00a4b9;
+	background-color: #3B3B3B; //#4C96B3#00a4b9;
 }
 a.gradient-button {
 	outline: none;
@@ -91,7 +91,7 @@ a.gradient-button:hover {
 
 .page-heading {
 	background-image: url(../images/svg/heading-sm.svg),  url(../images/heading-bg.png);
-	background-position: 90% 70%, center center;
+	background-position: 95% 150%, center center;
 	background-repeat: no-repeat, no-repeat;
 	background-size: 540px, cover;
 	padding: 230px 0px 180px 0px;
@@ -219,7 +219,7 @@ header {
 	width: 100%;
 	background-color: transparent!important;
 	border-bottom: 1px solid rgba(250,250,250,0.30);
-	height: 80px;
+	height: 108px; /*80px;*/
 	-webkit-transition: all .5s ease 0s;
     -moz-transition: all .5s ease 0s;
     -o-transition: all .5s ease 0s;
@@ -227,7 +227,8 @@ header {
 }
 .background-header {
 	background-color: #fff!important;
-	box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+  height: 136px;
 }
 .background-header .navbar-brand h2 {
 	color: #3B3B3B!important;
@@ -372,11 +373,11 @@ header {
 
 /* Banner Style */
 .banner {
-  background-image: url(../images/svg/data-points-animate.svg), url(../images/background.png);
-	background-size: 420px, cover;
-	background-repeat: no-repeat, no-repeat;
+  background-image: url(../images/svg/data-points-animate.svg), url(../images/svg/in-progress.svg), url(../images/background.png) ;
+	background-size: 420px, 420px, cover;
+	background-repeat: no-repeat, no-repeat, no-repeat;
 	padding: 300px 0px;
-  background-position: 90% 70%, center center;
+  background-position: 90% 70%, 30% 100%, center center ;
 }
 .banner .caption {
 	text-align: left;
@@ -484,7 +485,8 @@ header {
 
 /* Trusted Style */
 .trusted-section {
-	padding: 100px 0px 100px 0px;
+  /*padding: 100px 0px 100px 0px;*/
+  padding: 50px 0px 40px 0px;
 	background-color: #f7f7f7;
 }
 .trusted-section-heading {
@@ -761,7 +763,7 @@ header {
 /* Footer Style */
 footer {
   //background-image: url(../images/footer-bg.jpg);
-  background-color: #171717;
+  background-color: #122932; /*#171717;*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -897,7 +899,7 @@ footer .sub-footer a {
 	margin-top: 140px;
 }
 .team-section .section-heading {
-	text-align: center;
+	text-align: left;
 }
 .team-section .section-heading h2 {
 	color: #3B3B3B;
@@ -910,21 +912,29 @@ footer .sub-footer a {
 	margin-bottom: 30px;
 }
 .team-item img {
-	width: 100%;
+	width: 329px;
 	overflow: hidden;
 	transition: all 0.5s;
 }
+.team-section .right-image {
+	margin-left: 30px;
+}
+.team-section .left-content {
+	margin-right: 18px;
+}
+
 .team-item .down-content {
 	background-color: #f7f7f7;
 	text-align: center;
-	padding: 30px;
+  padding: 30px;
+	width: 329px;
 }
 .team-item h4 {
 	font-size: 19px;
 	font-weight: 700;
 	color: #3B3B3B;
 	letter-spacing: 0.5px;
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 .team-item span {
 	display: inline-block;
@@ -955,6 +965,7 @@ footer .sub-footer a {
 	padding-bottom: 40px;
 }
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
 	letter-spacing: 0.5px;
 	font-weight: 500;
@@ -1004,7 +1015,7 @@ footer .sub-footer a {
 	transition: all 0.5s;
 }
 .contact-form button:hover {
-	background-color: #00a4b9;
+	background-color: #3B3B3B;
 }
 .contact-us .right-content ul {
 	padding: 0;
@@ -1076,9 +1087,14 @@ footer .sub-footer a {
 		margin-left: 15px;
 		margin-bottom: 15px;
   }
+  .banner{
+    background-image: url(../images/svg/data-points-animate.svg), url(../images/background.png) ;
+    background-size: 420px, cover;
+  }
   .banner, .page-heading{
     background-position: 100% 70%, center center;
   }
+
 }
 @media (max-width: 991px) {
 	.navbar .navbar-brand {
@@ -1166,6 +1182,9 @@ footer .sub-footer a {
   .page-heading .caption  {
     margin-bottom: 200px;
   }
+  .background-header {
+    height: 108px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1220,6 +1239,9 @@ footer .sub-footer a {
 	.background-header .functional-buttons	ul li:first-child a {
 		padding: 6px 10px;
 		letter-spacing: 0px;
+  }
+  .team-section .right-image {
+    margin-left: 0px;
   }
 
 }

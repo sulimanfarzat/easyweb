@@ -1,15 +1,55 @@
 <!-- Header -->
+
+
 <header class="" id="header">
+
+  <div class="stickynav-tease hidden-sm hidden-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          easy2edi Support:
+          <span class="ml-4">
+            <i>
+              <fa-icon [icon]="['fas', 'phone']"></fa-icon>
+            </i>
+            <a class="ml-1" href="tel:+49 6078 9307344">+49 6078 9307344</a>
+          </span>
+
+
+          <span class="ml-4">
+            <i>
+              <fa-icon [icon]="['far', 'envelope']"></fa-icon>
+            </i>
+            <a class="ml-1" href="mailto:philippe.schaefer@easy2edi.de?subject=Mail from easy2edi Site&amp;body=Hallo Herr Schäfer,">philippe.schaefer@easy2edi.de</a>
+          </span>
+        </div>
+        <div class="col-md-6">
+          <div class="float-right">
+            <a target="_blank" rel="nofollow" href="https://outlook.office365.com/owa/calendar/easy2edischaefer@easy2edi.de/bookings/">
+              <i>
+                <fa-icon [icon]="['far', 'calendar-check']"></fa-icon>
+              </i>
+              {{ 'header.termin' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a routerLink="/" class="navbar-brand" href="#"><h2>easy<em>2edi</em></h2></a>
+      <a routerLink="/" class="navbar-brand" href="#">
+        <img src="./assets/images/logo/SmallLogo.png" style="margin-top: -10px;" width="150" alt="easy2edi">
+      </a>
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> -->
       <button type="button" class="navbar-toggler" (click)="isMenuCollapsed = !isMenuCollapsed"
-      [attr.aria-expanded]="!isMenuCollapsed" aria-controls="navbarResponsive">
-      <span class="navbar-toggler-icon">&#9776;</span>
-</button>
+        [attr.aria-expanded]="!isMenuCollapsed" aria-controls="navbarResponsive">
+        <span class="navbar-toggler-icon">&#9776;</span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive" [ngbCollapse]="isMenuCollapsed">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">

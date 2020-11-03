@@ -1,104 +1,103 @@
-<!-- Page Content --><!-- Heading Starts Here -->
+<!-- Page Content -->
+<!-- Heading Starts Here -->
 
 <div class="page-heading header-text">
   <div class="container">
-  <div class="row">
-  <div class="col-md-12">
-  <h1 class="lang" key="about">About Us</h1>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="caption">
+          <h2>{{ 'about.zeile1' | translate }} </h2>
+                <p class="lead" key="start_section">
+                {{ 'about.zeile2' | translate }}</p>
+           <br><br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Heading Ends Here -->
 
-  <p><a href="index.html">Home</a> / <span>About Us</span></p>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- Heading Ends Here --><!-- About Us Starts Here -->
+<!-- About Us Starts Here -->
 
-  <div class="about-us">
+<div class="about-us">
   <div class="container">
-  <div class="row">
-  <div class="col-md-6">
-  <div class="left-image"><img alt="" src="assets/images/our-team.jpg" /></div>
-  </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="left-image"><img alt="" src="assets/images/our-team.jpg" /></div>
+      </div>
 
-  <div class="col-md-6">
-  <div class="right-content">
-  <div class="section-heading"><span>About Us</span>
+      <div class="col-md-6">
+        <div class="right-content">
+          <div class="section-heading">
+            <span>{{ 'about.aboutMnu' | translate }}</span>
 
-  <h2>Background of our company</h2>
+            <h2>{{ 'about.aboutNav.title.0' | translate }}</h2>
 
-  <p>Duis sit amet nibh non sapien tincidunt bibendum. Curabitur rutrum justo id leo ornare, suscipit lobortis augue volutpat. Sed ligula arcu, interdum eu magna eget, tristique aliquet nibh.</p>
-  </div>
+            <p>{{ 'about.aboutNav.description' | translate }}</p>
+          </div>
 
-  <div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Our History</a></li>
-    <li><a href="#tabs-2">Our Vision</a></li>
-    <li><a href="#tabs-3">Our EDI</a></li>
-  </ul>
+          <div id="tabs" class="tabs-content">
+            <ul ngbNav #nav="ngbNav" class="nav-pills nav">
+              <li [ngbNavItem]="1">
+                <a href="#tabs-1" ngbNavLink>{{ 'about.aboutNav.title.1' | translate }}</a>
+                <ng-container>
+                  <ng-template ngbNavContent>
+                    <p>{{ 'about.aboutNav.history.0' | translate }}</p>
+                    <p>{{ 'about.aboutNav.history.1' | translate }}</p>
+                    <p>{{ 'about.aboutNav.history.2' | translate }}</p>
+                    <p>{{ 'about.aboutNav.history.3' | translate }}</p>
+                  </ng-template>
+              </ng-container>
+              </li>
+              <li [ngbNavItem]="2">
+                <a href="#tabs-2" ngbNavLink>{{ 'about.aboutNav.title.2' | translate }}</a>
+                <ng-template ngbNavContent>
+                  <p>{{ 'about.aboutNav.vision' | translate }}</p>
+                </ng-template>
+              </li>
+            </ul>
 
-  <section class="tabs-content">
-  <article id="tabs-1">
-  <p>Ut elementum a elit sed tristique. Pellentesque sed semper erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean quam erat, rutrum ut malesuada a, commodo vitae lectus. Integer volutpat sapien in arcu fringilla, ac eleifend est facilisis.<br />
-  <br />
-  Phasellus finibus lacus eu scelerisque rutrum. Duis purus eros, blandit ultricies iaculis in, commodo quis lacus. Pellentesque interdum varius enim nec accumsan.</p>
-  </article>
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
 
-  <article id="tabs-2">
-  <p>Aenean molestie, odio quis viverra ultricies, leo tellus lacinia neque, sit amet maximus tortor nunc aliquet felis. Duis sit amet nibh non sapien tincidunt bibendum. Curabitur rutrum justo id leo ornare, suscipit lobortis augue volutpat.<br />
-  <br />
-  Sed ligula arcu, interdum eu magna eget, tristique aliquet nibh. Aenean sodales justo vitae ex pharetra, vitae tincidunt dolor condimentum. Cras vel mattis risus.</p>
-  </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Us Ends Here -->
+<!-- Team Starts Here -->
 
-  <article id="tabs-3">
-  <p>Fusce in semper velit, at tempus augue. Morbi quis auctor ipsum, ut accumsan neque. Vivamus dapibus ipsum placerat ante commodo, eget suscipit tortor hendrerit. Quisque lacinia sed velit et maximus.<br />
-  <br />
-  Quisque dictum, lacus a malesuada finibus, arcu magna luctus risus, eu accumsan risus elit vitae lacus. Vestibulum et lorem non erat efficitur iaculis ut nec nibh. Vestibulum mauris ipsum, tempor tincidunt justo sit amet, bibendum tincidunt dui.</p>
-  </article>
-  </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- About Us Ends Here --><!-- Team Starts Here -->
-
-  <div class="team-section">
+<div class="team-section">
   <div class="container">
-  <div class="row">
-  <div class="col-md-8 offset-md-2">
-  <div class="section-heading"><span>Our Team</span>
+    <div class="row">
 
-  <h2>Meet the greatest people</h2>
 
-  <p>Integer blandit, tellus varius vulputate cursus, purus orci tincidunt tortor, eget tincidunt elit justo non leo. Donec mollis nulla id est suscipit, ut laoreet nibh faucibus.</p>
-  </div>
-  </div>
 
-  <div class="col-md-4 col-sm-6 col-xs-12">
-  <div class="team-item"><img alt="" src="assets/images/team-01.jpg" />
-  <div class="down-content">
-  <h4>John Doe</h4>
-  <span>Co-Founder</span></div>
-  </div>
-  </div>
+      <div class="col-md-6">
+        <div class="left-content">
+        <div class="section-heading">
+          <span>{{ 'about.team.title' | translate }}</span>
 
-  <div class="col-md-4 col-sm-6 col-xs-12">
-  <div class="team-item"><img alt="" src="assets/images/team-02.jpg" />
-  <div class="down-content">
-  <h4>John Doe</h4>
-  <span>Co-Founder</span></div>
-  </div>
-  </div>
+          <h2>{{ 'about.team.subTitle' | translate }}</h2>
 
-  <div class="col-md-4 col-sm-6 col-xs-12">
-  <div class="team-item"><img alt="" src="assets/images/team-03.jpg" />
-  <div class="down-content">
-  <h4>John Doe</h4>
-  <span>Co-Founder</span></div>
+          <p>{{ 'about.team.description1' | translate }}</p>
+          <p>{{ 'about.team.description2' | translate }}</p>
+        </div>
+      </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="team-item right-image"><img alt="Philippe Schäfer" src="assets/images/Philippe.jpg" />
+          <div class="down-content">
+            <h4>Philippe Schäfer</h4>
+            <span>Co-Founder</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- Team Ends Here -->
+</div>
+<!-- Team Ends Here -->

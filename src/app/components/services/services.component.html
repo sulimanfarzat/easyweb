@@ -1,13 +1,14 @@
 <!-- Page Content -->
     <!-- Heading Starts Here -->
-    <div class="page-heading">
+    <div class="page-heading header-text">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <div class="header-text caption">
+            <div class=" caption">
               <h2>{{ 'services.hauptSatz.zeile1' | translate }} </h2>
                 <p class="lead" key="start_section">
                 {{ 'services.hauptSatz.zeile3' | translate }}</p>
+                <br><br><br><br>
             </div>
           </div>
         </div>
@@ -22,15 +23,17 @@
       </div>
       <div class="container">
         <div class="row">
+
           <div class="col-md-8 offset-md-2">
             <div class="section-heading">
               <h2>{{ 'services.hauptSatz.zeile2' | translate }}</h2>
-              <p>Lorem ipsum dolor amet taxidermy sriracha cardigan salvia actually vice migas enamel pin sustainable carry scenester lomo hot chicken farm table actually kinfolk.</p>
+              <p></p>
             </div>
           </div>
+
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="pricing-item">
-              <h4>{{ 'services.card1.title' | translate }}</h4>
+              <h4>{{ 'services.card1.title' | translate }}</h4><br>
               <div class="price">
                 <h6>{{ 'services.card1.subTitle' | translate }}</h6>
                 <span>Consulting</span>
@@ -42,9 +45,11 @@
                   <li><i><fa-icon [icon]="['fas', 'check']"></fa-icon></i>{{item}}</li>
                 </ng-container>
               </ul>
-              <a href="#" class="main-button">{{ 'services.cardButton' | translate }}</a>
+              <a class="main-button" (click)="open(content, 'lobster _data' )">{{ 'services.cardButton' | translate }}</a>
+              <!-- <pre>{{ closeResult }}</pre> -->
             </div>
           </div>
+
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="pricing-item">
               <h4>{{ 'services.card2.title' | translate }}</h4>
@@ -62,6 +67,7 @@
               <a href="#" class="gradient-button">{{ 'services.cardButton' | translate }}</a>
             </div>
           </div>
+
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="pricing-item">
               <h4>{{ 'services.card3.title' | translate }}</h4>
@@ -79,9 +85,93 @@
               <a href="#" class="main-button">{{ 'services.cardButton' | translate }}</a>
             </div>
           </div>
+
         </div>
       </div>
     </div>
+
+    <!-- models -->
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">{{ product }} Angebot einholen</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom01">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom02">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom03">City</label>
+              <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom04">State</label>
+              <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="validationCustom05">Zip</label>
+              <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="dateOfBirth">Date</label>
+            <div class="input-group">
+              <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark btn-primary" (click)="modal.close('Save click')">Save</button>
+      </div>
+    </ng-template>
+
+
+
     <!-- Pricing Ends Here -->
 
 

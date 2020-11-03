@@ -1,4 +1,7 @@
 {
+  "header": {
+    "termin": "Direkt Termin vereinbaren"
+    },
   "home": {
     "homeMnu": "Home",
     "hauptSatz": {
@@ -150,7 +153,7 @@
           "- EDI/EAI Kommunikationsanbindungen",
           "- Entwicklung & Support _data Profile/Mappings",
           "- Prozess- und Anforderungmanagement",
-          "-.Schulungen/Workshops Remote",
+          "- Schulungen/Workshops Remote",
           "- Dokumentation"
         ]
       ],
@@ -259,9 +262,11 @@
 
   "about": {
     "aboutMnu": "Über uns",
+    "zeile1": "Erfahrungen über die Jahre",
+    "zeile2": "Unsere Erfahrung ist das Ergebnis jahrelanger direkter Arbeit im Projektmanagement und in der Projektdurchführung, zusätzlich zu unserer Professionalität im Umgang mit der Verwaltung täglicher Probleme.",
     "aboutNav" : {
       "title" : ["Das Unternehmen", "Entstehung", "Unsere Vision"],
-      "description" : "xxxxx",
+      "description" : "easy2edi Schäfer ist ein Startup-Unternehmen, das elektronische Datenaustauschdienste und andere informationstechnologische Dienstleistungen anbietet, die auf umfassenden und praktischen Erfahrungen auf dem Arbeitsmarkt basieren.",
       "history":["Gründer: Philippe Schäfer, geboren 02.02.1976",
                 "Gründungsjahr: 2019",
                 "Gründungsort: Groß-Umstadt",
@@ -280,7 +285,7 @@
     "contactMnu": "Kontakt",
     "hauptSatz": {
       "zeile1": "Telefon oder E-Mail Sie sind herzlich willkommen!",
-      "zeile2": "Ich würde mich freuen, Ihnen zukünftig als kompetenter und verlässiger Partner bei EDI/EAI Themen zur Verfügung zu stehen."
+      "zeile2": "Wir würde uns freuen, Ihnen zukünftig als kompetenter und verlässiger Partner bei EDI/EAI Themen zur Verfügung zu stehen."
     },
     "contactNav" : {
       "title" : "Lassen Sie uns in Kontakt bleiben",

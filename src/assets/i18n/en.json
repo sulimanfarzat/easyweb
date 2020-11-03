@@ -1,4 +1,7 @@
 {
+  "header": {
+    "termin": "Make an appointment"
+  },
   "home": {
     "homeMnu": "Home",
     "hauptSatz": {
@@ -139,26 +142,130 @@
     "historie": {
       "1": [
         "EDI/EAI Senior Consultant Lobster _data",
-        "Fritz Logistik GmbH",
-        "Transport und Logistik",
-        "06/2019 - bis jetzt",
-        "- Initiale System- und Umgebungsanalyse inkl. Optimierung (Prozesse, Konfiguration etc.)",
-        "- Administration, Konfiguration & Support der Lobster _data Instanzen",
-        "- EDI/EAI Prozessberatung und Entwicklung",
-        "- EDI/EAI Kommunikationsanbindungen",
-        "- Entwicklung & Support _data Profile/Mappings",
-        "- Prozess- und Anforderungmanagement",
-        "-.Schulungen/Workshops Remote",
-        "- Dokumentation"
+        "Fritz Logistics GmbH",
+        "Transport and Logistics",
+        "06/2019 - until now",
+        [
+          "- Initial system and environment analysis including optimization (processes, configuration etc.)",
+          "- Administration, configuration & support of the Lobster _data instances",
+          "- EDI/EAI process consulting and development",
+          "- EDI/EAI communication links",
+          "- Development & Support _data Profile/Mappings",
+          "- Process and requirements management",
+          "- Training/Workshops Remote",
+          "- Documentation"
+        ]
+      ],
+      "2": [
+        "EDI/EAI Senior Consultant / Project Manager",
+        "SuperAlloy Manufacture GmbH & SuperAlloy Industrial Co, Ltd",
+        "Automotive and Vehicle Construction",
+        "03/2019 - until now",
+        [
+          "- General advice on EDI and EDI processes",
+          "- Analysis of the current EDI processes/environment (national & international)",
+          "- Creation and implementation of an EDI concept (national & international)",
+          "- Optimization or introduction of EDI/EAI processes",
+          "- Planning and coordination of EDI requirements"
+        ]
+      ],
+      "3": [
+        "EDI/EAI Consultant Lobster _data",
+        "LEHMANN GmbH & Co. KG",
+        "Industry and mechanical engineering",
+        "12/2017 - until now",
+        [
+          "- Planning and implementation EDI customer connection",
+          "- Concept & development of EDI interfaces on DB basis for internal ERP system",
+          "- message types: EDIFACT Orders, ORDRSP, DESADV",
+          "- Coordination & execution of the integration tests",
+          "- process implementation including support & documentation",
+          "- General advice on EDI/EAI"
+        ]
+      ],
+      "4": [
+        "EDI/EAI Senior Consultant Lobster _data",
+        "VS Logistics Wuerzburg GmbH",
+        "Transport and Logistics",
+        "03/2017 - until now",
+        [
+          "- Configuration & Administration of the Lobster _data instances",
+          "- EDI/EAI implementation concepts + process development",
+          "- EDI/EAI communication links",
+          "- Development & Support _data profiles, mappings & interfaces",
+          "- Process and requirements management",
+          "- Training/Workshops Remote",
+          "- Creating guidelines"
+        ]
+      ],
+      "5": [
+        "EDI/EAI Senior Consultant Lobster _data",
+        "deugro Carl E. Press Holding GmbH & Co. KG",
+        "Transport and Logistics",
+        "03/2019 - until now",
+        [
+          "- Introduction Lobster _data Integration Server",
+          "- Configuration & ongoing administration of the Lobster _data instances",
+          "- System Updates & Patches",
+          "- EDI/EAI implementation concepts + process development",
+          "- EDI/EAI communication links",
+          "- Development & Support _data profiles, mappings & interfaces",
+          "- Process and requirements management",
+          "- Training/Workshops Remote",
+          "- Documentation",
+          "Applications:",
+          "- CargoSoft TMS",
+          "- Logiswift"
+        ]
+      ],
+      "6": [
+        "EDI/EAI Senior Consultant / Application Developer",
+        "Lobster Logistics Cloud GmbH",
+        "Internet and Information Technology",
+        "03/2019 - until now",
+        [
+          "- Conceptual design & implementation of platform functionalities and processes",
+          "- Partner and system onboardings",
+          "- System and module configurations _scm/_data",
+          "- Create _data processes and profiles"
+        ]
+      ],
+      "7": [
+        "EDI/EAI Senior Consultant Lobster _data",
+        "ROTHENBERGER Tools GmbH",
+        "Industry and mechanical engineering",
+        "10/2018 - until now",
+        [
+          "- Configuration & Administration of the Lobster _data instances",
+          "- EDI/EAI implementation concepts + process development",
+          "- EDI/EAI communication links",
+          "- Development & Support _data profiles, mappings & interfaces",
+          "- Process and requirements management",
+          "- Training/Workshops Remote",
+          "- Creating guidelines"
+        ]
+      ],
+      "8": [
+        "EDI/EAI Senior Consultant Lobster _data",
+        "Stingel Consulting GmbH",
+        "Internet and Information Technology",
+        "04/2019 - 05/2019",
+        [
+          "- Requirements analysis and implementation EAI between Webshop & SAP",
+          "- Profile or mapping creation including tests and activation",
+          "- Documentation"
+        ]
       ]
     }
   },
 
   "about": {
     "aboutMnu": "About Us",
+    "zeile1": "Experience through the years",
+    "zeile2": "Our experience is the result of years of direct work in project management and implementation, in addition to our professionalism in dealing with the management of daily problems.",
     "aboutNav" : {
       "title" : ["Background of our company", "Our History", "Our Vision"],
-      "description" : "xxxxx",
+      "description" : "easy2edi Schäfer is a startup that provides electronic data exchange services and other information technology services, that are based on wide and practical experiences in the labor market",
       "history":["Founder: Philippe Schäfer, born 02.02.1976",
                 "Year of foundation: 2019",
                 "Place of foundation: Groß-Umstadt",
@@ -172,11 +279,12 @@
       "description2" : "Willingness to travel in a moderate framework in principle available. However, due to ongoing projects, only for small projects with flexible time schedules, remotely available."
     }
   },
+
   "contact": {
     "contactMnu": "Contact Us",
     "hauptSatz": {
       "zeile1": "Telephone or email You're welcome!",
-      "zeile2": "I would be pleased to be available to you in the future as a competent and reliable partner for EDI/EAI topics."
+      "zeile2": "We would be pleased to be available to you in the future as a competent and reliable partner for EDI/EAI topics."
     },
     "contactNav" : {
       "title" : "Let's keep in touch",
