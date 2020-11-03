@@ -15,7 +15,6 @@
             <a class="ml-1" href="tel:+49 6078 9307344">+49 6078 9307344</a>
           </span>
 
-
           <span class="ml-4">
             <i>
               <fa-icon [icon]="['far', 'envelope']"></fa-icon>
@@ -52,26 +51,44 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive" [ngbCollapse]="isMenuCollapsed">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a routerLink="/" class="nav-link lang" href="#" key="home" (click)="isMenuCollapsed = true">Home
+          <li class="nav-item">
+            <a routerLink="/home" routerLinkActive="active" class="nav-link" href="#" key="home" (click)="isMenuCollapsed = true">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/services" routerLinkActive="active" class="nav-link" href="#" (click)="isMenuCollapsed = true">{{ 'services.servicesMnu' | translate }}</a>
+            <a routerLink="/services" routerLinkActive="active" class="nav-link" href="#"
+              (click)="isMenuCollapsed = true">{{ 'services.servicesMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a  routerLink="/projects" routerLinkActive="active" class="nav-link" href="#" (click)="isMenuCollapsed = true">{{ 'projects.projectsMnu' | translate }}</a>
+            <a routerLink="/projects" routerLinkActive="active" class="nav-link" href="#"
+              (click)="isMenuCollapsed = true">{{ 'projects.projectsMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/about" routerLinkActive="active"  class="nav-link" href="#" key="about" (click)="isMenuCollapsed = true">{{ 'about.aboutMnu' | translate }}</a>
+            <a routerLink="/about" routerLinkActive="active" class="nav-link" href="#" key="about"
+              (click)="isMenuCollapsed = true">{{ 'about.aboutMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/contact" routerLinkActive="active"  class="nav-link" href="#" (click)="isMenuCollapsed = true">{{ 'contact.contactMnu' | translate }}</a>
+            <a routerLink="/contact" routerLinkActive="active" class="nav-link" href="#"
+              (click)="isMenuCollapsed = true">{{ 'contact.contactMnu' | translate }}</a>
           </li>
         </ul>
       </div>
 
+
+
+      <div ngbDropdown class="dropdown language">
+        <button class="btn btn-secondary dropdown-toggle" type="button" ngbDropdownToggle id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="flag-icon flag-icon-us"></span> English
+        </button>
+        <div class="dropdown-menu dropdown-menu-right text-right language" ngbDropdownMenu>
+          <button ngbDropdownItem><span class="flag-icon flag-icon-de"> </span></button>
+          <button ngbDropdownItem><span class="flag-icon flag-icon-us"> </span></button>
+          <a class="dropdown-item"  ngbDropdownItem><span class="flag-icon flag-icon-fr"> </span> French</a>
+          <a class="dropdown-item" href="#it" ngbDropdownItem><span class="flag-icon flag-icon-it"> </span> Italian</a>
+          <a class="dropdown-item" href="#ru" ngbDropdownItem><span class="flag-icon flag-icon-ru"> </span> Russian</a>
+        </div>
+      </div>
 
 
       <div class="row functional-buttons" (click)="isMenuCollapsed = true">

@@ -89,7 +89,7 @@
     },
     "cardButton": "Angebot anfordern",
     "card1": {
-      "title": "Kompliziert ist einfach zu langsam.",
+      "title": "Kompliziert ist einfach zu langsam",
       "subTitle": "Lobster _data",
       "description": "Datenkonvertierung, Data Mapping oder Datenmanipulation. Überführen sie ihre Daten in ihr Zielsystem. ohne zittern zu müssen, ob’s auch klappt. ohne diskussion. zack mit lobster_data.",
       "lobster": [
@@ -99,7 +99,8 @@
         "Entwicklung Profile & Mappings",
         "API/Webservice Anbindung",
         "Schulungen & Workshops",
-        "Portal Entwicklung _data"
+        "Portal Entwicklung _data",
+        "automatische Reports"
       ]
     },
     "card2": {
@@ -118,7 +119,7 @@
       ]
     },
       "card3": {
-        "title": "Ihre zentrale Plattform für die digitale Transformation",
+        "title": "Ihre Plattform für die digitale Transformation",
         "subTitle": "Seeburger BIS",
         "description": "SEEBURGER Business Integration Suite – die umfassendste Plattform für den digitalen Wandel. Ihr Vorteil? Eine nahtlose Integration all Ihrer Systeme, Anwendungen, Geschäftspartner und Cloud Services.",
         "seeburger": [

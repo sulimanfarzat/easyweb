@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
 
   public isMenuCollapsed = true;
-  y = window.scrollY;
+  //y = window.scrollY;
   //myID = document.getElementById("header");
   //myID2 = document.getElementById("header2");
 

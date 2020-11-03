@@ -20,3 +20,21 @@
     display: none !important;
   }
  }
+
+
+
+
+
+
+.dropdown.language {
+  position: absolute;
+  right: 200px;
+  width: auto;
+  top: 35px;
+}
+@media (max-width: 991px) {
+  .dropdown.language {
+    right: 100px;
+    position: absolute; top: 10px;
+  }
+}
