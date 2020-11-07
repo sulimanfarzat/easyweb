@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 // Awesome
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -29,6 +31,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +52,8 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
     CarouselModule,
     HttpClientModule,
     FontAwesomeModule,
+    NgSelectModule,
+    FormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

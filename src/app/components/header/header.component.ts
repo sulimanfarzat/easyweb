@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
 
   public isMenuCollapsed = true;
+  selectedLang: string;
   //y = window.scrollY;
   //myID = document.getElementById("header");
   //myID2 = document.getElementById("header2");
@@ -19,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
     const browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/en|de/) ? browserLang : 'en');
+    this.selectedLang = (browserLang.match(/en|de/) ? browserLang : 'en');
   }
 
   ngOnInit(): void {

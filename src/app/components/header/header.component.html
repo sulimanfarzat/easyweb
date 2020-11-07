@@ -77,18 +77,23 @@
 
 
 
-      <div ngbDropdown class="dropdown language">
-        <button class="btn btn-secondary dropdown-toggle" type="button" ngbDropdownToggle id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="flag-icon flag-icon-us"></span> English
-        </button>
-        <div class="dropdown-menu dropdown-menu-right text-right language" ngbDropdownMenu>
-          <button ngbDropdownItem><span class="flag-icon flag-icon-de"> </span></button>
-          <button ngbDropdownItem><span class="flag-icon flag-icon-us"> </span></button>
-          <a class="dropdown-item"  ngbDropdownItem><span class="flag-icon flag-icon-fr"> </span> French</a>
-          <a class="dropdown-item" href="#it" ngbDropdownItem><span class="flag-icon flag-icon-it"> </span> Italian</a>
-          <a class="dropdown-item" href="#ru" ngbDropdownItem><span class="flag-icon flag-icon-ru"> </span> Russian</a>
-        </div>
+
+      <div class="dropdown language">
+        <ng-select [items]="translate.getLangs()" [(ngModel)]="selectedLang"
+        (change)="switchLang(selectedLang.value)"
+        appearance="outline" [searchable]="false" [clearable]="false">
+          <ng-option value="de">
+            <!-- <img src="{{basePath}}/assets/batman.png" width="20px" height="20px" /> -->
+            <span class="flag-icon flag-icon-de"> </span>
+            DE
+          </ng-option>
+          <ng-option value="en">
+            <span class="flag-icon flag-icon-us"> </span>
+            EN
+          </ng-option>
+        </ng-select>
       </div>
+
 
 
       <div class="row functional-buttons" (click)="isMenuCollapsed = true">
