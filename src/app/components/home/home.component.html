@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <div class="header-text caption">
+            <div class="header-text caption" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
               <h2>{{ 'home.hauptSatz.zeile1' | translate }}</h2>
                 <p class="lead" key="start_section">
                   {{ 'home.hauptSatz.zeile2' | translate }}!
@@ -69,28 +69,28 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="section-heading">
+            <div class="section-heading" data-aos="fade-down" data-aos-duration="1000">
               <span>{{ 'home.services.zeile0' | translate }}</span>
               <h2>{{ 'home.services.zeile1' | translate }}</h2>
               <p>{{ 'home.services.zeile2' | translate }}
                  {{ 'home.services.zeile3' | translate }}</p>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-sm-6 col-xs-12" data-aos="zoom-in-down" data-aos-duration="1500">
             <div class="service-item animate_down run">
               <i><fa-icon [icon]="['fas', 'business-time']" size="lg"></fa-icon></i>
               <h4>{{ 'home.services.card1-h' | translate }}</h4>
               <p>{{ 'home.services.card1-b' | translate }}</p>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-sm-6 col-xs-12" data-aos="zoom-in-down" data-aos-duration="1500">
             <div class="service-item animate_down run">
               <i><fa-icon [icon]="['fas', 'server']" size="lg"></fa-icon></i>
               <h4>{{ 'home.services.card2-h' | translate }}</h4>
               <p>{{ 'home.services.card2-b' | translate }}</p>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-sm-6 col-xs-12" data-aos="zoom-in-down" data-aos-duration="1500">
             <div class="service-item animate_down run">
               <i><fa-icon [icon]="['fas', 'shield-alt']" size="lg"></fa-icon></i>
               <h4>{{ 'home.services.card3-h' | translate }}</h4>
@@ -106,8 +106,10 @@
 
 
 
+
+
     <!-- Features Starts Here -->
-    <div class="features-section">
+    <div class="features-section" data-aos="fade-down" data-aos-duration="500">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -117,7 +119,7 @@
             </div>
           </div>
           <ng-container *ngFor="let item of 'home.features.cards' | translate | keyvalue">
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
             <div class="feature-item">
               <div class="icon">
                 <i><fa-icon [icon]="['fas', item.value[0] ]" size="2x"></fa-icon></i>

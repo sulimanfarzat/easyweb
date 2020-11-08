@@ -35,7 +35,9 @@ a.main-button {
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 0.5px;
-	transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: .125rem;
+  box-shadow: 0rem .25rem .25rem 0rem rgba(0,0,0,0.15);
 }
 a.main-button:hover {
 	background-color: #3B3B3B; //#4C96B3#00a4b9;
@@ -70,7 +72,7 @@ a.gradient-button:hover {
 	margin-bottom: 80px;
 }
 .section-heading span {
-	color: #51BAA7;
+	color: #3B3B3B;
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 0.5px;
@@ -601,7 +603,7 @@ header {
   margin-right: 2.5%;
   box-shadow: 0rem 0rem .5rem 0rem rgba(19,10,133,0.15);
   border-radius: .3rem;
-  height: 954px;
+  height: 880px;
 }
 .pricing-item h4 {
 	text-transform: uppercase;
@@ -1047,7 +1049,10 @@ footer .sub-footer a {
 	font-size: 15px;
 	font-weight: 500;
 	letter-spacing: 0.5px;
-	transition: all 0.5s;
+  transition: all 0.5s;
+  transition: background-color 200ms;
+  border-radius: .125rem;
+  box-shadow: 0rem .25rem .25rem 0rem rgba(0,0,0,0.15);
 }
 .contact-form button:hover {
 	background-color: #3B3B3B;
@@ -1130,7 +1135,7 @@ footer .sub-footer a {
     background-position: 100% 70%, center center;
   }
   .pricing-item  {
-    height: 948px;
+    height: 958px;
 	}
 
 }
@@ -1224,7 +1229,7 @@ footer .sub-footer a {
     height: 136px;
   }
   .pricing-item  {
-    height: 1100px;
+    height: auto;
   }
   .pricing-item .price h6 {
     font-size: 24px;

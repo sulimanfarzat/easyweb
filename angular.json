@@ -33,7 +33,8 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/custom.js",
-              "src/assets/js/accordions.js"
+              "src/assets/js/accordions.js",
+              "./node_modules/aos/dist/aos.js"
             ]
           },
           "configurations": {
