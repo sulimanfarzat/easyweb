@@ -16,8 +16,8 @@
       "zeile2": "Daten einfacher und schneller austauschen! ",
       "zeile3": "Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Lesen Sie unser Profil, um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Plattform automatisieren können.",
       "card1-h": "KEINE PROJEKT-STILLSTÄNDE",
-      "card1-b": "Entwicklung, Betrieb und interne Unterstützung, d.h. wir können auch Ad-hoc-Dienste außerhalb der Release-Zyklen anbieten.",
-      "card2-h": "UMFANGREICHE DIENSTLEISTUNGEN",
+      "card1-b": "Entwicklungen, Betrieb und interne Unterstützung, d.h. wir können auch Ad-hoc-Dienste außerhalb der Release-Zyklen bereitstellen.",
+      "card2-h": "UMFASSENDE DIENSTE",
       "card2-b": "EDI-Konvertierung, Signierungsdienst, Archivierungsdienst, Validierungsdienst, Dateiübertragungsdienst, Erfassungsdienste, Berichtswesen usw.",
       "card3-h": "SICHERHEIT",
       "card3-b": "Wir bieten maximale Transparenz in Bezug auf Sicherheit und Prozesssicherheit durch Verschlüsselungen, Betriebsmodellen, Datenbanken und Betriebssystemen."
@@ -93,7 +93,7 @@
       "subTitle": "Lobster _data",
       "description": "Datenkonvertierung, Data Mapping oder Datenmanipulation. Überführen sie ihre Daten in ihr Zielsystem. ohne zittern zu müssen, ob’s auch klappt. ohne diskussion. zack mit lobster_data.",
       "lobster": [
-        "EDI Clearing",
+        "EDI Clearing ",
         "Partner Onboarding (AS2, OFTP(2), http(s)...)",
         "Entwicklung EDI/EAI Prozesse",
         "Entwicklung Profile & Mappings",

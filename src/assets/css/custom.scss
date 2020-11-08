@@ -590,9 +590,18 @@ header {
 .pricing-item {
 	background-color: #fff;
 	text-align: center;
-	padding: 50px 50px 30px 50px;
+	//padding: 50px 50px 30px 50px;
 	position: relative;
-	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  //box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+  float: left;
+  //width: 27.6%;
+  //max-width: 18.5rem;
+  padding: 2.1rem 4% 1.6rem 4%;
+  margin-right: 2.5%;
+  box-shadow: 0rem 0rem .5rem 0rem rgba(19,10,133,0.15);
+  border-radius: .3rem;
+  height: 954px;
 }
 .pricing-item h4 {
 	text-transform: uppercase;
@@ -642,7 +651,7 @@ header {
 	text-align: left;
 }
 .pricing-item ul li {
-	display: inline-block;
+	//display: inline-block;
 	margin-bottom: 20px;
 	font-size: 16px;
 	color: #3B3B3B;
@@ -662,21 +671,24 @@ header {
 	transform: translateX(-53%);
   bottom: -25px;
   min-width: 240px;
+  transition: background-color 200ms;
+  cursor: pointer;
+  border-radius: .125rem;
+  box-shadow: 0rem .25rem .25rem 0rem rgba(0,0,0,0.15);
 }
 
 
 
 /* Features Style */
 .features-section {
-  margin-top: 80px;
-  padding-top: 80px;
-  background-color: #3B3B3B;
+  margin-top: 160px;
+  //background-color: #3B3B3B;
 }
 .features-section .section-heading {
 	text-align: center;
 }
 .features-section .section-heading h2 {
-	color: #fff; /*#3B3B3B;*/
+	color: #3B3B3B;
 }
 .features-section .feature-item {
   //box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -1117,6 +1129,9 @@ footer .sub-footer a {
   .banner, .page-heading{
     background-position: 100% 70%, center center;
   }
+  .pricing-item  {
+    height: 948px;
+	}
 
 }
 @media (max-width: 991px) {
@@ -1208,11 +1223,18 @@ footer .sub-footer a {
   .background-header {
     height: 136px;
   }
+  .pricing-item  {
+    height: 1100px;
+  }
+  .pricing-item .price h6 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 767px) {
 	.pricing-item  {
-		margin-bottom: 55px;
+    margin-bottom: 55px;
+    height: auto;
 	}
 	.footer-item {
 		margin-bottom: 60px;
@@ -1235,7 +1257,9 @@ footer .sub-footer a {
   .page-heading .caption  {
     text-align: center;
   }
-
+  .pricing-item .price h6 {
+    font-size: 32px;
+  }
 
 }
 
