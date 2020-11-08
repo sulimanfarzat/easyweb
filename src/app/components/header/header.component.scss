@@ -20,11 +20,31 @@
     display: none !important;
   }
  }
+ @media (max-width: 576px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
 
 
-
-
-.ng-select.custom ::ng-deep .ng-select-container  {
+ .ng-select.custom {
+  border:0px;
   min-height: 0px;
   border-radius: 0;
+
+}
+.ng-select.custom .ng-select-container  {
+  min-height: 0px;
+  border-radius: 0;
+}
+.ng-select.custom ::ng-deep .ng-select-container  {
+  min-height: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border-color: #ffffff;
+  color: #fff;
+  background-color: transparent;
+  margin-top: 3px;
+  line-height: 25px;
+  overflow: unset;
 }
