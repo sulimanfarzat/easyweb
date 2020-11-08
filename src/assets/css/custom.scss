@@ -507,20 +507,40 @@ header {
 
 /* Services Style */
 .services-section {
-	margin-top: 140px;
+	padding-top: 140px;
 }
 .services-section .section-heading {
 	text-align: center;
 }
 .services-section .section-heading h2 {
+  color: #fff;
+}
+.services-section .section-heading p {
+	color: #fff !important;
+}
+.services-section .section-heading span{
   color: #3B3B3B;
 }
+
 .services-section .service-item {
-	background-color: #f7f7f7;
-	border-radius: 5px;
-	padding: 50px 40px;
+//	background-color: #f7f7f7;
+	//border-radius: 5px;
+	//padding: 50px 40px;
 	text-align: center;
-	margin-bottom: 30px;
+
+  //max-width: 16.5rem;
+  padding: 1.1rem .75rem 1.6rem .75rem;
+  box-shadow: 0rem 0rem 0.5rem 0rem rgba(19,10,133,0.15);
+  margin: 1rem .5rem;
+  border-radius: .3rem;
+  position: relative;
+  background-color: #fff;
+}
+@media (min-width: 1000px){
+.animate_left.run, .animate_right.run, .animate_top.run, .animate_show.run, .animate_down.run {
+    opacity: 1;
+    transform: translate(0rem, 0rem);
+}
 }
 .services-page .service-item {
 	margin-bottom: 30px;
@@ -648,26 +668,29 @@ header {
 
 /* Features Style */
 .features-section {
-	margin-top: 160px;
+  margin-top: 80px;
+  padding-top: 80px;
+  background-color: #3B3B3B;
 }
 .features-section .section-heading {
 	text-align: center;
 }
 .features-section .section-heading h2 {
-	color: #3B3B3B;
+	color: #fff; /*#3B3B3B;*/
 }
 .features-section .feature-item {
   //box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
   transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
-	border-radius: 5px;
+  border-radius: 5px;
+  background-color: #EDF8F6;
 	padding: 30px;
 	margin-bottom: 30px;
 }
 .features-section .feature-item:hover{
   transform: scale(1.01);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-  background-color: #EDF8F6;
+  background-color: #DDFBF4;
   cursor: pointer;
 }
 .features-section .feature-item .icon {
@@ -1130,7 +1153,7 @@ footer .sub-footer a {
 	    left: 0;
 	    width: 100%;
 	    text-align: center;
-	    background-color: #fff;
+	    background-color:#fff;
 	    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
 	}
 	.navbar .navbar-nav .nav-item {
@@ -1183,7 +1206,7 @@ footer .sub-footer a {
     margin-bottom: 200px;
   }
   .background-header {
-    height: 108px;
+    height: 136px;
   }
 }
 
