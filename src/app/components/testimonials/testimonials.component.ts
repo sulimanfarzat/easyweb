@@ -8,6 +8,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class TestimonialsComponent implements OnInit {
 
+  currentRate = 5;
+
   constructor() { }
 
   ngOnInit(): void {

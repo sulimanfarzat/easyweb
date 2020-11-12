@@ -298,6 +298,17 @@
                 "Nachricht senden"],
       "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
               }
-  }
+  },
+
+
+  "cookie": {
+    "header": "xxxxxxxxxe!",
+    "message": "Diese Webseite setzt Cookies ein. Mit der weiteren Nutzung dieser Webseite erklären Sie sich mit dem Einsatz von Cookies einverstanden. Erfahren Sie mehr",
+    "dismiss": "Got it!",
+    "allow": "Allow cookies",
+    "deny": "Decline",
+    "link": "Learn more",
+    "policy": "Cookie datenschutz"
+}
 
 }

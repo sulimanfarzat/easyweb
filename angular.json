@@ -28,13 +28,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/cookieconsent/build/cookieconsent.min.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/custom.js",
               "src/assets/js/accordions.js",
-              "./node_modules/aos/dist/aos.js"
+              "./node_modules/aos/dist/aos.js",
+              "node_modules/cookieconsent/build/cookieconsent.min.js"
             ]
           },
           "configurations": {

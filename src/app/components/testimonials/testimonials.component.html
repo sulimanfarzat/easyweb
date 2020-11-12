@@ -20,6 +20,14 @@
                 </div>
                 <p>{{ item.value[1] }}</p>
                 <h4>{{ item.key }}</h4>
+
+                <ngb-rating [(rate)]="currentRate" [readonly]="true" [max]="5">
+                  <ng-template let-fill="fill" let-index="index">
+                    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 5">&#9733;</span>
+                  </ng-template>
+                </ngb-rating>
+                <br>
+
                 <span>{{ item.value[0] }}</span>
               </div>
             </ng-template>
