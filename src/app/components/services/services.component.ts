@@ -17,7 +17,7 @@ export class ServicesComponent implements OnInit {
 
 
   open(content, x) {
-    this.modalService.open(content,  { centered: true, size: 'xl' }).result.then((result) => {
+    this.modalService.open(content,  { centered: true, size: 'lg' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;

@@ -292,10 +292,33 @@
       "form":["Your name",
                 "Your email",
                 "Subject",
+                "Please select",
+                "Consulting",
+                "Information",
+                "Request a offer",
+                "Other",
                 "Your message",
                 "Send Message"],
       "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
               }
+  },
+
+
+  "impressum": {
+    "impressumMnu": "Imprint",
+    "hauptSatz": {
+      "zeile1": "xxxx",
+      "zeile2": "xxxx"
+    }
+  },
+
+
+  "datenschutz": {
+    "datenschutzMnu": "Privacy policy",
+    "hauptSatz": {
+      "zeile1": "xxxx",
+      "zeile2": "xxxx"
+    }
   },
 
 
@@ -306,6 +329,9 @@
     "allow": "Allow cookies",
     "deny": "Decline",
     "link": "Learn more",
-    "policy": "Cookie Policy"
+    "policy": "Cookie Policy",
+    "verlassen": "By rejecting the cookie policy, you will leave the site, you are sure !",
+    "ja": "Yes",
+    "nein": "No"
 }
 }

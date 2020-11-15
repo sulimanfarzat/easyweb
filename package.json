@@ -38,6 +38,7 @@
     "flag-icon-css": "^3.5.0",
     "install": "^0.13.0",
     "jquery": "^3.5.1",
+    "ng-bootstrap-form-validation": "^9.0.0",
     "ngx-cookieconsent": "^2.2.3",
     "ngx-owl-carousel-o": "^4.0.0",
     "npm": "^6.14.8",

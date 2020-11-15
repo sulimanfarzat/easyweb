@@ -7,3 +7,21 @@
   margin-top: 0px;
   margin-bottom: -147px;
 }
+
+
+ng-select.custom ::ng-deep .ng-select-container  {
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #6a6a6a;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  height: 46px;
+  outline: none;
+}

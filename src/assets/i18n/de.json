@@ -294,21 +294,46 @@
       "form":["Ihr Name",
                 "Ihre E-Mail",
                 "Betreff",
+                "Bitte auswählen",
+                "Beratung",
+                "Anfrage",
+                "Angebot anfordern",
+                "Sonstiges",
                 "Ihre Nachricht",
                 "Nachricht senden"],
       "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
               }
   },
 
+  "impressum": {
+    "impressumMnu": "Impressum",
+    "hauptSatz": {
+      "zeile1": "xxxx",
+      "zeile2": "xxxx"
+    }
+  },
+
+
+  "datenschutz": {
+    "datenschutzMnu": "Datenschutz",
+    "hauptSatz": {
+      "zeile1": "xxxx",
+      "zeile2": "xxxx"
+    }
+  },
+
 
   "cookie": {
-    "header": "xxxxxxxxxe!",
-    "message": "Diese Webseite setzt Cookies ein. Mit der weiteren Nutzung dieser Webseite erklären Sie sich mit dem Einsatz von Cookies einverstanden. Erfahren Sie mehr",
-    "dismiss": "Got it!",
-    "allow": "Allow cookies",
-    "deny": "Decline",
-    "link": "Learn more",
-    "policy": "Cookie datenschutz"
+    "header": "Auf der Website verwendete Cookies!",
+    "message": "Diese Webseite setzt Cookies ein. Mit der weiteren Nutzung dieser Webseite erklären Sie sich mit dem Einsatz von Cookies einverstanden.",
+    "dismiss": "Verstanden!",
+    "allow": "Akzeptieren",
+    "deny": "Ablehnen",
+    "link": "Erfahren Sie mehr",
+    "policy": "Cookie-Richtlinie",
+    "verlassen": "Mit Ablehnung der Cookies-Richtlinie werden Sie die Website verlassen, sind Sie sicher !",
+    "ja": "Ja",
+    "nein": "Nein"
 }
 
 }

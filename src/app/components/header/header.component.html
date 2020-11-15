@@ -92,6 +92,19 @@
 
 
 
+      <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">{{ 'cookie.policy' | translate }}!</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{ 'cookie.verlassen' | translate }}</p>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-outline-dark" href="https://www.google.com">{{ 'cookie.ja' | translate }}</a>
+          <a type="button" class="btn btn-outline-dark" href="http://localhost:4200/home">{{ 'cookie.nein' | translate }}</a>
+        </div>
+      </ng-template>
+
 
 
 
