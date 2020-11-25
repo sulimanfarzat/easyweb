@@ -298,7 +298,8 @@
                 "Request a offer",
                 "Other",
                 "Your message",
-                "Send Message"],
+                "Send Message",
+                "Reset"],
       "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
               }
   },

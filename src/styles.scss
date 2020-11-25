@@ -15,3 +15,83 @@
 /*@import "assets/css/flex-slider.scss";*/
 
 BODY, HTML { overflow-x: hidden; }
+
+// fixed button
+.feedback {
+  position: fixed;
+  right: 0;
+  bottom: 30%;
+  height: 419px;
+  width: 0px;
+  /* HOVER OFF */
+  -webkit-transition: width 0.5s;
+  z-index: 1049;
+}
+
+.sub-feedback {
+  background-color: #51BAA7 !important;
+    right: 0;
+    width: 40px;
+    bottom: 30%;
+    height: 25px;
+    position: fixed;
+    height: 40px; /* as the half of the width */
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    //border: 10px solid gray;
+    border-bottom: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.feedback:hover {
+  width: 200px;
+  transition: color 0.5s linear;
+  /* vendorless fallback */
+  -o-transition: color 0.5s linear;
+  /* opera */
+  -ms-transition: color 0.5s linear;
+  /* IE 10 */
+  -moz-transition: color 0.5s linear;
+  /* Firefox */
+  -webkit-transition: color 0.5s linear;
+  /*safari and chrome */
+  /* HOVER ON */
+  -webkit-transition: width 0.5s;
+  animation-fill-mode: forwards;
+  animation: animateThis 0.5s ease-in;
+}
+
+@keyframes animateThis {
+  0% {
+    width: 20px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+.dark {
+  border-color: #184358 !important;
+  border-radius: 5px 0 0 5px !important;
+  p {
+    color: #FFF;
+  }
+}
+
+#flm-profile-widget a {
+  background-color: #51BAA7 !important;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  border-radius: 0.125rem;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.15);
+}
+
+#flm-profile-widget a:hover {
+  background-color: #3B3B3B !important;
+}

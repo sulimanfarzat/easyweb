@@ -1,8 +1,8 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Contact } from '../components/contact/cmspage.module';
-import { throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 import { ContactComponent } from '../components/contact/contact.component';
 
 
@@ -11,29 +11,29 @@ import { ContactComponent } from '../components/contact/contact.component';
 })
 export class CmspageService {
 
-  ServerUrl = 'https://farzat.co/farzat/email/easy2edi/';
+  ServerUrl = 'https://farzat.co/farzat/email/easy2edi';
   errorData: {};
 
+  /*========================================
+    send email Methods for consuming RESTful API
+  =========================================*/
+  // Http Options
   httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'})
-   // responseType: 'text'
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
   };
 
 
   constructor(private http: HttpClient) { }
 
-  getPage(slug: string) {
-    return this.http.get<ContactComponent>(this.ServerUrl + 'send_mail.php/' + slug)
-    .pipe(
+  contactForm(formdata: Contact): Observable<Contact>  {
+    console.log(JSON.stringify(formdata));
+    return this.http.post<Contact>(this.ServerUrl + '/api_email.php', JSON.stringify(formdata)).pipe(
+      // retry(1),
       catchError(this.handleError)
     );
-  }
 
-  contactForm(formdata: Contact) {
-    console.log(formdata);
-    return this.http.post<Contact>(this.ServerUrl + 'send_mail.php', formdata, this.httpOptions).pipe(
-      catchError(this.handleError)
-    );
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -48,7 +48,7 @@ export class CmspageService {
 
       // The response body may contain clues as to what went wrong.
 
-      console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
+      console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}` + ` message was: ${error.message}`);
     }
 
     // return an observable with a user-facing error message

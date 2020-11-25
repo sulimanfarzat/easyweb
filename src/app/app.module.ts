@@ -34,6 +34,8 @@ import { DatenschutzComponent } from './components/datenschutz/datenschutz.compo
 import { CookieModule } from './modules/cookie.module';
 import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 
+import { CmspageService } from './services/cmspage.service';
+
 
 @NgModule({
   declarations: [
@@ -72,7 +74,7 @@ import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
     NgBootstrapFormValidationModule
 
   ],
-  providers: [],
+  providers: [CmspageService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

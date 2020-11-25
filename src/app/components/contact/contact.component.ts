@@ -27,17 +27,26 @@ export class ContactComponent implements OnInit {
       user_name: new FormControl('', [
         Validators.required,
         Validators.minLength(2),
-        Validators.maxLength(25)
+        Validators.maxLength(30)
       ]),
-      betreff: new FormControl(''),
-      subject: new FormControl(''),
-      comments: new FormControl('')
+      betreff: new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(30)
+      ]),
+      subject: new FormControl('', [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(30)
+      ]),
+      comments: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5)
+      ])
     });
   }
 
   onSubmit() {
-    console.log(this.formGroup.value);
-
     this.submitted = true;
     return this.cmspageService.contactForm(this.formGroup.value).subscribe(
       data => this.model = data,

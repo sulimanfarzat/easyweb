@@ -1,8 +1,8 @@
-$(function () {
-  $("#tabs").tabs();
+// $(function () {
+//   $("#tabs").tabs();
 
 
-});
+// });
 
 // Page loading animation
 $(window).on('load', function () {
@@ -33,4 +33,3 @@ $(window).scroll(function () {
       $("header").removeClass("background-header");
   }
 });
-
