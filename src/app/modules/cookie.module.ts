@@ -4,7 +4,7 @@ import { NgcCookieConsentConfig, NgcCookieConsentModule } from 'ngx-cookieconsen
 
 const cookieConfig: NgcCookieConsentConfig =  {
   cookie: {
-    domain: 'www.easy2edi.de' // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+    domain: 'www.easy2edi.de' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
   },
   palette: {
     popup: {
@@ -21,7 +21,7 @@ const cookieConfig: NgcCookieConsentConfig =  {
   position: 'bottom',
   type: 'opt-out'
   ,
-  content:{
+  content: {
 
     href: 'https://easy2edi.de/datenschutz',
   }

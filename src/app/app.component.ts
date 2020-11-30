@@ -1,4 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import * as AOS from 'aos';
 
 
@@ -12,13 +13,18 @@ export class AppComponent  implements OnInit {
   title = 'easy2edi';
 
 
+  public constructor(private titleService: Title) { }
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Add 'implements OnInit' to the class.
     AOS.init();
+
   }
 
+  public setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
+  }
 
 
 }

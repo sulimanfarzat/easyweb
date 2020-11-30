@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-import { CmspageService } from 'src/app/services/cmspage.service';
+import { CmspageService } from '@service/cmspage.service';
+import { ErrorMessage } from 'ng-bootstrap-form-validation';
 import { Contact } from './cmspage.module';
 
 @Component({
@@ -10,21 +11,32 @@ import { Contact } from './cmspage.module';
 })
 export class ContactComponent implements OnInit {
 
-  formGroup: FormGroup;
+  selectedPersonId = 'Please select';
 
   model = new Contact();
   submitted = false;
   error: {};
 
+  formGroup: FormGroup;
+  customErrorMessages: ErrorMessage[] = [
+    {
+      error: 'required',
+      format: (label, error) => `${label.toUpperCase()} IS DEFINITELY REQUIRED!`
+    }, {
+      error: 'pattern',
+      format: (label, error) => `${label.toUpperCase()} EMAIL IS INVALID!`
+    }
+  ];
+
   constructor(private router: Router, private cmspageService: CmspageService) { }
 
   ngOnInit(): void {
     this.formGroup = new FormGroup({
-      email_address: new FormControl('', [
+      emailAddress: new FormControl('', [
         Validators.required,
         Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
       ]),
-      user_name: new FormControl('', [
+      userName: new FormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30)
@@ -46,7 +58,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(): any {
     this.submitted = true;
     return this.cmspageService.contactForm(this.formGroup.value).subscribe(
       data => this.model = data,
@@ -54,11 +66,11 @@ export class ContactComponent implements OnInit {
     );
   }
 
-  onReset() {
+  onReset(): any {
     this.formGroup.reset();
   }
 
-  gotoHome() {
+  gotoHome(): any {
     this.router.navigate(['/']);
   }
 

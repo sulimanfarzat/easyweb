@@ -6,7 +6,7 @@
     "homeMnu": "Home",
     "hauptSatz": {
       "zeile1": "EDI/EAI Senior Consultant",
-      "zeile2": "Ihr fairer & unabhängiger Ansprechpartner bei Themen zum elektronischen Datenaustausch & Schnittstellen",
+      "zeile2": "Ihr fairer & unabhängiger Ansprechpartner bei Themen zum elektronischen Datenaustausch & Schnittstellen.",
       "zeile3": "Beratung & Entwicklung aus einer Hand"
     },
     "reverences": "Unsere Referenzen",
@@ -14,7 +14,8 @@
       "zeile0": "Ihr Unternehmen wachsen lassen",
       "zeile1": "wir liefern optimale EDI Lösungen",
       "zeile2": "Daten einfacher und schneller austauschen! ",
-      "zeile3": "Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Lesen Sie unser Profil, um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Plattform automatisieren können.",
+      "zeile3": "Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Plattform automatisieren könne",
+      "zeile4": "klicken Sie hier.",
       "card1-h": "KEINE PROJEKT-STILLSTÄNDE",
       "card1-b": "Entwicklungen, Betrieb und interne Unterstützung, d.h. wir können auch Ad-hoc-Dienste außerhalb der Release-Zyklen bereitstellen.",
       "card2-h": "UMFASSENDE DIENSTE",
@@ -28,7 +29,7 @@
       "cards": {
         "EDI mit Lobster": [
           "filter",
-          "Consulting, Profilentwicklung, Prozessimplementierungen & Entwicklung individueller EDI/EAI/API Services mit mit Lobster _data 3.x & 4.x, Lobster _data Portal & Lobster _scm sowie Workschops & Schulungen."
+          "Consulting, Profilentwicklung, Prozessimplementierungen & Entwicklung individueller EDI/EAI/API Services mit Lobster _data 3.x & 4.x, Lobster _data Portal & Lobster _scm sowie Workschops & Schulungen."
         ],
         "EDI mit Seeburger": [
           "exchange-alt",
@@ -66,15 +67,18 @@
       "cards": {
         "Stefan Endler": [
           "Head of SAP/BPM - ROTHENBERGER Werkzeuge GmbH",
-          "Mit Herrn Schäfer haben wir einen sehr guten Berater der uns bei unseren Entwicklungen Rund um die elektronische Kunden und Lieferantenanbindung schnell, sachlich korrekt und unbürokratisch unterstützt. Mit seinem hohen Engagement macht die Zusammenarbeit immer wieder Spaß und führt zu den erwarteten Ergebnissen."
+          "Mit Herrn Schäfer haben wir einen sehr guten Berater der uns bei unseren Entwicklungen Rund um die elektronische Kunden und Lieferantenanbindung schnell, sachlich korrekt und unbürokratisch unterstützt. Mit seinem hohen Engagement macht die Zusammenarbeit immer wieder Spaß und führt zu den erwarteten Ergebnissen.",
+          "www.rothenberger.com"
         ],
         "Patrik Kluge": [
           "Global Head of IT Systems and Development - dservice GmbH",
-          "Sehr professionelle und freundliche Art, die Zusammenarbeit mit Hr. Philippe Schäfer ist für uns auf einer sehr soliden Basis. Sein Expertenwissen in den Themen EDI,EAI und deren Umsetzung in Lobster ist eine große Hilfe. Wir freuen uns auch in Zukunft auf kommende Projekte!"
+          "Sehr professionelle und freundliche Art, die Zusammenarbeit mit Hr. Philippe Schäfer ist für uns auf einer sehr soliden Basis. Sein Expertenwissen in den Themen EDI,EAI und deren Umsetzung in Lobster ist eine große Hilfe. Wir freuen uns auch in Zukunft auf kommende Projekte!",
+          "http://deugro-group.com"
         ],
         "Projektmanager": [
           "VS Logistics",
-          "Das Schöne an der Arbeit mit Herrn Schäfer ist seine Erreichbarkeit und schnelle Unterstützung bei dringenden Themen. Ebenso hilft uns sein Know-how in der Umsetzung verschiedenster Projekte, da er unterschiedliche Weg zum Ziel aufzeigt die wir bis dahin nicht gesehen haben. Auch dadurch finden die Umsetzungen seinerseits problemlos statt. Des Weiteren ist auch seine sympatische und hilfsbereite Art ein Grund wieso wir so gerne seit längerem mit ihm zusammenarbeiten und das weiterhin werden."
+          "Das Schöne an der Arbeit mit Herrn Schäfer ist seine Erreichbarkeit und schnelle Unterstützung bei dringenden Themen. Ebenso hilft uns sein Know-how in der Umsetzung verschiedenster Projekte, da er unterschiedliche Weg zum Ziel aufzeigt die wir bis dahin nicht gesehen haben. Auch dadurch finden die Umsetzungen seinerseits problemlos statt. Des Weiteren ist auch seine sympatische und hilfsbereite Art ein Grund wieso wir so gerne seit längerem mit ihm zusammenarbeiten und das weiterhin werden.",
+          "https://www.vs-logistics.com/"
         ]
       }
     }
@@ -85,7 +89,10 @@
     "hauptSatz": {
       "zeile1": "EDI Services und mehr",
       "zeile2": "Die besten Dienstleistungen, die wir anbieten! ",
-      "zeile3": "Daten einfacher und schneller austauschen! Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Lesen Sie unsere Fallstudie, um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Platform automatisieren können."
+      "zeile3": "Daten einfacher und schneller austauschen! Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Lesen Sie unsere Fallstudie, um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Platform automatisieren können.",
+      "zeile4": "EDI-Konvertierung | EDI-Mapping | Sichere Transaktionen",
+      "knopf": "EDI Software Lösungen",
+      "solutions": "Die Entscheidung für die richtige EDI-Lösung für Ihr Unternehmen ist ziemlich schwierig, da es auf dem Markt eine große Auswahl an Möglichkeiten gibt. Hier sind einige der populären EDI-Lösungen, die wir anbieten und unterstützen:"
     },
     "cardButton": "Angebot anfordern",
     "card1": {
@@ -131,6 +138,18 @@
         "Workflowdesigner BIS5.x",
         "Migrationserfahrung BIS5 / BIS6 inkl. Mappings"
       ]
+    },
+    "video": {
+      "lobster":{
+        "bez": "Lobster_data Produktfilm",
+        "name": "Erfahren Sie in diesem Clip, wie Lobster_data mittels Datenkonvertierung den reibungslosen Austausch zwischen unterschiedlichen Systemen und Formaten sicherstellt – innerhalb Ihres Unternehmens ebenso wie in der mühelosen Anbindung von Dienstleistern, Partnern, Kunden.",
+        "link": ["https://www.youtube.com/embed/o_fGmIn2ItQ?rel=0&showinfo=0&autoplay=0&loop=0&modestbranding=0"]
+      },
+      "seeburger":{
+        "bez": "SEEBURGER Business Integration Suite (BIS)",
+        "name": "Disparate applications and legacy B2B landscapes are holding your business back. What companies need is a holistic foundation, a single platform that can handle all of your business integration and file transfer needs and is fully integrated to SAP.",
+        "link": "https://www.youtube.com/embed/6Xl8woj8pSA?rel=0&showinfo=0&autoplay=0&loop=0&modestbranding=0"
+      }
     }
   },
 
@@ -331,10 +350,67 @@
     "allow": "Akzeptieren",
     "deny": "Ablehnen",
     "link": "Erfahren Sie mehr",
-    "policy": "Cookie-Richtlinie",
+    "policy": "Cookie-Hinweis",
     "verlassen": "Mit Ablehnung der Cookies-Richtlinie werden Sie die Website verlassen, sind Sie sicher !",
     "ja": "Ja",
     "nein": "Nein"
-}
+  },
+
+
+  "schlagworte": {
+    "name": "Schlagworte",
+    "alle": [
+      "IT Beratung",
+      "SEEBURGER Business Integration Server BIS 6",
+      "Lobster _scm",
+      "EAI-Schnittstellen",
+      "EDI/EAI",
+      "IT-Generalist",
+      "EDI (EDIFACT / EANCOM / openTrans / IDoc)",
+      "IT Business Analyst",
+      "Edifact",
+      "SQL",
+      "EDI",
+      "Webservices",
+      "Remote-Service",
+      "Oracle 10",
+      "VDA",
+      "Seeburger BIC",
+      "Siebel CRM",
+      "Lobster _data",
+      "Teamfähigkeit und Flexibilität",
+      "Schulung und Consulting",
+      "SAP IDOC",
+      "RestFul WebServices",
+      "ANSI X.12",
+      "XML",
+      "JSON",
+      "Guidelines",
+      "Mappingschreibungen",
+      "Papermappings",
+      "First Level Support",
+      "Second Level Support"
+    ]
+  },
+
+  "footer": {
+    "adresse": "Unsere Adresse",
+    "links": {
+      "name": "Nützliche Links",
+      "inhalt": {
+        "GS1 Germany": "https://www.gs1-germany.de/",
+        "EDI Wissen": "https://edi-wissen.de/",
+        "Lobster GmbH EDI &amp; EAI": "https://www.lobster-world.com/",
+        "Seeburger BIS": "https://www.seeburger.com/platform/business-integration-suite/",
+        "FARZAT it solutions": "https://it.farzat.co/",
+        "MMC - Media": "https://www.mmc-media.de/",
+        "VDA": "https://www.vda.de/de/services/Publikationen.html",
+        "ZUGFeRD": "https://de.wikipedia.org/wiki/ZUGFeRD",
+        "Latest EDI News": "https://www.google.com/search?client=ubuntu&amp;hs=QEp&amp;channel=fs&amp;biw=1542&amp;bih=760&amp;tbm=nws&amp;sxsrf=ALeKk03mQeeYFk8HMOzAVbcDhni8NTO_qg%3A1602939306819&amp;ei=qumKX8HPMZiEhbIPuuiguAg&amp;q=Latest+Electronic+Data+Interchange+News&amp;oq=Latest+Electronic+Data+Interchange+News&amp;gs_l=psy-ab.3...0.0.0.6372.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.UeR9VdMF8cg"
+      }
+    }
+  }
+
+
 
 }

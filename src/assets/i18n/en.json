@@ -6,21 +6,22 @@
     "homeMnu": "Home",
     "hauptSatz": {
       "zeile1": "EDI/EAI Senior Consulting",
-      "zeile2": "Your fair & independent contact for all topics concerning electronic data interchange & interfaces",
-      "zeile3": "Consulting & development from one source"
+      "zeile2": "Your trustworthy freelance partner for all projects concerning Electronic Data Interchange & interfaces.",
+      "zeile3": "Consulting & development from one provider"
     },
     "reverences": "Our references",
     "services": {
       "zeile0": "Grow your Business",
-      "zeile1": "we provide optimal EDI solutions",
-      "zeile2": "Exchange data easier and faster! ",
-      "zeile3": "Optimize communication with your customers and suppliers. Read our case study to learn how you can automate the exchange of data with our high-performance Business Integration Platform.",
+      "zeile1": "We provide optimal EDI solutions",
+      "zeile2": "faster and easier data Exchange! ",
+      "zeile3": "Optimized communication with your customers and suppliers. For learning how you can automate the exchange of data with our high-performance Business Integration Platform ",
+      "zeile4": "click here.",
       "card1-h": "NO PROJECT STANDSTILLS",
-      "card1-b": "development, operation and in-house support, that is, we can also provide ad-hoc services outside of release cycles.",
+      "card1-b": "Development, operation and in-house support; we can also provide ad-hoc services outside of release cycles.",
       "card2-h": "COMPREHENSIVE SERVICES",
-      "card2-b": "EDI conversion, signing service, archiving service, validation service, file transfer service, capture services, reporting, etc.",
+      "card2-b": "EDI conversion, signing service, archiving service, validation service, file transfer service, capture services, reporting... etc.",
       "card3-h": "LEADING WITH SECURITY",
-      "card3-b": "we offer maximum transparency in terms of security and process safety through encryptions, databases and operating systems."
+      "card3-b": "We offer maximum transparency in terms of security and process safety through encryptions, databases and operating systems."
     },
     "features": {
       "zeile1": "Best Quality for you success",
@@ -28,35 +29,35 @@
       "cards": {
         "EDI with Lobster": [
           "filter",
-          "Consulting, profile development, process implementations & development of individual EDI/EAI/API services with with Lobster _data 3.x & 4.x, Lobster _data Portal & Lobster _scm as well as workshops & trainings."
+          "Consulting, profile development, process implementations & development of individual EDI/EAI/API services with Lobster _data (3.x & 4.x), Lobster _data Portal & Lobster _scm, as well as workshops & trainings."
         ],
         "EDI with Seeburger": [
           "exchange-alt",
-          "Consulting, mapping development & implementations, real-time connection of applications and cloud services and control of internal and external business processes as well as process designer Seeburger BIS/BIC 5.x & 6"
+          "Consulting, mapping development & implementation, real-time connection of applications, cloud services, control of internal and external business processes as well as process designer Seeburger BIS/BIC 5.x & 6."
         ],
         "EDI Project Management": [
           "project-diagram",
-          "Requirements management external/internal partners, systems (EAI), pre- & after-sales support, conceptual design, documentation EDI interfaces & processes as well as analysis and creation of EDI guidelines."
+          "Requirements management external/internal partners, systems (EAI), pre-/ after-sales support, conceptual design, documentation EDI interfaces & processes as well as analysis and creation of EDI guidelines."
         ],
         "Conception & Documentation": [
           "edit",
-          "Creation of so-called „paper mappings“ (mapping descriptions hand in hand with your specialist departments) as well as creation of documentation EDI interfaces & processes."
+          "Creation of so-called 'paper mappings' (mapping descriptions hand in hand with your specialist departments) as well as creation of documentation EDI interfaces & processes."
         ],
         "Communication Channels": [
           "network-wired",
-          "Tuning, setup and test of remote communication connections such as HTTP(s), (S)FTP(S), AS2, X.400, AS400 Dataqueue, LDAP, SMTP, POP3, IMAP, database connections, OFTP(2) or VAN (e.g. GXS)."
+          "Tuning, setup and testing of remote communications and connections such as HTTP(S), FTP(S), AS2, X.400, AS400 Dataqueue, LDAP, SMTP, POP3, IMAP, database connections, OFTP(2) or VAN (e.g. GXS)."
         ],
         "Performance": [
           "tachometer-alt",
-          "High processing speed of large files as well as many short messages, load balance capability with fail-over and configuration options (HA concept)."
+          "High processing speed of large files as well as many short messages, Load balancing capabilities with failover and configuration options (HA concept)."
         ],
         "Data Formats": [
           "file-alt",
-          "Data formats such as EDIFACT, Tradacoms, ZUGFeRD, XML, CSV, Excel, FixRecord, database queries, BWA, JSON, CARGO-IMP etc. as well as templates such as VDA, SAP IDoc, ANSI X.12 and more than 9,000 EDIFACT templates with secure transmission"
+          "Data formats such as EDIFACT, Tradacoms, ZUGFeRD, XML, CSV, Excel, FixRecord, database queries, BWA, JSON, CARGO-IMP etc... As well as templates such as VDA, SAP IDoc, ANSI X.12 and more than 9,000 EDIFACT templates with secure transmission."
         ],
         "IT Support & Consulting": [
           "question",
-          "extensive IT know-how, experience in client service, system first and second level as well as EDI clearing and support. Branch Know How: Logistics, Industry & Trade, Automotive."
+          "Extensive IT Know-how, experience in client services, system first and second level as well as EDI clearing and support, branch Know-how: Logistics, Industry & Trade, Automotive."
         ]
       }
     },
@@ -66,15 +67,18 @@
       "cards": {
         "Stefan Endler": [
           "Head of SAP/BPM - ROTHENBERGER Werkzeuge GmbH",
-          "With Mr. Schäfer we have a very good consultant who supports us in our developments around the electronic customer and supplier connection fast, factually correct and unbureaucratic. With his high level of commitment, the cooperation is always fun and leads to the expected results."
+          "With Mr. Schäfer we have a very good consultant who supports us in our developments around the electronic customers and supplier connection fast, factually correct and unbureaucratic. With his high level of commitment, the cooperation is always fun and leads to the expected results.",
+          "www.rothenberger.com"
         ],
         "Patrik Kluge": [
           "Global Head of IT Systems and Development - dservice GmbH",
-          "Very professional and friendly manner, the cooperation with Mr. Philippe Schäfer is for us on a very solid basis. His expert knowledge in the topics EDI,EAI and their implementation in Lobster is a great help. We are looking forward to future projects!"
+          "Very professional and friendly manner, the cooperation with Mr. Philippe Schäfer is established on very solid basis. His expert knowledge in the topics EDI, EAI and their implementation in Lobster is a great help. We are looking forward to future projects!",
+          "http://deugro-group.com"
         ],
         "Project manager": [
           "VS Logistics",
-          "The nice thing about working with Mr. Schäfer is his availability and quick support in urgent matters. Also his know-how helps us in the implementation of various projects, as he shows us different ways to reach our goal that we have not seen before. This is another reason why the implementations on his part take place without any problems. Furthermore, his friendly and helpful nature is also a reason why we like to work with him for a long time and will continue to do so."
+          "The best thing about working with Mr. Schäfer is his availability and quick support in urgent matters. Also, his Know-how helps us in the implementation of various projects, as he shows us different ways to reach our goal in ways that we didn't see possible. This is another reason why the implementations from his part take place without any problems. Furthermore, his friendly and helpful nature is also a reason why we like to work with him for a long time and will continue to do so.",
+          "https://www.vs-logistics.com/"
         ]
       }
     }
@@ -84,7 +88,10 @@
     "hauptSatz": {
       "zeile1": "EDI Services and more",
       "zeile2": "Best Services We Provide! ",
-      "zeile3": "Exchange data easier and faster! Optimize communication with your customers and suppliers. Read our case study to learn how you can automate the exchange of data with our high-performance Business Integration Platform."
+      "zeile3": "Exchange data easier and faster! Optimize communication with your customers and suppliers. Read our case study to learn how you can automate the exchange of data with our high-performance Business Integration Platform.",
+      "zeile4": "EDI translation | EDI mapping | Secure transactions",
+      "knopf": "EDI Software Solutions",
+      "solutions" : "Choosing the right EDI solution for your company is quite difficult, as there is a wide range of choices available on the market, here are some of the popular EDI solutions that we provide and support:"
     },
     "cardButton": "Offer request",
     "card1": {
@@ -129,12 +136,24 @@
           "Workflow Designer BIS5.x",
           "Migration Experience BIS5 / BIS6 incl. Mappings"
       ]
+    },
+    "video": {
+      "lobster":{
+        "bez": "Lobster data in 60 seconds",
+        "name": "Get to know Lobster_data, the software for electronic data integration (EDI). In just 60 seconds. With EDI, a company can communicate electronically with its customers and suppliers in a cost-saving manner. Are you interested in smooth EDI processes? Then go ahead: Get information now. ",
+        "link": "https://www.youtube.com/embed/AwByIV-G02o?rel=0&showinfo=0&autoplay=0&loop=0&modestbranding=0"
+      },
+      "seeburger":{
+        "bez": "SEEBURGER Business Integration Suite (BIS)",
+        "name": "Disparate applications and legacy B2B landscapes are holding your business back. What companies need is a holistic foundation, a single platform that can handle all of your business integration and file transfer needs and is fully integrated to SAP.",
+        "link": "https://www.youtube.com/embed/6Xl8woj8pSA?rel=0&showinfo=0&autoplay=0&loop=0&modestbranding=0"
+      }
     }
   },
 
   "projects": {
     "projectsMnu": "Projects",
-    "zeile1": "we make your business Projects a reality",
+    "zeile1": "we turn your business Projects into reality",
     "zeile2": "Our real work begins after implementing the project represented by providing the highest levels of support.",
     "zeile3": "more than 10 years experience",
     "zeile4": " In addition to technology, we are happy to place our know-how and many years of experience in project management at your disposal and ensure that your business runs smoothly from planning to implementation.",
@@ -334,5 +353,64 @@
     "verlassen": "By rejecting the cookie policy, you will leave the site, you are sure !",
     "ja": "Yes",
     "nein": "No"
-}
+  },
+
+
+  "schlagworte": {
+    "name": "Keywords",
+    "alle": [
+      "IT Beratung",
+      "SEEBURGER Business Integration Server BIS 6",
+      "Lobster _scm",
+      "EAI-Schnittstellen",
+      "EDI/EAI",
+      "IT-Generalist",
+      "EDI (EDIFACT / EANCOM / openTrans / IDoc)",
+      "IT Business Analyst",
+      "Edifact",
+      "SQL",
+      "EDI",
+      "Webservices",
+      "Remote-Service",
+      "Oracle 10",
+      "VDA",
+      "Seeburger BIC",
+      "Siebel CRM",
+      "Lobster _data",
+      "Teamfähigkeit und Flexibilität",
+      "Schulung und Consulting",
+      "SAP IDOC",
+      "RestFul WebServices",
+      "ANSI X.12",
+      "XML",
+      "JSON",
+      "Guidelines",
+      "Mappingschreibungen",
+      "Papermappings",
+      "First Level Support",
+      "Second Level Support"
+    ]
+  },
+
+  "footer": {
+    "adresse": "Our Address",
+    "links": {
+      "name": "Useful Links",
+      "inhalt": {
+        "GS1 Germany": "https://www.gs1-germany.de/",
+        "EDI Wissen": "https://edi-wissen.de/",
+        "Lobster GmbH EDI &amp; EAI": "https://www.lobster-world.com/",
+        "Seeburger BIS": "https://www.seeburger.com/platform/business-integration-suite/",
+        "FARZAT it solutions": "https://it.farzat.co/",
+        "MMC - Media": "https://www.mmc-media.de/",
+        "VDA": "https://www.vda.de/de/services/Publikationen.html",
+        "ZUGFeRD": "https://de.wikipedia.org/wiki/ZUGFeRD",
+        "Latest EDI News": "https://www.google.com/search?client=ubuntu&amp;hs=QEp&amp;channel=fs&amp;biw=1542&amp;bih=760&amp;tbm=nws&amp;sxsrf=ALeKk03mQeeYFk8HMOzAVbcDhni8NTO_qg%3A1602939306819&amp;ei=qumKX8HPMZiEhbIPuuiguAg&amp;q=Latest+Electronic+Data+Interchange+News&amp;oq=Latest+Electronic+Data+Interchange+News&amp;gs_l=psy-ab.3...0.0.0.6372.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.UeR9VdMF8cg"
+      }
+    }
+  }
+
+
+
+
 }

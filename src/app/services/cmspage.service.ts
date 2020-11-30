@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Contact } from '../components/contact/cmspage.module';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { ContactComponent } from '../components/contact/contact.component';
 
 
 @Injectable({
@@ -36,7 +35,7 @@ export class CmspageService {
 
   }
 
-  private handleError(error: HttpErrorResponse) {
+  private handleError(error: HttpErrorResponse): Observable<never> {
     if (error.error instanceof ErrorEvent) {
 
       // A client-side or network error occurred. Handle it accordingly.

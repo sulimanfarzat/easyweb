@@ -1,11 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+
 
 // Awesome
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -18,13 +20,17 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+// services
+import { CmspageService } from './services/cmspage.service';
+import { LangService } from '@service/lang.service';
+
 // components
 import { AppRoutingModule } from './modules/app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { ServicesComponent } from './components/services/services.component';
+import { SafePipe, ServicesComponent } from './components/services/services.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -34,7 +40,7 @@ import { DatenschutzComponent } from './components/datenschutz/datenschutz.compo
 import { CookieModule } from './modules/cookie.module';
 import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 
-import { CmspageService } from './services/cmspage.service';
+
 
 
 @NgModule({
@@ -49,11 +55,13 @@ import { CmspageService } from './services/cmspage.service';
     ContactComponent,
     TestimonialsComponent,
     ImpressumComponent,
-    DatenschutzComponent
+    DatenschutzComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     NgbModule,
     BrowserAnimationsModule,
     CarouselModule,
@@ -72,9 +80,8 @@ import { CmspageService } from './services/cmspage.service';
     ReactiveFormsModule,
     NgBootstrapFormValidationModule.forRoot(),
     NgBootstrapFormValidationModule
-
   ],
-  providers: [CmspageService],
+  providers: [Title, HttpClientModule, CmspageService, LangService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
@@ -85,6 +92,6 @@ export class AppModule {
 }
 
 // AOT compilation support
-export function httpTranslateLoader(http: HttpClient) {
+export function httpTranslateLoader(http: HttpClient):any {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }

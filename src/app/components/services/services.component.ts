@@ -1,28 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent implements OnInit  {
 
   closeResult = '';
-  product= '';
+  product = '';
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal) {
+   }
 
   ngOnInit(): void {
   }
 
 
-  open(content, x) {
+  open(content, x): void {
     this.modalService.open(content,  { centered: true, size: 'lg' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
-    this.product=x;
+    this.product = x;
     console.log(x);
   }
 
@@ -36,5 +38,22 @@ export class ServicesComponent implements OnInit {
     }
   }
 
+
+}
+
+
+
+
+
+@Pipe({
+  name: 'safe'
+})
+
+export class SafePipe implements PipeTransform {
+
+  constructor(private sanitizer: DomSanitizer) { }
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
 }

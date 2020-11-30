@@ -1,21 +1,25 @@
 <!-- Page Content -->
     <!-- Banner Starts Here -->
-    <div class="banner">
+    <div class="banner" id="banner">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
             <div class="header-text caption" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
               <h2>{{ 'home.hauptSatz.zeile1' | translate }}</h2>
                 <p class="lead" key="start_section">
-                  {{ 'home.hauptSatz.zeile2' | translate }}!
+                  {{ 'home.hauptSatz.zeile2' | translate }} <br>
                 {{ 'home.hauptSatz.zeile3' | translate }}</p>
+            </div>
+            <div class="mt-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+              <a class="main-button" style="margin-left: 0px;" routerLink="." fragment="testimonials">
+                {{ 'home.testimonials.zeile1' | translate }}
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Banner Ends Here -->
-
 
 
     <!-- Trusted Starts Here -->
@@ -32,7 +36,7 @@
               <ng-template carouselSlide>
                 <div class="trusted-item">
                   <a class="mr-3" href="https://www.vs-logistics.com/" target="_blank">
-                    <img src="assets/images/vs.png" alt="vs logistics">
+                    <img src="assets/images/trusted-vs.png" alt="vs logistics">
                   </a>
                 </div>
               </ng-template>
@@ -56,6 +60,30 @@
                     <img src="assets/images/trusted_lobster1.png" alt="lobster"></a>
                 </div>
               </ng-template>
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a href="https://edi-wissen.de/de/" target="_blank">
+                    <img src="assets/images/trusted_edi-wissen.png" alt="MMC-Media"></a>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a href="https://www.mmc-media.de/" target="_blank">
+                    <img src="assets/images/trusted-mmc.png" alt="MMC-Media"></a>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a href="https://www.vda.de/de/services/Publikationen.html" target="_blank">
+                    <img src="assets/images/trusted_vda.png" alt="VDA"></a>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="trusted-item">
+                  <a href="https://it.farzat.co/" target="_blank">
+                    <img src="assets/images/trusted_farzat.png" alt="FARZAT" style="width: 57px;max-height: 80px"></a>
+                </div>
+              </ng-template>
             </owl-carousel-o>
           </div>
         </div>
@@ -73,7 +101,8 @@
               <span>{{ 'home.services.zeile0' | translate }}</span>
               <h2>{{ 'home.services.zeile1' | translate }}</h2>
               <p>{{ 'home.services.zeile2' | translate }}
-                 {{ 'home.services.zeile3' | translate }}</p>
+                 {{ 'home.services.zeile3' | translate }} <a class="text-secondary" routerLink="." fragment="features">{{ 'home.services.zeile4' | translate }}</a></p>
+
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12" data-aos="zoom-in-down" data-aos-duration="1500">
@@ -109,7 +138,7 @@
 
 
     <!-- Features Starts Here -->
-    <div class="features-section" data-aos="fade-down" data-aos-duration="200">
+    <div class="features-section" id="features" data-aos="fade-down" data-aos-duration="200">
       <div class="container">
         <div class="row">
           <div class="col-md-12">

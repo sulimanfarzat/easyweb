@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-6 col-6">
           <div class="float-right ml-2">
-            <ng-select [(ngModel)]="selectLang" class="custom"
+            <ng-select [(ngModel)]="selectedLang" class="custom"
             (change)="switchLang($event)" appearance="outline" [searchable]="false" [clearable]="false">
               <ng-option value="de">
                 <!-- <img src="{{basePath}}/assets/batman.png" width="20px" height="20px" /> -->
@@ -67,24 +67,24 @@
       <div class="collapse navbar-collapse" id="navbarResponsive" [ngbCollapse]="isMenuCollapsed">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a routerLink="/home" routerLinkActive="active" class="nav-link" href="#" key="home" (click)="isMenuCollapsed = true">Home
+            <a routerLink="/home" routerLinkActive="active" class="nav-link underline" href="#" key="home" (click)="isMenuCollapsed = true">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a routerLink="/services" routerLinkActive="active" class="nav-link" href="#"
+            <a routerLink="/services" routerLinkActive="active" class="nav-link underline" href="#"
               (click)="isMenuCollapsed = true">{{ 'services.servicesMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/projects" routerLinkActive="active" class="nav-link" href="#"
+            <a routerLink="/projects" routerLinkActive="active" class="nav-link underline" href="#"
               (click)="isMenuCollapsed = true">{{ 'projects.projectsMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/about" routerLinkActive="active" class="nav-link" href="#" key="about"
+            <a routerLink="/about" routerLinkActive="active" class="nav-link underline" href="#" key="about"
               (click)="isMenuCollapsed = true">{{ 'about.aboutMnu' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a routerLink="/contact" routerLinkActive="active" class="nav-link" href="#"
+            <a routerLink="/contact" routerLinkActive="active" class="nav-link underline" href="#"
               (click)="isMenuCollapsed = true">{{ 'contact.contactMnu' | translate }}</a>
           </li>
         </ul>

@@ -4,17 +4,22 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-@import "~animate-scss/animate.scss";
+@import '~animate-scss/animate.scss';
 @import '~flag-icon-css/sass/flag-icon.scss';
-@import "~aos/src/sass/aos.scss";
-@import "~@ng-select/ng-select/scss/default.theme.scss";
+@import '~aos/src/sass/aos.scss';
+@import '~@ng-select/ng-select/scss/default.theme.scss';
 // ... or
-//@import "~@ng-select/ng-select/themes/material.theme.css";
+//@import '~@ng-select/ng-select/themes/material.theme.css';
 
-@import "assets/css/custom.scss";
-/*@import "assets/css/flex-slider.scss";*/
+@import 'assets/css/custom.scss';
 
-BODY, HTML { overflow-x: hidden; }
+BODY, HTML {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::-moz-selection { background: #3B3B3B; color: #51BAA7; }
+::selection { background: #3B3B3B; color: #51BAA7; }
 
 // fixed button
 .feedback {
@@ -24,7 +29,7 @@ BODY, HTML { overflow-x: hidden; }
   height: 419px;
   width: 0px;
   /* HOVER OFF */
-  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
   z-index: 1049;
 }
 
@@ -94,4 +99,12 @@ BODY, HTML { overflow-x: hidden; }
 
 #flm-profile-widget a:hover {
   background-color: #3B3B3B !important;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  [data-aos] {
+    transition-duration: 0s !important;
+  }
 }

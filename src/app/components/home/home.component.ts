@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -6,11 +7,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 
   trustedOptions: OwlOptions = {
@@ -24,7 +20,7 @@ export class HomeComponent implements OnInit {
     margin: 30,
     autoplay: true,
     smartSpeed: 700,
-    autoplayTimeout: 6000,
+    autoplayTimeout: 4000,
     navText: ['', ''],
     responsive: {
       0: {
@@ -45,6 +41,12 @@ export class HomeComponent implements OnInit {
       }
     },
     nav: false
+  };
+
+  constructor() {
+   }
+
+  ngOnInit(): void {
   }
 
 

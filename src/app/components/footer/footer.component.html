@@ -1,11 +1,12 @@
  <!-- Footer Starts Here -->
  <footer>
+
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="footer-item">
           <div class="footer-heading">
-            <h2>Our Address:</h2>
+            <h2>{{ 'footer.adresse' | translate }}</h2>
           </div>
           <p>easy2edi Schäfer</p>
           <p>Philippe Schäfer<br>
@@ -48,20 +49,12 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="footer-item">
           <div class="footer-heading">
-            <h2>Useful Links</h2>
+            <h2>{{ 'footer.links.name' | translate }}</h2>
           </div>
           <ul class="footer-list">
-            <li><a target="_blank" href="https://www.gs1-germany.de/" rel="noopener">GS1 Germany</a></li>
-            <li><a target="_blank" href="https://edi-wissen.de/" rel="nofollow">EDI Wissen</a></li>
-            <li><a target="_blank" href="https://www.lobster-world.com/">Lobster GmbH EDI &amp; EAI</a></li>
-            <li><a target="_blank" href="https://www.seeburger.com/platform/business-integration-suite/">Seeburger BIS</a></li>
-            <li><a target="_blank" href="https://it.farzat.co/">FARZAT it solutions</a></li>
-            <li><a target="_blank" href="https://www.mmc-media.de/">MMC - Media</a></li>
-            <li><a target="_blank" href="https://www.vda.de/de/services/Publikationen.html">VDA</a></li>
-            <li><a target="_blank" href="https://de.wikipedia.org/wiki/ZUGFeRD">ZUGFeRD</a></li>
-            <li><a target="_blank" href="https://www.google.com/search?client=ubuntu&amp;hs=QEp&amp;channel=fs&amp;biw=1542&amp;bih=760&amp;tbm=nws&amp;sxsrf=ALeKk03mQeeYFk8HMOzAVbcDhni8NTO_qg%3A1602939306819&amp;ei=qumKX8HPMZiEhbIPuuiguAg&amp;q=Latest+Electronic+Data+Interchange+News&amp;oq=Latest+Electronic+Data+Interchange+News&amp;gs_l=psy-ab.3...0.0.0.6372.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.UeR9VdMF8cg">Latest EDI News</a></li>
-            <li></li>
-
+            <ng-container *ngFor="let item of 'footer.links.inhalt' | translate | keyvalue ">
+              <li><a target="_blank" [href]="item.value" rel="noopener">{{item.key}}</a></li>
+            </ng-container>
           </ul>
         </div>
       </div>
@@ -82,10 +75,20 @@
           </ul>
         </div>
       </div>
+
+
       <div class="col-md-12">
         <div class="sub-footer">
+
+          <div class="d-flex justify-content-center mb-3">
+            <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a routerLink="/impressum" routerLinkActive="active" href="#">{{ 'impressum.impressumMnu' | translate }}</a> </div>
+            <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a routerLink="/datenschutz" routerLinkActive="active" href="#">{{ 'datenschutz.datenschutzMnu' | translate }}</a> </div>
+            <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a href="#">{{ 'cookie.policy' | translate }}</a> </div>
+          </div>
+
+
           <p>Copyright &copy; 2020 easy2edi Schäfer
-          - Designed by <a rel="nofollow" href="https://it.farzat.co" target="_blank">Suliman Farzat</a></p>
+          - Designed by <a rel="nofollow" href="https://it.farzat.co" target="_blank">Suliman Farzat - FARAZT it solutins</a></p>
         </div>
       </div>
     </div>

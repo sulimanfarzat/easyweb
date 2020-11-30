@@ -1,4 +1,4 @@
-import { Component,  OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef  } from '@angular/core';
+import { Component,  OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef, Output, EventEmitter, Input  } from '@angular/core';
 import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
@@ -6,6 +6,7 @@ import { NgcCookieConsentService, NgcInitializeEvent, NgcNoCookieLawEvent, NgcSt
 import { isPlatformBrowser } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { LangService } from '@service/lang.service';
 
 @Component({
   selector: 'app-header',
@@ -16,12 +17,12 @@ import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 export class HeaderComponent implements OnInit, OnDestroy {
 
   public isMenuCollapsed = true;
-  selectLang: string = null;
+  selectedLang: string = null;
 
-  @ViewChild("content") contentMsgCookies: ElementRef;
+  @ViewChild('content') contentMsgCookies: ElementRef;
   contentMsgAblehnen: string;
 
-   //keep refs to subscriptions to be able to unsubscribe later
+   // keep refs to subscriptions to be able to unsubscribe later
    private popupOpenSubscription: Subscription;
    private popupCloseSubscription: Subscription;
    private initializeSubscription: Subscription;
@@ -30,29 +31,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
    private noCookieLawSubscription: Subscription;
 
 
-  constructor(public translate: TranslateService,
-    private ccService: NgcCookieConsentService,
-    config: NgbModalConfig,
-    private modalService: NgbModal,
-    private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {
-      this.router.events.pipe(
-        filter((event:RouterEvent) => event instanceof NavigationEnd)
-      ).subscribe(event => {
-        if (isPlatformBrowser(this.platformId)) {
-          window.scroll(0, 0);
-        }
-      });
+  constructor(public lang: LangService,
+              private ccService: NgcCookieConsentService,
+              config: NgbModalConfig,
+              private modalService: NgbModal,
+              private router: Router, @Inject(PLATFORM_ID) private platformId: object) {
+              this.router.events.pipe(
+                filter((event: RouterEvent) => event instanceof NavigationEnd)
+              ).subscribe(event => {
+                if (isPlatformBrowser(this.platformId)) {
+                  window.scroll(0, 0);
+                }
+              });
 
-    translate.addLangs(['en', 'de']);
-    translate.setDefaultLang('en');
+              // translate
+              this.selectedLang = lang.selectLang;
 
-    const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/en|de/) ? browserLang : 'en');
-    this.selectLang = (browserLang.match(/en|de/) ? browserLang : 'en');
-
-    config.backdrop = 'static';
-    config.keyboard = false;
-    config.centered = true;
+              config.backdrop = 'static';
+              config.keyboard = false;
+              config.centered = true;
   }
 
   ngOnInit(): void {
@@ -70,13 +67,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
  }
 
 
-  switchLang(lang: string) {
-    this.translate.use(lang);
+  switchLang(lang: string): void {
+    // this.translate.use(lang);
+    this.lang.translate.use(lang)
     this.cookieMsg();
   }
 
 
-  cookieMsg(){
+  cookieMsg(): void{
 
       // subscribe to cookieconsent observables to react to main events
       this.popupOpenSubscription = this.ccService.popupOpen$.subscribe(
@@ -101,7 +99,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         (event: NgcStatusChangeEvent) => {
           // you can use this.ccService.getConfig() to do stuff...
           console.log(`statusChange: ${JSON.stringify(event.status)}`);
-          if (event.status === "deny") {
+          if (event.status === 'deny') {
             this.contentMsgAblehnen = JSON.stringify(event);
             this.modalService.open(this.contentMsgCookies);
           }
@@ -122,13 +120,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
 
       // (Optional) support for translated cookies messages
-      //this.translate.addLangs(['en', 'de']);
-      //this.translate.setDefaultLang('en');
-
-      //const browserLang = this.translate.getBrowserLang();
-     // this.translate.use(browserLang.match(/en|de/) ? browserLang : 'en');
-
-     this.translate//
+      this.lang.translate
         .get(['cookie.header', 'cookie.message', 'cookie.dismiss', 'cookie.allow', 'cookie.deny', 'cookie.link', 'cookie.policy'])
         .subscribe(data => {
 
@@ -142,7 +134,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
           this.ccService.getConfig().content.link = data['cookie.link'];
           this.ccService.getConfig().content.policy = data['cookie.policy'];
 
-          this.ccService.destroy();//remove previous cookie bar (with default messages)
+          this.ccService.destroy(); // remove previous cookie bar (with default messages)
           this.ccService.init(this.ccService.getConfig()); // update config with translated messages
         });
 

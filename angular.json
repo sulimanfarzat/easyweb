@@ -34,7 +34,6 @@
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "src/assets/js/custom.js",
-              "src/assets/js/accordions.js",
               "./node_modules/aos/dist/aos.js",
               "node_modules/cookieconsent/build/cookieconsent.min.js"
             ]
@@ -50,7 +49,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,

@@ -16,13 +16,20 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: '**', redirectTo: '/home', pathMatch: 'full'}
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '**', redirectTo: 'home', pathMatch: 'full'}
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
+  imports: [RouterModule.forRoot(routes,
+    {
+    scrollPositionRestoration: 'top',
+    anchorScrolling: 'enabled',
+    scrollOffset: [0, 64],
+    relativeLinkResolution: 'legacy'
+}
+      )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

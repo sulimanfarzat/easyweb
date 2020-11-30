@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -9,11 +10,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class TestimonialsComponent implements OnInit {
 
   currentRate = 5;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  link: any = null;
 
   testimonialsOptions: OwlOptions = {
     loop: true,
@@ -47,6 +44,13 @@ export class TestimonialsComponent implements OnInit {
       }
     },
     nav: false
+  };
+
+  constructor(private route: ActivatedRoute) {
+    this.link = this.route.snapshot.url;
+   }
+
+  ngOnInit(): void {
   }
 
 
