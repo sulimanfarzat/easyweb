@@ -10,7 +10,7 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class CmspageService {
 
-  ServerUrl = 'https://farzat.co/farzat/email/easy2edi';
+  ServerUrl = 'https://farzat.co/it/email/easy2edi';
   errorData: {};
 
   /*========================================
@@ -25,6 +25,7 @@ export class CmspageService {
 
 
   constructor(private http: HttpClient) { }
+
 
   contactForm(formdata: Contact): Observable<Contact>  {
     console.log(JSON.stringify(formdata));

@@ -39,6 +39,8 @@ import { ImpressumComponent } from './components/impressum/impressum.component';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
 import { CookieModule } from './modules/cookie.module';
 import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 
@@ -56,7 +58,8 @@ import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
     TestimonialsComponent,
     ImpressumComponent,
     DatenschutzComponent,
-    SafePipe
+    SafePipe,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +84,8 @@ import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
     NgBootstrapFormValidationModule.forRoot(),
     NgBootstrapFormValidationModule
   ],
-  providers: [Title, HttpClientModule, CmspageService, LangService],
+  exports: [TranslateModule],
+  providers: [Title, HttpClient, HttpClientModule, CmspageService, LangService],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

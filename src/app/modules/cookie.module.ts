@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgcCookieConsentConfig, NgcCookieConsentModule } from 'ngx-cookieconsent';
+import { TranslateModule } from '@ngx-translate/core';
 
 const cookieConfig: NgcCookieConsentConfig =  {
   cookie: {
-    domain: 'www.easy2edi.de' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+    domain: 'easy2edi.de' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
   },
   palette: {
     popup: {
@@ -30,9 +31,10 @@ const cookieConfig: NgcCookieConsentConfig =  {
 @NgModule({
   declarations: [],
   imports: [
+    TranslateModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
     CommonModule
   ],
-  exports: [NgcCookieConsentModule]
+  exports: [NgcCookieConsentModule, TranslateModule]
 })
 export class CookieModule { }

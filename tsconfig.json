@@ -16,6 +16,9 @@
       "@assets/*": ["src/assets/*"],
       "@service/*": ["src/app/services/*"]
     },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
       "es2018",
       "dom"

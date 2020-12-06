@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 import { CmspageService } from '@service/cmspage.service';
 import { ErrorMessage } from 'ng-bootstrap-form-validation';
+import { Subject } from 'rxjs';
 import { Contact } from './cmspage.module';
+import {debounceTime} from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   templateUrl: './contact.component.html',
@@ -28,9 +32,21 @@ export class ContactComponent implements OnInit {
     }
   ];
 
-  constructor(private router: Router, private cmspageService: CmspageService) { }
+  private _success = new Subject<string>();
+  private _danger = new Subject<string>();
+  successMessage = '';
+  notSuccessMessage = '';
+  @ViewChild('selfClosingAlertNotSent', {static: false}) selfClosingAlertNotSent: NgbAlert;
+  @ViewChild('selfClosingAlert', {static: false}) selfClosingAlert: NgbAlert;
+
+  constructor(private router: Router, private cmspageService: CmspageService, private titleService:Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('easy2edi | Contact');
+    // message email gesendet
+    this.emailGesendet();
+    this.emailNotSent();
+
     this.formGroup = new FormGroup({
       emailAddress: new FormControl('', [
         Validators.required,
@@ -58,22 +74,51 @@ export class ContactComponent implements OnInit {
     });
   }
 
+
   onSubmit(): any {
-    this.submitted = true;
+    this.submitted = false;
     return this.cmspageService.contactForm(this.formGroup.value).subscribe(
-      data => this.model = data,
+      data => { (data['email'] === 'gesendet' ? this.changeSuccessMessage() : void 0) },
       error => this.error = error
     );
   }
 
+
   onReset(): any {
-    this.formGroup.reset();
+    return this.formGroup.reset();
   }
 
   gotoHome(): any {
-    this.router.navigate(['/']);
+    return this.router.navigate(['/']);
   }
 
+  // message email gesendet
+  private emailGesendet(): void {
+    this._success.subscribe(message => this.successMessage = message);
+    this._success.pipe(debounceTime(700000)).subscribe(() => {
+      if (this.selfClosingAlert) {
+        this.selfClosingAlert.close();
+      }
+    });
+  }
 
+  public changeSuccessMessage() {
+    this._success.next(`${new Date()}`);
+    this.onReset();
+  }
+// message nicht gesendet
+private emailNotSent(): void {
+  this._danger.subscribe(message => this.notSuccessMessage = message);
+  this._danger.pipe(debounceTime(7000)).subscribe(() => {
+    if (this.selfClosingAlertNotSent) {
+      this.selfClosingAlertNotSent.close();
+    }
+  });
+}
+
+public changeDangerMessage() {
+  this._danger.next(`${new Date()}`);
+  this.onReset();
+}
 
 }

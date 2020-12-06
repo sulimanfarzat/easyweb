@@ -20,4 +20,9 @@ export class LangService {
   }
 
 
+  public switchLangService(lang: string): void {
+    this.translate.use(lang);
+  }
+
+
 }

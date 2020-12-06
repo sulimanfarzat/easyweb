@@ -5,6 +5,7 @@ import { ContactComponent } from '../components/contact/contact.component';
 import { DatenschutzComponent } from '../components/datenschutz/datenschutz.component';
 import { HomeComponent } from '../components/home/home.component';
 import { ImpressumComponent } from '../components/impressum/impressum.component';
+import { NotfoundComponent } from '../components/notfound/notfound.component';
 import { ProjectsComponent } from '../components/projects/projects.component';
 import { ServicesComponent } from '../components/services/services.component';
 
@@ -16,8 +17,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: '**', redirectTo: 'home', pathMatch: 'full'}
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '**', component: NotfoundComponent}
 
 ];
 

@@ -1,6 +1,5 @@
 import { Component,  OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef, Output, EventEmitter, Input  } from '@angular/core';
 import { Router, NavigationEnd, RouterEvent } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { NgcCookieConsentService, NgcInitializeEvent, NgcNoCookieLawEvent, NgcStatusChangeEvent } from 'ngx-cookieconsent';
 import { isPlatformBrowser } from '@angular/common';
@@ -36,8 +35,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
               config: NgbModalConfig,
               private modalService: NgbModal,
               private router: Router, @Inject(PLATFORM_ID) private platformId: object) {
+
               this.router.events.pipe(
-                filter((event: RouterEvent) => event instanceof NavigationEnd)
+                filter((event: RouterEvent) => event instanceof NavigationEnd )
               ).subscribe(event => {
                 if (isPlatformBrowser(this.platformId)) {
                   window.scroll(0, 0);
@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.cookieMsg();
+    //this.cookieMsg();
   }
 
   ngOnDestroy(): void {
@@ -67,9 +67,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
  }
 
 
-  switchLang(lang: string): void {
-    // this.translate.use(lang);
-    this.lang.translate.use(lang)
+ switchLang(lang: string): void {
+    this.lang.switchLangService(lang);
     this.cookieMsg();
   }
 
@@ -103,7 +102,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
             this.contentMsgAblehnen = JSON.stringify(event);
             this.modalService.open(this.contentMsgCookies);
           }
-
         });
 
       this.revokeChoiceSubscription = this.ccService.revokeChoice$.subscribe(

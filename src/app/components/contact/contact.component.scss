@@ -25,3 +25,9 @@ ng-select.custom ::ng-deep .ng-select-container  {
   height: 46px;
   outline: none;
 }
+
+
+.alert-dismissible ::ng-deep .close {
+  height: 100% !important;
+  font-size: 20px !important;
+}

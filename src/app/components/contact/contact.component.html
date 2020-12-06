@@ -63,13 +63,26 @@
                   <div class="col-lg-12 form-group" [customErrorMessages]="customErrorMessages">
                       <textarea name="comments" rows="6" class="form-control" formControlName="comments" placeholder="{{ 'contact.contactNav.form.8' | translate }}"></textarea>
                   </div>
+
                   <div class="col-lg-12 btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
                       <button class="main-button" type="button" (click)="onReset()">{{ 'contact.contactNav.form.10' | translate }}</button>
-                      <button class="main-button" type="submit" name="submit" [disabled]="!contactForm.form.valid" >{{ 'contact.contactNav.form.9' | translate }}</button>
+                      <button class="main-button" type="submit" name="submit" >{{ 'contact.contactNav.form.9' | translate }}</button>
+                      <!-- [disabled]="!contactForm.form.valid"  -->
+                  </div>
+                  <div class="mt-2 p-3">
+                    <ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">
+                      {{ 'contact.emailGesendet' | translate }} {{ successMessage }}
+                    </ngb-alert>
+                    <ngb-alert #selfClosingAlertNotSent *ngIf="notSuccessMessage" type="danger" (closed)="notSuccessMessage = ''">
+                      {{ 'contact.emailNichtGesendet' | translate }} {{ notSuccessMessage }}
+                    </ngb-alert>
+                    <hr/>
+                    <p>
                   </div>
                 </div>
               </form>
           </div>
+
           </div>
           <div class="col-md-6">
             <div class="right-content">
@@ -95,7 +108,7 @@
               <div class="row">
                 <div class="col-md-12 col-sm-12">
                   <ul>
-                    <li data-aos="fade-left" data-aos-duration="2200"><i><fa-icon [icon]="['fas', 'envelope']"></fa-icon></i> philippe.schaefer@easy2edi.de</li>
+                    <li data-aos="fade-left" data-aos-duration="2100"><i><fa-icon [icon]="['fas', 'envelope']"></fa-icon></i> philippe.schaefer@easy2edi.de</li>
                   </ul>
                 </div>
               </div>

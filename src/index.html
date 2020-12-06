@@ -3,46 +3,63 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Easy2edi</title>
-  <base href="/sandbox/">
+  <title>easy2edi</title>
+  <base href="/">
   <meta name="description" content="EDI/EAI Senior Consulting Ihr fairer & unabhängiger Ansprechpartner bei Themen zum elektronischen Datenaustausch & Schnittstellen! Beratung & Entwicklung">
   <meta name="keywords" content="IT Beratung, SEEBURGER Business Integration Server BIS 6, Lobster _scm,
       EAI-Schnittstellen, EDI/EAI, IT-Generalist, EDI, EDIFACT, EANCOM, openTrans, IDoc, IT Business Analyst,
       Edifact, SQL, EDI, Webservices, Remote-Service, Oracle 10, VDA, Seeburger BIC, Siebel CRM, Lobster _data,
       Teamfähigkeit und Flexibilität, Schulung und Consulting, SAP IDOC, RestFul WebServices, ANSI X.12, XML,
-      JSON, Guidelines, Mappingschreibungen, Papermappings, First Level Support, Second Level Support">
+      JSON, Guidelines, Mappingschreibungen, Papermappings, First Level Support, Second Level Support,Philippe Schäfer, Suliman Farzat">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Philippe Schäfer">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-
   <link rel="alternate" hreflang="en" href="https://www.easy2edi.de" />
   <link rel="alternate" hreflang="de" href="https://www.easy2edi.de" />
-  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 
 
-
-  <div class="feedback">
+  <div id="sub-freelancer" class="sub-feedback">
+    <span>&#10094;</span>
+  </div>
+  <div id="freelancer" class="feedback">
     <div class="dark" id="flm-profile-widget">
-
-      <a target="_blank" href="https://www.freelancermap.de/freelancer-verzeichnis/profile/entwicklung/156624-profil-philippe-schaefer-edi-eai-api-senior-consultant-lobster-data-pro-aus-gross-umstadt.html?ref=widget">
-        Profil bei freelancermap
-        <div class="sub-feedback">
-        <span><fa-icon [icon]="['fas', 'question-circle']"></fa-icon></span>
-      </div>
+      <a target="_blank"
+        href="https://www.freelancermap.de/freelancer-verzeichnis/profile/entwicklung/156624-profil-philippe-schaefer-edi-eai-api-senior-consultant-lobster-data-pro-aus-gross-umstadt.html?ref=widget">
+        freelancermap
       </a>
     </div>
   </div>
 
+
   <app-root></app-root>
 
 
-<!-- freelancer map -->
-<script src="//www.freelancermap.de/js/widgets/profile.js"></script>
-<script>flm_profile.init({profile_id: 156624})</script>
+  <!-- freelancer map -->
+  <script src="//www.freelancermap.de/js/widgets/profile.js"></script>
+  <script>
+    flm_profile.init({
+      profile_id: 156624
+    })
+
+    document.getElementById("sub-freelancer").onclick = function() {freelancerBtn()};
+    function freelancerBtn() {
+      var NAMEFREE = document.getElementById("freelancer");
+      var NAMESUB = document.getElementById("sub-freelancer");
+      if (NAMEFREE.className == "feedback show-feedback") {
+        NAMEFREE.classList.remove("show-feedback");
+        NAMESUB.classList.remove("show-sub-feedback");
+        NAMESUB.innerHTML = "<span>&#10094;</span>";
+      } else {
+        NAMEFREE.className = "feedback show-feedback";
+        NAMESUB.className = "sub-feedback show-sub-feedback";
+        NAMESUB.innerHTML = "<span>&#10095;</span>";
+      }
+    }
+  </script>
 
 
 </body>

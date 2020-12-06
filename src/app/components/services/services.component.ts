@@ -1,5 +1,5 @@
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Title } from '@angular/platform-browser';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -11,10 +11,11 @@ export class ServicesComponent implements OnInit  {
   closeResult = '';
   product = '';
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal, private titleService:Title) {
    }
 
   ngOnInit(): void {
+    this.titleService.setTitle('easy2edi | Services');
   }
 
 

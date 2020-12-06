@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -43,10 +44,11 @@ export class HomeComponent implements OnInit {
     nav: false
   };
 
-  constructor() {
+  constructor(private titleService: Title) {
    }
 
   ngOnInit(): void {
+    this.titleService.setTitle('easy2edi | Home');
   }
 
 
