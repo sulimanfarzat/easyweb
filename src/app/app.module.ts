@@ -41,6 +41,8 @@ import { CookieModule } from './modules/cookie.module';
 import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -82,7 +84,8 @@ import { RouterTestingModule } from '@angular/router/testing';
     CookieModule,
     ReactiveFormsModule,
     NgBootstrapFormValidationModule.forRoot(),
-    NgBootstrapFormValidationModule
+    NgBootstrapFormValidationModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [TranslateModule],
   providers: [Title, HttpClient, HttpClientModule, CmspageService, LangService],

@@ -95,7 +95,7 @@ export class ContactComponent implements OnInit {
   // message email gesendet
   private emailGesendet(): void {
     this._success.subscribe(message => this.successMessage = message);
-    this._success.pipe(debounceTime(700000)).subscribe(() => {
+    this._success.pipe(debounceTime(8000)).subscribe(() => {
       if (this.selfClosingAlert) {
         this.selfClosingAlert.close();
       }
@@ -109,7 +109,7 @@ export class ContactComponent implements OnInit {
 // message nicht gesendet
 private emailNotSent(): void {
   this._danger.subscribe(message => this.notSuccessMessage = message);
-  this._danger.pipe(debounceTime(7000)).subscribe(() => {
+  this._danger.pipe(debounceTime(8000)).subscribe(() => {
     if (this.selfClosingAlertNotSent) {
       this.selfClosingAlertNotSent.close();
     }
