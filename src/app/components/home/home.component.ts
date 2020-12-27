@@ -1,4 +1,3 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { OwlOptions } from 'ngx-owl-carousel-o';
