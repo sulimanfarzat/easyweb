@@ -85,7 +85,7 @@
   },
 
   "services": {
-    "servicesMnu": "Dienste",
+    "servicesMnu": "Services",
     "hauptSatz": {
       "zeile1": "EDI Services und mehr",
       "zeile2": "Die besten Dienstleistungen, die wir anbieten! ",
@@ -319,7 +319,7 @@
                 "Angebot anfordern",
                 "Sonstiges",
                 "Ihre Nachricht",
-                "Nachricht senden",
+                "senden",
                 "Zurücksetzen"],
       "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
     },
@@ -396,6 +396,15 @@
   },
 
   "footer": {
+    "exali-txt1": "exali IT-Haftpflicht-Siegel (Sondertarif für Freelancermap-Mitglieder):",
+    "exali-txt2": "Das original exali IT-Haftpflicht-Siegel bestätigt dem Auftraggeber, dass die betreffende Person oder Firma eine aktuell gültige branchenspezifische Berufs- bzw. Betriebshaftpflichtversicherung abgeschlossen hat. Diese Versicherung wurde zum Sondertarif für Freelancermap-Mitglieder abgeschlossen.",
+    "exali-link1": "mehr über die Freelancermap Sondertarife",
+    "exali-start": "Versicherungsbeginn:",
+    "exali-start-dt": "15.08.2019",
+    "exali-end": "Versicherungsende:",
+    "exali-end-dt": "01.09.2022",
+    "exali-link2": "Zum exali-Profil",
+    "copyright": "2021 easy2edi Schäfer, alle Rechte vorbehalten.",
     "adresse": "Unsere Adresse",
     "links": {
       "name": "Nützliche Links",

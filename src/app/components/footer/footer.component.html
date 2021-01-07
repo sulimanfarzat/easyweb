@@ -12,11 +12,22 @@
           <div class="footer-heading">
             <h2>{{ 'footer.adresse' | translate }}</h2>
           </div>
-          <p>easy2edi Schäfer</p>
-          <p>Philippe Schäfer<br>
+          <p>easy2edi Sch&auml;fer</p>
+          <p>Philippe Sch&auml;fer<br>
             Am Gewerbepark 7<br>
             64823 Groß-Umstadt<br>
             DE</p>
+            <br>
+            <div class="d-flex flex-column">
+              <div class="p-2">
+              <a target="_blank" href="https://www.marktplatz-mittelstand.de/aschaffenburg/582296-easy2edi-schaefer">
+                <img
+                  src="https://www.marktplatz-mittelstand.de/siegel/582296/9b31181ef9fa495d901a8bcaf709c15b58671a7d/112/siegel.gif"
+                  alt="Marktplatz Mittelstand - easy2edi Sch&amp;fer" border="0" />
+              </a>
+            </div>
+            </div>
+
         </div>
       </div>
 
@@ -71,7 +82,7 @@
           <ul class="footer-list">
             <li><fa-icon [icon]="['fas', 'phone']"></fa-icon><a href="tel:+49 6078 9307344">+49 6078 9307344</a></li>
             <li><fa-icon [icon]="['fab', 'whatsapp']"></fa-icon><a href="tel:+49 6078 9307344">+49 6078 9307344</a></li>
-            <li style="letter-spacing: 0;"><fa-icon [icon]="['fas', 'envelope']"></fa-icon><a href="mailto:philippe.schaefer@easy2edi.de?subject=Mail from easy2edi Site&amp;body=Hallo Herr Schäfer,">philippe.schaefer@easy2edi.de</a></li>
+            <li style="letter-spacing: 0;"><fa-icon [icon]="['fas', 'envelope']"></fa-icon><a href="mailto:philippe.schaefer@easy2edi.de?subject=Mail from easy2edi Site&amp;body=Hallo Herr Sch&auml;fer,">philippe.schaefer@easy2edi.de</a></li>
             <li><fa-icon [icon]="['fas', 'question-circle']"></fa-icon><a href="mailto:info@easy2edi.de?subject=Mail from easy2edi Site&amp;body=Hallo Herr Schäfer,">info@easy2edi.de</a></li>
             <li><fa-icon [icon]="['fas', 'globe-europe']"></fa-icon><a href="https://easy2edi.de/" target="_blank">www.easy2edi.de</a></li>
             <li><fa-icon [icon]="['fab', 'xing']"></fa-icon><a href="https://www.xing.com/profile/Philippe_Schaefer" target="_blank">Xing: Philippe_Schaefer</a></li>
@@ -82,17 +93,64 @@
 
 
       <div class="col-md-12">
-        <div class="sub-footer">
 
-          <div class="d-flex justify-content-center mb-3">
+        <div class="sub-footer text-left">
+          <div class="row">
+            <div class="col-md-6">
+              <p><b>{{ 'footer.exali-txt1' | translate }}</b></p>
+              <p>{{ 'footer.exali-txt2' | translate }}
+              </p>
+              <div id="exaliInsuranceInfoLinks">
+                <a class="exaliSealTextLinks" href="/berufshaftpflichtversicherung.html" target="_blank"
+                  title="mehr über die Freelancermap Sondertarife">{{ 'footer.exali-link1' | translate }} »</a>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 margin-t">
+              <p>
+                <b>{{ 'footer.exali-start' | translate }}</b>
+                <br>
+                <span>{{ 'footer.exali-start-dt' | translate }}</span>
+              </p>
+              <p style="margin-top: 8px;">
+                <b>{{ 'footer.exali-end' | translate }}</b>
+                <br>
+                <span>{{ 'footer.exali-end-dt' | translate }}</span>
+              </p>
+              <p style="margin-top: 8px;">
+                <a class="exaliSealTextLinks" href="http://mein.exali.de/siegel/easy2edi-Schaefer" target="_blank"
+                  title="Zum exali-Profil">{{ 'footer.exali-link2' | translate }} »</a>
+              </p>
+            </div>
+
+            <div class="col-md-3 col-sm-6 margin-t logo-center">
+              <a rel="nofollow" href="https://www.exali.de/siegel/easy2edi-Schaefer" target="_blank"
+                title="Weitere Informationen zur IT-Haftpflicht von easy2edi Sch&auml;fer, Gro&szlig;-Umstadt"><img
+                  border="0" src="//siegel.exali.de/siegel/Haftpflicht_Siegel_0_6137b99bed3d43bd7ec015b422a050a2.png"
+                  width="120" height="120"
+                  alt="Weitere Informationen zur IT-Haftpflicht von easy2edi Sch&auml;fer, Gro&szlig;-Umstadt" /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-footer">
+          <div class="d-flex justify-content-center mb-4">
             <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a routerLink="/impressum" routerLinkActive="active" href="#">{{ 'impressum.impressumMnu' | translate }}</a> </div>
+            <div class="d-inline-flex justify-content-center pt-3"> <p style="color: #999898;">|</p></div>
             <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a routerLink="/datenschutz" routerLinkActive="active" href="#">{{ 'datenschutz.datenschutzMnu' | translate }}</a> </div>
+            <div class="d-inline-flex justify-content-center pt-3"> <p style="color: #999898;">|</p></div>
             <div class="d-inline-flex justify-content-center px-2 px-md-2 px-lg-3 pt-3"> <a href="#">{{ 'cookie.policy' | translate }}</a> </div>
           </div>
 
+          <div class="mb-3">
+            <img src="./assets/images/logo/SmallLogo.png" alt="easy2edi" width="250">
+          </div>
 
-          <p>Copyright &copy; 2020 All Rights Reserved  easy2edi Schäfer
-          <br> Designed by <a rel="nofollow" href="https://it.farzat.co" target="_blank">Suliman Farzat - FARZAT it solutions</a></p>
+          <p>&copy; {{ 'footer.copyright' | translate }} </p>
+
+          <p  style="font-size: 8px !important;color: gray !important;">
+            by <a rel="nofollow" href="https://it.farzat.co" target="_blank">FARZAT it solutions</a>
+          </p>
         </div>
       </div>
     </div>

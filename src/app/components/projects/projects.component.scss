@@ -57,11 +57,13 @@ ul.timeline > li:before {
   height: 20px;
   z-index: 400;
 }
-ul.timeline > li a{
+ul.timeline > li b{
   color: #51BAA7;
 }
 
-
+.card-body {
+    padding: 0 0 0 1.25rem;
+}
 
 @media (max-width: 767px) {
 

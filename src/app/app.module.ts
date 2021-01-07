@@ -20,6 +20,13 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+// angular/fire 1. Import the libs you need
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+
 // services
 import { CmspageService } from './services/cmspage.service';
 import { LangService } from '@service/lang.service';
@@ -42,8 +49,9 @@ import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-
+import { LoginComponent } from './components/profile/login/login.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -61,7 +69,10 @@ import { environment } from '../environments/environment';
     ImpressumComponent,
     DatenschutzComponent,
     SafePipe,
-    NotfoundComponent
+    NotfoundComponent,
+    LoginComponent,
+    BlogsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +96,12 @@ import { environment } from '../environments/environment';
     ReactiveFormsModule,
     NgBootstrapFormValidationModule.forRoot(),
     NgBootstrapFormValidationModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    // 3. Initialize
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule // storage
   ],
   exports: [TranslateModule],
   providers: [Title, HttpClient, HttpClientModule, CmspageService, LangService],

@@ -1435,3 +1435,19 @@ footer .sub-footer a:hover {
 	  line-height: 95px;
 	  cursor: pointer;
   }
+
+ /* Marktplatz Mittelstand Widget */
+  .mm-widget-rating-578839 h1, .mm-widget-stars-c3aefe h1 {
+    border-bottom: 2px solid #51BAA7 !important;
+    color: #3B3B3B !important;
+}
+
+
+@media (max-width: 767px) {
+  .margin-t {
+    margin-top: 15px;
+  }
+  .logo-center{
+    text-align-last: center;
+  }
+}

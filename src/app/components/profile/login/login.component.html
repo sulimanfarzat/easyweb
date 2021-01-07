@@ -1,0 +1,102 @@
+<div class="modal-header">
+  <h4 class="modal-title">Hi there!</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+      <div class="container">
+
+        <ul ngbNav #nav="ngbNav" class="nav-tabs">
+          <li ngbNavItem>
+            <a ngbNavLink>sign in</a>
+            <ng-template ngbNavContent>
+                <div class="row mt-3">
+                <form [formGroup]="formGroup" (validSubmit)="onSubmit()" class="col">
+                  <div class="form-group" [customErrorMessages]="customErrorMessages">
+                    <label class="control-label">Email</label>
+                    <input type="text" class="form-control" formControlName="Email">
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Password</label>
+                    <input type="password" class="form-control" formControlName="Password">
+                  </div>
+                  <button class="btn btn-default" type="button" (click)="onReset()">Reset</button>
+                  <button class="btn btn-primary pull-right" type="submit">Submit</button>
+                </form>
+              </div>
+
+
+              <hr>
+
+              <!-- test -->
+              <div *ngIf="auth.user$ | async; then authenticated else guest">
+                <!-- template will replace this div -->
+              </div>
+
+              <!-- User NOT logged in -->
+              <ng-template #guest>
+                <h3>Hi, GUEST</h3>
+                <p>Login to get started...</p>
+                <button class="btn btn-warning" (click)="onSubmitGoogle()">
+                  <i><fa-icon [icon]="['fab', 'google']"></fa-icon></i> Login with Google
+                </button>
+              </ng-template>
+
+              <!-- User logged in -->
+              <ng-template #authenticated>
+                <div *ngIf="auth.user$ | async as user">
+                  <h3>Hi, {{ user.displayName }}</h3>
+                  <img class="rounded" [src]="user.photoURL">
+                  <p>UID: {{ user.uid }}</p>
+                  <button class="btn btn-warning" (click)="auth.signOut()">
+                    <i><fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon></i> Logout
+                  </button>
+                  <button class="btn btn-warning" (click)="activeModal.close('Close click')">
+                    <a routerLink="/profile" routerLinkActive="active" class="nav-link underline" href="#"
+                      (click)="isMenuCollapsed = true">
+                      <i><fa-icon [icon]="['fas', 'user']"></fa-icon></i>Profile
+                    </a>
+                  </button>
+                </div>
+              </ng-template>
+              <!-- test -->
+
+
+            </ng-template>
+          </li>
+          <li ngbNavItem>
+            <a ngbNavLink>sign up</a>
+            <ng-template ngbNavContent>
+              <div class="row mt-3">
+                <form [formGroup]="formGroupSignUp" (validSubmit)="onSubmitSignUp()" class="col">
+                  <div class="form-group" [customErrorMessages]="customErrorMessages">
+                    <label class="control-label">Name</label>
+                    <input type="text" class="form-control" formControlName="Name">
+                  </div>
+                  <div class="form-group" [customErrorMessages]="customErrorMessages">
+                    <label class="control-label">Email</label>
+                    <input type="text" class="form-control" formControlName="Email">
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Password</label>
+                    <input type="password" class="form-control" formControlName="Password">
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Confirm Password</label>
+                    <input type="password" class="form-control" formControlName="PasswordConfirm">
+                  </div>
+                  <button class="btn btn-default" type="button" (click)="onReset()">Reset</button>
+                  <button class="btn btn-primary pull-right" type="submit">Submit</button>
+                </form>
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+        <div [ngbNavOutlet]="nav"></div>
+
+      </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

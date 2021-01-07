@@ -1,0 +1,38 @@
+<!-- Page Profile -->
+<!-- Heading Starts Here -->
+
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-md-8">
+        <div class="caption card" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+          <div *ngIf="auth.user$ | async; then authenticated else guest">
+            <!-- template will replace this div -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Heading Ends Here -->
+
+
+<!-- User NOT logged in -->
+<ng-template #guest>
+  <h3>Hi, GUEST</h3>
+  <p>Login to get started...</p>
+  <!-- <button class="btn btn-warning" (click)="onSubmitGoogle()">
+    <i><fa-icon [icon]="['fab', 'google']"></fa-icon></i> Login with Google
+  </button> -->
+</ng-template>
+
+<ng-template #authenticated>
+  <div class="p-3" *ngIf="auth.user$ | async as user">
+    <h3>Hi, {{ user.displayName }}</h3>
+    <img class="rounded" [src]="user.photoURL">
+    <p>UID: {{ user.uid }}</p>
+    <button class="btn btn-warning" (click)="auth.signOut()">
+      <i><fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon></i> Logout
+    </button>
+  </div>
+</ng-template>

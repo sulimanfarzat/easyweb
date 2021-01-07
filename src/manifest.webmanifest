@@ -1,5 +1,5 @@
 {
-  "name": "easy2edi",
+  "name": "easy2edi Schäfer",
   "short_name": "easy2edi",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
@@ -8,7 +8,7 @@
   "start_url": "./",
   "icons": [
     {
-      "src": "assets/icons/icon-72x72.png",
+      "src": "assets/icons/android-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
@@ -20,25 +20,31 @@
       "purpose": "maskable any"
     },
     {
+      "src": "assets/icons/android-96x196.png",
+      "sizes": "96x196",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
       "src": "assets/icons/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-144x144.png",
+      "src": "assets/icons/android-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-152x152.png",
-      "sizes": "152x152",
+      "src": "assets/icons/tile150x150.png",
+      "sizes": "150x150",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-192x192.png",
+      "src": "assets/icons/pwa-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
@@ -50,7 +56,13 @@
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-512x512.png",
+      "src": "assets/icons/tile310x310.png",
+      "sizes": "310x310",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/pwa-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"

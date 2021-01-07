@@ -3,9 +3,11 @@ import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { NgcCookieConsentService, NgcInitializeEvent, NgcNoCookieLawEvent, NgcStatusChangeEvent } from 'ngx-cookieconsent';
 import { isPlatformBrowser } from '@angular/common';
-import { filter } from 'rxjs/operators';
-import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { filter, publish } from 'rxjs/operators';
+import { NgbActiveModal, NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { LangService } from '@service/lang.service';
+import { LoginService } from '@service/login.service';
+import { LoginComponent } from '../profile/login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -33,8 +35,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(public lang: LangService,
               private ccService: NgcCookieConsentService,
               config: NgbModalConfig,
-              private modalService: NgbModal,
-              private router: Router, @Inject(PLATFORM_ID) private platformId: object) {
+              private modalService: NgbModal,private modalService2: NgbModal,
+              private router: Router, @Inject(PLATFORM_ID) private platformId: object,
+              public loginService: LoginService) {
 
               this.router.events.pipe(
                 filter((event: RouterEvent) => event instanceof NavigationEnd )
@@ -66,6 +69,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.noCookieLawSubscription.unsubscribe();
  }
 
+ // login
+  openLoginForm(): void{
+    this.modalService2.open(LoginComponent, { size: 'lg' });
+  }
 
  switchLang(lang: string): void {
     this.lang.switchLangService(lang);

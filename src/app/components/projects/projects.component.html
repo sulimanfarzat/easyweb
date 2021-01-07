@@ -8,7 +8,11 @@
               <h2>{{ 'projects.zeile1' | translate }} </h2>
                 <p class="lead" key="start_section">
                 {{ 'projects.zeile2' | translate }}</p>
-                <br><br><br>
+            </div>
+            <div class="mt-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+              <a class="main-button" style="margin-left: 0px;" routerLink="." fragment="testimonials">
+                {{ 'home.testimonials.zeile1' | translate }}
+              </a>
             </div>
           </div>
         </div>
@@ -39,8 +43,8 @@
           <ng-container *ngFor="let item of 'projects.historie' | translate | keyvalue ">
             <li>
               <div class="card-body">
-                <a target="_blank" href="#">{{ item.value[0] }}</a>
-                <a href="#" class="float-right">{{ item.value[3] }}</a>
+                <b target="_blank" href="#">{{ item.value[0] }}</b>
+                <b href="#" class="float-right">{{ item.value[3] }}</b>
 
                 <h6 class="card-title">{{ item.value[1] }}</h6>
                 <p class="card-subtitle mb-2 text-muted">{{ item.value[2] }}</p>
@@ -58,17 +62,3 @@
     </div>
   </div>
 </div>
-<!--
-<div class="services-section services-page">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="section-heading">
-          <span>EDI projectsMnu</span>
-          <h2>{{ 'projects.zeile3' | translate }}</h2>
-          <p>{{ 'projects.zeile4' | translate }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->

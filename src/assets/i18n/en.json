@@ -317,7 +317,7 @@
                 "Request a offer",
                 "Other",
                 "Your message",
-                "Send Message",
+                "Send",
                 "Reset"],
       "vision": "Wir beabsichtigen, unseren Kunden die beste Dienstleistung im EDI-Bereich von Anfang bis Ende zu bieten, mit schnellem Fernsupport, einfach zu befolgenden Anweisungen, klaren und sicheren Verbindungsmethoden und schneller, qualitativ hochwertiger Lieferung."
     },
@@ -395,6 +395,15 @@
   },
 
   "footer": {
+    "exali-txt1": "exali IT-Haftpflicht-Siegel (special rate for Freelancermap members):",
+    "exali-txt2": "The original exali IT-Haftpflicht-Siegel confirms to the client that the person or company has taken out a currently valid industry-specific professional or business has taken out. This insurance was taken out at a special rate for Freelancermap members.",
+    "exali-link1": "more about Freelancermap special tariffs",
+    "exali-start": "Start of insurance:",
+    "exali-start-dt": "15.08.2019",
+    "exali-end": "End of insurance:",
+    "exali-end-dt": "01.09.2022",
+    "exali-link2": "Visit exali profile",
+    "copyright": "2021 easy2edi Schäfer,  All Rights Reserved.",
     "adresse": "Our Address",
     "links": {
       "name": "Useful Links",
