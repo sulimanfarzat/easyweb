@@ -3,5 +3,9 @@ export interface User {
   email: string;
   photoURL?: string;
   displayName?: string;
+  name?: string;
+  emailVerified?: boolean;
+  creationTime?: string;
+  lastSignInTime?: string;
   myCustomData?: string;
 }

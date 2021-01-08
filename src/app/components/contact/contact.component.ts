@@ -15,13 +15,11 @@ import { Title } from '@angular/platform-browser';
 })
 export class ContactComponent implements OnInit {
 
-  selectedPersonId = 'Please select';
-
   model = new Contact();
   submitted = false;
   error: {};
 
-  formGroup: FormGroup;
+  formGroupContact: FormGroup;
   customErrorMessages: ErrorMessage[] = [
     {
       error: 'required',
@@ -47,7 +45,7 @@ export class ContactComponent implements OnInit {
     this.emailGesendet();
     this.emailNotSent();
 
-    this.formGroup = new FormGroup({
+    this.formGroupContact = new FormGroup({
       emailAddress: new FormControl('', [
         Validators.required,
         Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
@@ -65,7 +63,7 @@ export class ContactComponent implements OnInit {
       subject: new FormControl('', [
         Validators.required,
         Validators.minLength(2),
-        Validators.maxLength(30)
+        Validators.maxLength(35)
       ]),
       comments: new FormControl('', [
         Validators.required,
@@ -77,7 +75,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit(): any {
     this.submitted = false;
-    return this.cmspageService.contactForm(this.formGroup.value).subscribe(
+    return this.cmspageService.contactForm(this.formGroupContact.value).subscribe(
       data => { (data['email'] === 'gesendet' ? this.changeSuccessMessage() : void 0) },
       error => this.error = error
     );
@@ -85,7 +83,7 @@ export class ContactComponent implements OnInit {
 
 
   onReset(): any {
-    return this.formGroup.reset();
+    return this.formGroupContact.reset();
   }
 
   gotoHome(): any {

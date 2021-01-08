@@ -39,7 +39,7 @@
         <div class="row">
           <div class="col-md-6">
             <div class="contact-form">
-              <form [formGroup]="formGroup" (validSubmit)="onSubmit()" #contactForm="ngForm">
+              <form [formGroup]="formGroupContact" (validSubmit)="onSubmit()" #contactForm="ngForm">
                 <div class="row">
                   <div class="col-md-12 col-sm-12 form-group" [customErrorMessages]="customErrorMessages">
                       <input name="userName" type="text" class="form-control" formControlName="userName" placeholder="{{ 'contact.contactNav.form.0' | translate }}">
@@ -48,10 +48,10 @@
                       <input name="emailAddress" type="text" class="form-control" formControlName="emailAddress" placeholder="{{ 'contact.contactNav.form.1' | translate }}">
                   </div>
                   <div class="col-md-12 col-sm-12 form-group" [customErrorMessages]="customErrorMessages">
-                      <input name="betreff" type="text" class="form-control" formControlName="betreff" placeholder="{{ 'contact.contactNav.form.2' | translate }}">
+                      <input name="betreff" type="text" class="form-control" formControlName="betreff" placeholder="{{ 'contact.contactNav.form.2' | translate }}" formControlName="subject">
                   </div>
                   <div class="col-md-12 col-sm-12 form-group"  [customErrorMessages]="customErrorMessages">
-                      <ng-select [items]="" name="subject" class="custom" formControlName="subject"  [(ngModel)]="selectedPersonId" [translate]="'contact.contactNav.form.3'" placeholder="{{ 'contact.contactNav.form.3' | translate }}" [searchable]="false">
+                      <ng-select [items]="" name="subject" class="custom" [translate]="'contact.contactNav.form.3'" placeholder="{{ 'contact.contactNav.form.3' | translate }}" [searchable]="false">
                         <!-- <ng-option value="kein" selected="" [translate]="'contact.contactNav.form.3'"></ng-option> -->
                         <ng-option value="Beratung-Consulting" [translate]="'contact.contactNav.form.4'"></ng-option>
                         <ng-option value="Anfrage-Information" [translate]="'contact.contactNav.form.5'"></ng-option>

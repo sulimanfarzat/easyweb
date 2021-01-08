@@ -30,6 +30,9 @@ import { environment } from '../environments/environment';
 // services
 import { CmspageService } from './services/cmspage.service';
 import { LangService } from '@service/lang.service';
+import { AuthService } from '@service/auth/auth.service';
+import { AuthGuard } from '@service/auth/auth.guard';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 // components
 import { AppRoutingModule } from './modules/app-routing.module';
@@ -48,10 +51,10 @@ import { CookieModule } from './modules/cookie.module';
 import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { LoginComponent } from './components/profile/login/login.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { ProfileComponent } from './components/profile/profile.component';
+
 
 
 
@@ -104,7 +107,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     AngularFireStorageModule // storage
   ],
   exports: [TranslateModule],
-  providers: [Title, HttpClient, HttpClientModule, CmspageService, LangService],
+  providers: [Title, HttpClient, HttpClientModule, CmspageService, LangService, AuthService, AuthGuard],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

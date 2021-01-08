@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Router } from  "@angular/router";
 import { User } from 'src/app/modules/user.model';
-//import { User } from  'firebase';
+// import { User } from  'firebase';
 // import { auth } from 'firebase/app';
-// import * as firebase from 'firebase/app'
-//import 'firebase/auth';
-import firebase from "firebase";
-//import * as firebase from 'firebase';
-// import { firebase } from '@firebase/app';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 import { AngularFireAuth } from  "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
@@ -51,17 +48,19 @@ export class AuthService {
   }
 
   async emailSignin(email: string, password: string) {
-    var result = await this.afAuth.signInWithEmailAndPassword(email, password)
-    this.router.navigate(['profile/list']);
+    const result = await this.afAuth.signInWithEmailAndPassword(email, password);
+    this.updateUserData(result.user, result.user.displayName);
+    this.router.navigate(['profile']);
+    console.log(result.user)
   }
 
-  async emailSignup(username: string, email: string, password: string) {
+  async emailSignup(fullname: string, email: string, password: string) {
     //const provider = new firebase.auth.EmailAuthProvider();
-    await this.afAuth.createUserWithEmailAndPassword(email, password)
+    const resault = await this.afAuth.createUserWithEmailAndPassword(email, password)
     .then((user) => {
       this.sendEmailVerification();
-      this.updateUserData(user.user);
-      this.updateEmailUser(user.user, username);
+      this.updateUserData(user.user, fullname);
+      // this.updateEmailUser(user.user, username);
       console.log(user.user);
       this.router.navigate(['profile']);
     })
@@ -77,7 +76,7 @@ export class AuthService {
     // Updates the user attributes:
     user.updateProfile({
       displayName: username,
-      photoURL: "./assets/images/logo/SmallLogo.png"
+      photoURL: "https://images.app.goo.gl/drYZqgMuLsfmcZCK8"
     }).then(function() {
       // Profile updated successfully!
       let displayName = user.displayName;
@@ -89,16 +88,17 @@ export class AuthService {
 
   async sendEmailVerification() {
     await (await this.afAuth.currentUser).sendEmailVerification()
-    this.router.navigate(['admin/verify-email']);
+    this.router.navigate(['profile']);
   }
 
   async googleSignin(){
     const provider = new firebase.auth.GoogleAuthProvider();
     const credential = await this.afAuth.signInWithPopup(provider);
-    return this.updateUserData(credential.user);
+    console.log(credential.user);
+    return this.updateUserData(credential.user, credential.user.displayName);
   }
 
-  private updateUserData(user) {
+  private updateUserData(user, fullname) {
     // Sets user data to firestore on login
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
 
@@ -106,9 +106,13 @@ export class AuthService {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName,
-      photoURL: user.photoURL
+      photoURL: user.photoURL,
+      emailVerified: user.emailVerified,
+      creationTime: user.metadata.creationTime,
+      lastSignInTime: user.metadata.creationTime,
+      name: fullname
     }
-
+    console.log(data);
     return userRef.set(data, { merge: true })
 
   }
