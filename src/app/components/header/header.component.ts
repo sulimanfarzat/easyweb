@@ -1,10 +1,10 @@
-import { Component,  OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef, Output, EventEmitter, Input  } from '@angular/core';
+import { Component,  OnInit, OnDestroy, Inject, PLATFORM_ID, ViewChild, ElementRef, Output, EventEmitter, Input, HostListener  } from '@angular/core';
 import { Router, NavigationEnd, RouterEvent } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { NgcCookieConsentService, NgcInitializeEvent, NgcNoCookieLawEvent, NgcStatusChangeEvent } from 'ngx-cookieconsent';
 import { isPlatformBrowser } from '@angular/common';
 import { filter, publish } from 'rxjs/operators';
-import { NgbActiveModal, NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { LangService } from '@service/lang.service';
 import { LoginService } from '@service/login.service';
 import { LoginComponent } from '../profile/login/login.component';
@@ -18,10 +18,13 @@ import { LoginComponent } from '../profile/login/login.component';
 export class HeaderComponent implements OnInit, OnDestroy {
 
   public isMenuCollapsed = true;
-  selectedLang: string = null;
+  selectedLang: string = '';
 
   @ViewChild('content') contentMsgCookies: ElementRef;
+  @ViewChild('headerMenu') public menuElement!: ElementRef<HTMLInputElement>;
   contentMsgAblehnen: string;
+  elementPosition: any;
+  public scrolled = false;
 
    // keep refs to subscriptions to be able to unsubscribe later
    private popupOpenSubscription: Subscription;
@@ -59,6 +62,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
     //this.cookieMsg();
   }
 
+  ngAfterViewInit(): void{
+    this.elementPosition = this.menuElement.nativeElement.clientHeight;
+  }
+
   ngOnDestroy(): void {
     // unsubscribe to cookieconsent observables to prevent memory leaks
     this.popupOpenSubscription.unsubscribe();
@@ -68,6 +75,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.revokeChoiceSubscription.unsubscribe();
     this.noCookieLawSubscription.unsubscribe();
  }
+
+ @HostListener('window:scroll', ['$event'])
+  handleScroll(){
+    const windowScroll = window.pageYOffset;
+    if(windowScroll >= this.elementPosition){
+      this.scrolled = true;
+    } else {
+      this.scrolled = false;
+    }
+  }
 
  // login
   openLoginForm(): void{

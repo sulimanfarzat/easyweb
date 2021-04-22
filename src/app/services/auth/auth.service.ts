@@ -7,7 +7,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import { AngularFireAuth } from  "@angular/fire/auth";
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -18,11 +18,14 @@ import { switchMap } from 'rxjs/operators';
 export class AuthService {
 
   user$: Observable<User>;
-  // user$: User;
+  userRef: AngularFirestoreCollection<User>;
+
 
   constructor(public  afAuth:  AngularFireAuth,
               private afs: AngularFirestore,
               public  router:  Router) {
+    // firestore collection
+    this.userRef = afs.collection(`users`)
 
     // Get the auth state, then fetch the Firestore user document or return null
     this.user$ = this.afAuth.authState.pipe(
@@ -47,9 +50,12 @@ export class AuthService {
     })*/
   }
 
+  /*#################*/
+  /*# email sign in #*/
+  /*#################*/
   async emailSignin(email: string, password: string) {
     const result = await this.afAuth.signInWithEmailAndPassword(email, password);
-    this.updateUserData(result.user, result.user.displayName);
+    this.create(result.user, result.user.displayName);
     this.router.navigate(['profile']);
     console.log(result.user)
   }
@@ -59,9 +65,8 @@ export class AuthService {
     const resault = await this.afAuth.createUserWithEmailAndPassword(email, password)
     .then((user) => {
       this.sendEmailVerification();
-      this.updateUserData(user.user, fullname);
+      this.create(user.user, fullname);
       // this.updateEmailUser(user.user, username);
-      console.log(user.user);
       this.router.navigate(['profile']);
     })
     .catch((error) => {
@@ -72,15 +77,17 @@ export class AuthService {
 
   }
 
-  async updateEmailUser(user, username){
+  async updateEmailUser(username){
     // Updates the user attributes:
+    const user = firebase.auth().currentUser;
     user.updateProfile({
       displayName: username,
-      photoURL: "https://images.app.goo.gl/drYZqgMuLsfmcZCK8"
+      // photoURL: "https://images.app.goo.gl/drYZqgMuLsfmcZCK8"
     }).then(function() {
       // Profile updated successfully!
-      let displayName = user.displayName;
-      let photoURL = user.photoURL;
+      let displayName = username;
+      // let photoURL = user.photoURL;
+      console.log(user);
     }, function(error) {
       // An error happened.
     });
@@ -91,17 +98,42 @@ export class AuthService {
     this.router.navigate(['profile']);
   }
 
+
+
+  /*#################*/
+  /*  google sign in */
+  /*#################*/
   async googleSignin(){
     const provider = new firebase.auth.GoogleAuthProvider();
     const credential = await this.afAuth.signInWithPopup(provider);
     console.log(credential.user);
-    return this.updateUserData(credential.user, credential.user.displayName);
+    return this.create(credential.user, credential.user.displayName);
   }
 
-  private updateUserData(user, fullname) {
-    // Sets user data to firestore on login
-    const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
+  private googleDelete(): void{
+    // delete from firebase users
+    const user = firebase.auth().currentUser;
+    user.delete().then(function() {
+      // User deleted.
+    }).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+    });
+  }
 
+  async signOut() {
+    await this.afAuth.signOut();
+    //localStorage.removeItem('user');
+    this.router.navigate(['/']);
+  }
+
+
+
+  /*#####################*/
+  /*  firestore database */
+  /*#####################*/
+  private create(user, fullname) {
+    // Sets user data to firestore on login
     const data = {
       uid: user.uid,
       email: user.email,
@@ -112,18 +144,20 @@ export class AuthService {
       lastSignInTime: user.metadata.creationTime,
       name: fullname
     }
+    return this.userRef.doc(`/${user.uid}`).set(data, { merge: true })
+  }
+
+  public update(uid: string, data: any): Promise<void> {
     console.log(data);
-    return userRef.set(data, { merge: true })
-
+    return this.userRef.doc(`/${uid}`).update(data);
   }
 
-  async signOut() {
-    await this.afAuth.signOut();
-    //localStorage.removeItem('user');
-    this.router.navigate(['/']);
+  public delete(uid: string): Promise<void> {
+    // delete from firebase users
+    this.googleDelete();
+    // delete from firestore database
+    return this.userRef.doc(`/${uid}`).delete();
   }
-
-
 
 
 }

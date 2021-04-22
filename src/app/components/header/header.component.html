@@ -2,7 +2,7 @@
 <!-- Header -->
 
 
-<header class="" id="header">
+<header id="header" [ngClass]="[ scrolled ? 'background-header' : 'false']" #headerMenu>
 
   <div class="stickynav-tease">
     <div class="container">
@@ -68,6 +68,7 @@
 
       <button class="navbar-toggler d-lg-none" (click)="isMenuCollapsed = !isMenuCollapsed"
         [attr.aria-expanded]="!isMenuCollapsed"
+        [ngClass]="isMenuCollapsed === true? 'opened' : null "
         onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
         aria-label="Main Menu" aria-controls="navbarResponsive">
         <svg width="50" height="50" viewBox="0 0 100 100">
