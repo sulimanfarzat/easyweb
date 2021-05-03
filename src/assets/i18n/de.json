@@ -14,7 +14,7 @@
       "zeile0": "Ihr Unternehmen wachsen lassen",
       "zeile1": "wir liefern optimale EDI Lösungen",
       "zeile2": "Daten einfacher und schneller austauschen! ",
-      "zeile3": "Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Plattform automatisieren könne",
+      "zeile3": "Optimieren Sie die Kommunikation mit Ihren Kunden und Lieferanten. Um zu erfahren, wie Sie den Datenaustausch mit unserer leistungsstarken Business Integration Plattform automatisieren können",
       "zeile4": "klicken Sie hier.",
       "card1-h": "KEINE PROJEKT-STILLSTÄNDE",
       "card1-b": "Entwicklungen, Betrieb und interne Unterstützung, d.h. wir können auch Ad-hoc-Dienste außerhalb der Release-Zyklen bereitstellen.",
@@ -94,10 +94,10 @@
       "knopf": "EDI Software Lösungen",
       "solutions": "Die Entscheidung für die richtige EDI-Lösung für Ihr Unternehmen ist ziemlich schwierig, da es auf dem Markt eine große Auswahl an Möglichkeiten gibt. Hier sind einige der populären EDI-Lösungen, die wir anbieten und unterstützen:"
     },
-    "cardButton": "Angebot anfordern",
+    "cardButton": "Anfrage stellen",
     "card1": {
       "title": "Kompliziert ist einfach zu langsam",
-      "subTitle": "Lobster _data",
+      "subTitle": ["Lobster _data/_pro"],
       "description": "Datenkonvertierung, Data Mapping oder Datenmanipulation. Überführen sie ihre Daten in ihr Zielsystem. ohne zittern zu müssen, ob’s auch klappt. ohne diskussion. zack mit lobster_data.",
       "lobster": [
         "EDI Clearing ",
@@ -112,7 +112,7 @@
     },
     "card2": {
       "title": "vollste Unterstützung",
-      "subTitle": "Allgemeines EDI/IT",
+      "subTitle": ["Allgemeines EDI/EAI/IT"],
       "description": "Konzepte vorstellen, die alle das Zusammenspiel verschiedener Teile der IT-Landschaft eines oder mehrerer miteinander in Beziehung stehender Unternehmen behandeln.",
       "allgemeines": [
         "EDI/EAI Anforderungsmanagement",
@@ -127,7 +127,7 @@
     },
       "card3": {
         "title": "Ihre Plattform für die digitale Transformation",
-        "subTitle": "Seeburger BIS",
+        "subTitle": ["Seeburger BIS/BIC"],
         "description": "SEEBURGER Business Integration Suite – die umfassendste Plattform für den digitalen Wandel. Ihr Vorteil? Eine nahtlose Integration all Ihrer Systeme, Anwendungen, Geschäftspartner und Cloud Services.",
         "seeburger": [
         "EDI Clearing",
@@ -138,6 +138,22 @@
         "Workflowdesigner BIS5.x",
         "Migrationserfahrung BIS5 / BIS6 inkl. Mappings"
       ]
+    },
+    "formTitle": "Unverbindliche Anfrage",
+    "form": {
+      "thema": "Thema",
+      "firma": "Unternehmen",
+      "ansprchpartner": "Ansprechpartner",
+      "fname": "Vornahme",
+      "lname": "Nachname",
+      "land": "Land",
+      "mail": "E-Mail-Adresse",
+      "tel": "Telefon-Nr.",
+      "version": "Version Integrationserver",
+      "anfrage": "Bemerkung/Anfrage",
+      "check": "akuter Handlungsbedarf",
+      "send": "Senden",
+      "reset": "Zurücksetzen"
     },
     "video": {
       "lobster":{
@@ -309,7 +325,7 @@
     },
     "contactNav" : {
       "title" : "Lassen Sie uns in Kontakt bleiben",
-      "description" : "xxxxx",
+      "description" : "Quisque sagittis blandit sapien et elementum. Fusce pretium viverra consequat. Aliquam at feugiat mi. Pellentesque hendrerit, felis ac sodales commodo.",
       "form":["Ihr Name",
                 "Ihre E-Mail",
                 "Betreff",

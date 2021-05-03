@@ -63,12 +63,12 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a routerLink="/" class="navbar-brand" href="#" (click)="isMenuCollapsed = true">
-        <img src="./assets/images/logo/SmallLogo.png" style="margin-top: -10px;" width="150" alt="easy2edi">
+        <img src="./assets/images/logo/SmallLogo.png" alt="easy2edi">
       </a>
 
       <button class="navbar-toggler d-lg-none" (click)="isMenuCollapsed = !isMenuCollapsed"
         [attr.aria-expanded]="!isMenuCollapsed"
-        [ngClass]="isMenuCollapsed === true? 'opened' : null "
+        [ngClass]="isMenuCollapsed === false ? 'opened' : null "
         onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
         aria-label="Main Menu" aria-controls="navbarResponsive">
         <svg width="50" height="50" viewBox="0 0 100 100">

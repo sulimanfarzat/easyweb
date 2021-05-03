@@ -28,11 +28,15 @@ BODY, HTML {
   }
 }
 
+
+/**************************************/
 /* Start fixed button freelancer Site */
+/**************************************/
+
 $buttons-height: 36px;
 $sticky-width: 22px;
 $position: 100px;
-$height: 419px;
+$height: 519px;
 
 .feedback {
   z-index: 1049;
@@ -74,15 +78,48 @@ $height: 419px;
   border-radius: 5px 0 0 5px !important;
 }
 
-@media (max-width: 576px)  {
+/* Flashing/Glowing Button*/
+@keyframes glowing {
+  0% {
+    background-color: #DDFBF4;
+    box-shadow: 0 0 6px #DDFBF4;
+  }
+  50% {
+    background-color: #23F7E6;
+    box-shadow: 0 0 10px #23F7E6;
+  }
+  100% {
+    background-color: #DDFBF4;
+    box-shadow: 0 0 6px #DDFBF4;
+  }
+}
+
+.sub-feedback {
+  animation: glowing 1300ms infinite;
+}
+/*******************************/
+
+@media (max-height: 850px)  {
   .feedback {
-    height: 290px !important;
+    height: 390px !important;
     p{
       display: none;
     }
   }
   .sub-feedback {
-    bottom: $position + 290px !important;
+    bottom: $position + 390px !important;
+  }
+}
+
+@media (max-width: 576px)  {
+  .feedback {
+    height: 260px !important;
+    p{
+      display: none;
+    }
+  }
+  .sub-feedback {
+    bottom: $position + 260px !important;
   }
 }
 
@@ -121,6 +158,8 @@ $height: 419px;
   }
 }
 
+
+
 #flm-profile-widget a {
   background-color: #51BAA7 !important;
   border: none;
@@ -134,5 +173,7 @@ $height: 419px;
 #flm-profile-widget a:hover {
   background-color: #3B3B3B !important;
 }
-/* Ende fixed button freelancer Site */
 
+/**************************************/
+/* Ende fixed button freelancer Site */
+/**************************************/

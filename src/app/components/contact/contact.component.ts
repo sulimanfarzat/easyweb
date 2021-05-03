@@ -74,11 +74,15 @@ export class ContactComponent implements OnInit {
 
 
   onSubmit(): any {
-    this.submitted = false;
-    return this.cmspageService.contactForm(this.formGroupContact.value).subscribe(
-      data => { (data['email'] === 'gesendet' ? this.changeSuccessMessage() : void 0) },
-      error => this.error = error
-    );
+    if (this.formGroupContact.valid) {
+      this.submitted = false;
+      return this.cmspageService.contactForm(this.formGroupContact.value).subscribe(
+        data => { (data['email'] === 'gesendet' ? this.changeSuccessMessage() : void 0) },
+        error => this.error = error
+      );
+    } else {
+      return console.log('erorr');
+    }
   }
 
 

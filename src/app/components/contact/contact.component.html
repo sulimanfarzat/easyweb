@@ -33,7 +33,7 @@
 
 
 
-    <!-- Contact Us Starts Here -->
+    <!-- Contact Us Starts Here validSubmit-->
     <div class="contact-us">
       <div class="container">
         <div class="row">
@@ -48,10 +48,10 @@
                       <input name="emailAddress" type="text" class="form-control" formControlName="emailAddress" placeholder="{{ 'contact.contactNav.form.1' | translate }}">
                   </div>
                   <div class="col-md-12 col-sm-12 form-group" [customErrorMessages]="customErrorMessages">
-                      <input name="betreff" type="text" class="form-control" formControlName="betreff" placeholder="{{ 'contact.contactNav.form.2' | translate }}" formControlName="subject">
+                      <input name="betreff" type="text" class="form-control" formControlName="betreff" placeholder="{{ 'contact.contactNav.form.2' | translate }}">
                   </div>
-                  <div class="col-md-12 col-sm-12 form-group"  [customErrorMessages]="customErrorMessages">
-                      <ng-select [items]="" name="subject" class="custom" [translate]="'contact.contactNav.form.3'" placeholder="{{ 'contact.contactNav.form.3' | translate }}" [searchable]="false">
+                  <div class="col-md-12 col-sm-12 form-group" [customErrorMessages]="customErrorMessages">
+                      <ng-select [items]="" name="subject" formControlName="subject" class="custom" [translate]="'contact.contactNav.form.3'" placeholder="{{ 'contact.contactNav.form.3' | translate }}" [searchable]="false">
                         <!-- <ng-option value="kein" selected="" [translate]="'contact.contactNav.form.3'"></ng-option> -->
                         <ng-option value="Beratung-Consulting" [translate]="'contact.contactNav.form.4'"></ng-option>
                         <ng-option value="Anfrage-Information" [translate]="'contact.contactNav.form.5'"></ng-option>
@@ -66,7 +66,7 @@
 
                   <div class="col-lg-12 btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
                       <button class="main-button" type="button" (click)="onReset()">{{ 'contact.contactNav.form.10' | translate }}</button>
-                      <button class="main-button" type="submit" name="submit" >{{ 'contact.contactNav.form.9' | translate }}</button>
+                      <button class="main-button" type="submit" name="submit">{{ 'contact.contactNav.form.9' | translate }}</button>
                       <!-- [disabled]="!contactForm.form.valid"  -->
                   </div>
                   <div class="mt-2 p-3">
@@ -89,7 +89,7 @@
               <div class="section-heading" data-aos="fade-left" data-aos-duration="1000">
                 <span>Contact Us</span>
                 <h2>{{ 'contact.contactNav.title' | translate }}</h2>
-                <p>Quisque sagittis blandit sapien et elementum. Fusce pretium viverra consequat. Aliquam at feugiat mi. Pellentesque hendrerit, felis ac sodales commodo.</p>
+                <p> {{ 'contact.contactNav.description' | translate }}</p>
               </div>
               <div class="row">
                 <div class="col-md-6 col-sm-12">

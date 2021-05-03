@@ -11,6 +11,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class CmspageService {
 
   ServerUrl = 'https://farzat.co/it/email/easy2edi';
+  ServerAngebotUrl= 'https://farzat.co/it/email/easy2edi/angebot';
   errorData: {};
 
   /*========================================
@@ -27,13 +28,22 @@ export class CmspageService {
   constructor(private http: HttpClient) { }
 
 
+  // contact us
   contactForm(formdata: Contact): Observable<Contact>  {
     console.log(JSON.stringify(formdata));
     return this.http.post<Contact>(this.ServerUrl + '/api_email.php', JSON.stringify(formdata)).pipe(
       // retry(1),
       catchError(this.handleError)
     );
+  }
 
+  // angebot
+  angebotForm(formdata: any): Observable<any>  {
+    console.log(JSON.stringify(formdata));
+    return this.http.post<any>(this.ServerAngebotUrl + '/api_angebot.php', JSON.stringify(formdata)).pipe(
+      // retry(1),
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {

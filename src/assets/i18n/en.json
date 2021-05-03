@@ -93,10 +93,10 @@
       "knopf": "EDI Software Solutions",
       "solutions" : "Choosing the right EDI solution for your company is quite difficult, as there is a wide range of choices available on the market, here are some of the popular EDI solutions that we provide and support:"
     },
-    "cardButton": "Offer request",
+    "cardButton": "Make request",
     "card1": {
       "title": "Who has time for complicated?",
-      "subTitle": "Lobster _data",
+      "subTitle": ["Lobster _data/_pro"],
       "description": "Data conversion. Data mapping. Data manipulation. Transfer your data to your target system. No crossing your fingers. No holding your breath. No worries. With lobster_data.",
       "lobster": [
         "EDI Clearing",
@@ -110,7 +110,7 @@
     },
     "card2": {
       "title": "Fullest support",
-      "subTitle": "Allgemeines EDI/IT",
+      "subTitle": ["General EDI/EAI/IT"],
       "description": "Present concepts that all deal with the interaction of different parts of the IT landscape of one or more related companies.",
       "allgemeines": [
         "EDI/EAI Requirements Management",
@@ -125,7 +125,7 @@
     },
       "card3": {
         "title": "Your Central Platform for Digital Transformation",
-        "subTitle": "Seeburger BIS",
+        "subTitle": ["Seeburger BIS/BIC"],
         "description" : "SEEBURGER Business Integration Suite – The Hybrid Integration Platform One Platform for Full Life Cycle API Management and Any Integration Requirement.",
         "seeburger": [
           "EDI Clearing",
@@ -136,6 +136,22 @@
           "Workflow Designer BIS5.x",
           "Migration Experience BIS5 / BIS6 incl. Mappings"
       ]
+    },
+    "formTitle": "Non-binding request",
+    "form": {
+      "thema": "Subject",
+      "firma": "Company",
+      "ansprchpartner": "Contact person",
+      "fname": "First Name",
+      "lname": "Last Name",
+      "land": "Country",
+      "mail": "E-Mail Address",
+      "tel": "Phone no.",
+      "version": "Version Integrations-Server",
+      "anfrage": "Comment/Request",
+      "check": "A need for immediate action",
+      "send": "Send",
+      "reset": "Reset"
     },
     "video": {
       "lobster":{
@@ -307,7 +323,7 @@
     },
     "contactNav" : {
       "title" : "Let's keep in touch",
-      "description" : "xxxxx",
+      "description" : "Quisque sagittis blandit sapien et elementum. Fusce pretium viverra consequat. Aliquam at feugiat mi. Pellentesque hendrerit, felis ac sodales commodo.",
       "form":["Your name",
                 "Your email",
                 "Subject",

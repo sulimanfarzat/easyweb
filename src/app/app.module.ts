@@ -28,7 +28,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
 // services
-import { CmspageService } from './services/cmspage.service';
+import { CmspageService } from '@service/cmspage.service';
 import { LangService } from '@service/lang.service';
 import { AuthService } from '@service/auth/auth.service';
 import { AuthGuard } from '@service/auth/auth.guard';

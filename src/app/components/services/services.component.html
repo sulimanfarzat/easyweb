@@ -1,4 +1,5 @@
 <!-- Page Content -->
+
     <!-- Heading Starts Here -->
     <div class="page-heading header-text">
       <div class="container">
@@ -49,7 +50,9 @@
                   <li><i><fa-icon [icon]="['fas', 'check']"></fa-icon></i>{{item}}</li>
                 </ng-container>
               </ul>
-              <a class="main-button" (click)="open(content, 'lobster _data' )">{{ 'services.cardButton' | translate }}</a>
+              <a class="main-button" *ngFor="let thema of 'services.card1.subTitle' | translate" (click)="open(content, thema )">
+                {{ 'services.cardButton' | translate }}
+              </a>
               <!-- <pre>{{ closeResult }}</pre> -->
             </div>
           </div>
@@ -68,7 +71,9 @@
                   <li><i><fa-icon [icon]="['fas', 'check']"></fa-icon></i>{{item}}</li>
                 </ng-container>
               </ul>
-              <a class="gradient-button" (click)="open(content, 'Allgemeines EDI/IT Consulting' )">{{ 'services.cardButton' | translate }}</a>
+              <a class="gradient-button" *ngFor="let thema of 'services.card2.subTitle' | translate" (click)="open(content, thema )">
+                {{ 'services.cardButton' | translate }}
+              </a>
             </div>
           </div>
 
@@ -86,7 +91,9 @@
                   <li><i><fa-icon [icon]="['fas', 'check']"></fa-icon></i>{{item}}</li>
                 </ng-container>
               </ul>
-              <a class="main-button" (click)="open(content, 'Seeburger BIS' )">{{ 'services.cardButton' | translate }}</a>
+              <a class="main-button" *ngFor="let thema of 'services.card3.subTitle' | translate" (click)="open(content, thema )">
+                {{ 'services.cardButton' | translate }}
+              </a>
             </div>
           </div>
 
@@ -94,86 +101,120 @@
       </div>
     </div>
 
+    <!-- error message -->
+    <div class="mt-2 p-3">
+      <ngb-alert #selfClosingAlert *ngIf="successMessage" type="success" (closed)="successMessage = ''">
+        {{ 'contact.emailGesendet' | translate }} {{ successMessage }}
+      </ngb-alert>
+      <ngb-alert #selfClosingAlertNotSent *ngIf="notSuccessMessage" type="danger" (closed)="notSuccessMessage = ''">
+        {{ 'contact.emailNichtGesendet' | translate }} {{ notSuccessMessage }}
+      </ngb-alert>
+      <hr/>
+      <p>
+    </div>
+
+
     <!-- models -->
     <ng-template #content let-modal>
       <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">{{ product }} Angebot einholen</h4>
+        <h4 class="modal-title" id="modal-basic-title">{{ 'services.formTitle' | translate }} | {{ product }} </h4>
         <p class="text-warning">comming soon</p>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
       <div class="modal-body">
-        <form>
+        <form [formGroup]="formGroupAnfrage" (validSubmit)="onSubmit()" #anfrageForm="ngForm">
 
           <div class="form-row">
             <div class="col-md-6 mb-3">
-              <label for="validationCustom01">Vorname</label>
-              <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+              <label>{{ 'services.form.thema' | translate }}</label>
+              <ng-select [items]="" name="thema" formControlName="thema"
+                   class="custom" [(ngModel)]="product" (change)="selectedItems=product" [ngModelOptions]="{standalone: true}" placeholder="{{ product }}" [searchable]="false">
+                <ng-option value="{{ 'services.card1.subTitle' | translate }}" [translate]="'services.card1.subTitle'"></ng-option>
+                <ng-option value="{{ 'services.card2.subTitle' | translate }}" [translate]="'services.card2.subTitle'"></ng-option>
+                <ng-option value="{{ 'services.card3.subTitle' | translate }}" [translate]="'services.card3.subTitle'"></ng-option>
+              </ng-select>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="formGroupExampleInput">{{ 'services.form.firma' | translate }}</label>
+              <input type="text" name="firmenname" formControlName="firmenname" class="form-control" id="formGroupExampleInput" placeholder="{{ 'services.form.firma' | translate }}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label>{{ 'services.form.ansprchpartner' | translate }}</label>
+            </div>
+            <div class="col-md-4 mb-3">
+              <!-- <label for="validationCustom01">Ansprechpartner</label> -->
+              <input type="text" name="fName" formControlName="fName" class="form-control" id="validationCustom01" placeholder="{{ 'services.form.fname' | translate }}" required>
               <div class="valid-feedback">
                 Looks good!
               </div>
             </div>
-            <div class="col-md-6 mb-3">
-              <label for="validationCustom02">Nachname</label>
-              <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+            <div class="col-md-4 mb-3">
+              <!-- <label for="validationCustom02">Name</label> -->
+              <input type="text" name="lName" formControlName="lName" class="form-control" id="validationCustom02" placeholder="{{ 'services.form.lname' | translate }}" required>
               <div class="valid-feedback">
                 Looks good!
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <!-- <label for="validationCustom04">Stadt</label> -->
+              <input type="text" name="land" formControlName="land" class="form-control" id="validationCustom04" placeholder="State" required>
+              <div class="invalid-feedback">
+                Please provide a valid Land.
               </div>
             </div>
           </div>
           <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <label for="validationCustom03">Straße</label>
-              <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+            <div class="col-md-8 mb-3">
+              <!-- <label for="validationCustom03">Mail</label> -->
+              <input type="text" name="email" formControlName="email" class="form-control" id="validationCustom03" placeholder="{{ 'services.form.mail' | translate }}" required>
               <div class="invalid-feedback">
-                Please provide a valid city.
+                Please provide a valid Mail.
               </div>
             </div>
-            <div class="col-md-3 mb-3">
-              <label for="validationCustom04">Stadt</label>
-              <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+            <div class="col-md-4 mb-3">
+              <!-- <label for="validationCustom05">Telefon</label> -->
+              <input type="text" name="tel" formControlName="tel" class="form-control" id="validationCustom05" placeholder="{{ 'services.form.tel' | translate }}" required>
               <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="validationCustom05">PLZ</label>
-              <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-              <div class="invalid-feedback">
-                Please provide a valid zip.
+                Please provide a Telefon.
               </div>
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="formGroupExampleInput">{{ 'services.form.version' | translate }}</label>
+              <input type="text" name="version" formControlName="version" class="form-control" id="formGroupExampleInput" placeholder="{{ 'services.form.version' | translate }}">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="exampleFormControlTextarea1">{{ 'services.form.anfrage' | translate }}</label>
+              <textarea class="form-control" name="anfrage" formControlName="anfrage" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <input class="form-check-input" type="checkbox" name="handlungsbedarf" formControlName="handlungsbedarf" value="">
               <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
+                {{ 'services.form.check' | translate }}
               </label>
-              <div class="invalid-feedback">
-                You must agree before submitting.
-              </div>
             </div>
           </div>
 
-
-          <div class="form-group">
-            <label for="dateOfBirth">Date</label>
-            <div class="input-group">
-              <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-              </div>
-            </div>
+          <div class="modal-footer">
+              <i><a routerLink="/contact" routerLinkActive="active" (click)="modal.close('close')">to contact page</a></i>
+              <button class="btn btn-primary" type="button" (click)="onReset()">{{ 'services.form.reset' | translate }}</button>
+              <button class="btn btn-primary" type="submit" (click)="anfrageForm.form.valid? modal.close('Save click'): null">{{ 'services.form.send' | translate }}</button>
           </div>
+
 
         </form>
       </div>
-      <div class="modal-footer">
-        <i><a routerLink="/contact" routerLinkActive="active" (click)="modal.close('close')">to contact page</a></i>
-        <button type="button" class="btn btn-primary" (click)="modal.close('Save click')" disabled>Save</button>
-      </div>
+
     </ng-template>
     <!-- Pricing Ends Here -->
 

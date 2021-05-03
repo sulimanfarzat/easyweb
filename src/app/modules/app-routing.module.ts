@@ -39,7 +39,7 @@ const routes: Routes = [
     useHash: true,
     scrollPositionRestoration: 'top',
     anchorScrolling: 'enabled',
-    scrollOffset: [0, 64],
+    scrollOffset: [0, 218],
     onSameUrlNavigation: 'reload',
     relativeLinkResolution: 'legacy'
 }
