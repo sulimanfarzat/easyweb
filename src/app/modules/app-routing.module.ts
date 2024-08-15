@@ -40,8 +40,7 @@ const routes: Routes = [
     scrollPositionRestoration: 'top',
     anchorScrolling: 'enabled',
     scrollOffset: [0, 218],
-    onSameUrlNavigation: 'reload',
-    relativeLinkResolution: 'legacy'
+    onSameUrlNavigation: 'reload'
 }
       )],
   exports: [RouterModule]

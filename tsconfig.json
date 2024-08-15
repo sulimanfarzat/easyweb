@@ -10,11 +10,15 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "module": "es2020",
     "paths": {
-      "@assets/*": ["src/assets/*"],
-      "@service/*": ["src/app/services/*"]
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@service/*": [
+        "src/app/services/*"
+      ]
     },
     "typeRoots": [
       "node_modules/@types"
@@ -22,6 +26,7 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "useDefineForClassFields": false
   }
 }
