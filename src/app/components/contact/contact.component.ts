@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbAlert } from '@ng-bootstrap/ng-bootstrap';
 import { CmspageService } from '@service/cmspage.service';
@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   submitted = false;
   error: {};
 
-  formGroupContact: FormGroup;
+  formGroupContact: UntypedFormGroup;
   customErrorMessages: ErrorMessage[] = [
     {
       error: 'required',
@@ -45,27 +45,27 @@ export class ContactComponent implements OnInit {
     this.emailGesendet();
     this.emailNotSent();
 
-    this.formGroupContact = new FormGroup({
-      emailAddress: new FormControl('', [
+    this.formGroupContact = new UntypedFormGroup({
+      emailAddress: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
       ]),
-      userName: new FormControl('', [
+      userName: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30)
       ]),
-      betreff: new FormControl('', [
+      betreff: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30)
       ]),
-      subject: new FormControl('', [
+      subject: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(35)
       ]),
-      comments: new FormControl('', [
+      comments: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(5)
       ])

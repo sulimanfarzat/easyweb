@@ -3,7 +3,7 @@ import { DomSanitizer, Title } from '@angular/platform-browser';
 import {NgbModal, ModalDismissReasons, NgbAlert} from '@ng-bootstrap/ng-bootstrap';
 import { Subject} from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ErrorMessage } from 'ng-bootstrap-form-validation';
 import { CmspageService } from '@service/cmspage.service';
 
@@ -20,7 +20,7 @@ export class ServicesComponent implements OnInit  {
   submitted = false;
   error: {};
 
-  formGroupAnfrage: FormGroup;
+  formGroupAnfrage: UntypedFormGroup;
   customErrorMessages: ErrorMessage[] = [
     {
       error: 'required',
@@ -49,49 +49,49 @@ export class ServicesComponent implements OnInit  {
     this.emailGesendet();
     this.emailNotSent();
 
-    this.formGroupAnfrage = new FormGroup({
-      thema: new FormControl('', [
+    this.formGroupAnfrage = new UntypedFormGroup({
+      thema: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(35)
       ]),
-      firmenname: new FormControl('', [
+      firmenname: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30)
       ]),
-      fName: new FormControl('', [
+      fName: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30)
       ]),
-      lName: new FormControl('', [
+      lName: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30)
       ]),
-      land: new FormControl('', [
+      land: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(2),
         Validators.maxLength(30),
       ]),
-      email: new FormControl('', [
+      email: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
       ]),
-      tel: new FormControl('', [
+      tel: new UntypedFormControl('', [
         Validators.required
       ]),
-      version: new FormControl('', [
+      version: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(5)
       ]),
-      anfrage: new FormControl('', [
+      anfrage: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(5)
       ])
       ,
-      handlungsbedarf: new FormControl('', [
+      handlungsbedarf: new UntypedFormControl('', [
       ])
     });
   }

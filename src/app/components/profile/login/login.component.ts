@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
 import { ErrorMessage } from 'ng-bootstrap-form-validation';
 import { AuthService } from '@service/auth/auth.service';
 import { Router } from '@angular/router';
@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  formGroup: FormGroup;
-  formGroupSignUp: FormGroup;
+  formGroup: UntypedFormGroup;
+  formGroupSignUp: UntypedFormGroup;
 
   customErrorMessages: ErrorMessage[] = [
     {
@@ -29,33 +29,33 @@ export class LoginComponent implements OnInit {
               public auth: AuthService,public  router:  Router) { }
 
   ngOnInit(): void {
-    this.formGroup = new FormGroup({
-      Email: new FormControl('', [
+    this.formGroup = new UntypedFormGroup({
+      Email: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
       ]),
-      Password: new FormControl('', [
+      Password: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(8),
         Validators.maxLength(20)
       ])
     });
 
-    this.formGroupSignUp = new FormGroup({
-      Name: new FormControl('', [
+    this.formGroupSignUp = new UntypedFormGroup({
+      Name: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(4),
       ]),
-      Email: new FormControl('', [
+      Email: new UntypedFormControl('', [
         Validators.required,
         Validators.pattern(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
       ]),
-      Password: new FormControl('', [
+      Password: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(8),
         Validators.maxLength(20)
       ]),
-      PasswordConfirm: new FormControl('', [
+      PasswordConfirm: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(8),
         Validators.maxLength(20)
