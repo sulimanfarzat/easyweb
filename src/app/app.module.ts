@@ -18,7 +18,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 // translate
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 // angular/fire 1. Import the libs you need
 import { AngularFireModule } from '@angular/fire';
@@ -58,59 +58,61 @@ import { ProfileComponent } from './components/profile/profile.component';
 
 
 
-@NgModule({
+@NgModule({ 
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    ServicesComponent,
-    ProjectsComponent,
-    AboutComponent,
-    ContactComponent,
-    TestimonialsComponent,
-    ImpressumComponent,
-    DatenschutzComponent,
-    SafePipe,
-    NotfoundComponent,
-    LoginComponent,
-    BlogsComponent,
-    ProfileComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-    NgbModule,
-    BrowserAnimationsModule,
-    CarouselModule,
-    HttpClientModule,
-    FontAwesomeModule,
-    NgSelectModule,
-    FormsModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: httpTranslateLoader,
-        deps: [HttpClient]
-      }
-    }),
-    CookieModule,
-    ReactiveFormsModule,
-    NgBootstrapFormValidationModule.forRoot(),
-    NgBootstrapFormValidationModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    // 3. Initialize
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage
-  ],
-  exports: [TranslateModule],
-  providers: [Title, HttpClient, HttpClientModule, CmspageService, LangService, AuthService, AuthGuard],
-  bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
-})
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        ServicesComponent,
+        ProjectsComponent,
+        AboutComponent,
+        ContactComponent,
+        TestimonialsComponent,
+        ImpressumComponent,
+        DatenschutzComponent,
+        SafePipe,
+        NotfoundComponent,
+        LoginComponent,
+        BlogsComponent,
+        ProfileComponent
+    ],
+    exports: [TranslateModule],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA], 
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule,
+        NgbModule,
+        BrowserAnimationsModule,
+        CarouselModule,
+        FontAwesomeModule,
+        NgSelectModule,
+        FormsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: httpTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        CookieModule,
+        ReactiveFormsModule,
+        NgBootstrapFormValidationModule.forRoot(),
+        NgBootstrapFormValidationModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+        // 3. Initialize
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule, // firestore
+        AngularFireAuthModule, // auth
+        AngularFireStorageModule // storage
+    ], 
+    providers: [Title, HttpClient, HttpClientModule, CmspageService, LangService, AuthService, AuthGuard, provideHttpClient(withInterceptorsFromDi())] 
+  }
+)
+
+
 export class AppModule {
   constructor(library: FaIconLibrary) {
     library.addIconPacks(fas, far, fab);
